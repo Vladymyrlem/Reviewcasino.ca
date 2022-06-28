@@ -1,0 +1,22 @@
+/*Top Bonuses block*/
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/Roboto.woff2") format("woff2"), url("/fonts/Roboto.woff") format("woff"), url("/fonts/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/Robotomedium.woff2") format("woff2"), url("/fonts/Robotomedium.woff") format("woff"), url("/fonts/Robotomedium.ttf") format("truetype");
+}
+
+.top-bonuses-block {
+    background: rgba(108, 95, 176, 0.7);
+}
+
+/*# sourceMappingURL=bonuses.css.map */

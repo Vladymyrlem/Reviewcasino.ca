@@ -1,0 +1,57 @@
+.review-criteria {
+
+  .description {
+    width: 100%;
+    max-width: 882px;
+
+    p {
+      @include light-text();
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  .criteria-list {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+    width: 100%;
+    max-width: 100%;
+
+    .criteria-list-item {
+      display: flex;
+      margin-bottom: 25px;
+      padding: 27px 46px 45px 28px;
+
+      .left-criteria {
+        float: left;
+        width: 100%;
+        max-width: 698px;
+
+        .criteria-title {
+          @include text-style('Roboto Medium', normal, 500, 27px, 32px);
+          color: #ffffff;
+          width: 100%;
+          max-width: 100%;
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+
+        .criteria-content {
+          width: 100%;
+          max-width: 100%;
+
+          p {
+            @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+            color: #ffffff;
+          }
+        }
+      }
+
+      img {
+        float: right;
+        margin-left: auto;
+      }
+    }
+  }
+}

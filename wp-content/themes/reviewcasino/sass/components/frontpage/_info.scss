@@ -1,0 +1,252 @@
+@import "../../abstracts/mixins/mixins";
+@import "../../abstracts/variables/colors";
+
+.info-about {
+  position: relative;
+  background: $color__violet_background;
+  padding: 58px 0;
+  @include for-tablet {
+    padding-bottom: 20px;
+  }
+  @include for-big-phone {
+    padding: 20px 0;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .middle-title {
+    @include middle-title();
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .info-descr {
+    @include description();
+    margin-top: 0;
+    margin-bottom: 30px;
+    @include for-big-phone {
+      @include text-style('Roboto Medium', normal, 500, 14px, 16px);
+    }
+  }
+
+  .info-block {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 620px;
+    height: 100%;
+    max-height: 100%;
+    @include for-desktop-mdl {
+      max-width: 100%;
+      flex: 0 0 100%;
+      position: relative;
+      z-index: 999;
+    }
+
+    .casino-games-list {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 40px;
+      display: grid;
+      column-gap: 70px;
+      row-gap: 54px;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      margin-bottom: 40px;
+      @include for-desktop-mdl {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include for-tablet-landscape-up {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include for-big-phone {
+        grid-template-rows: auto;
+      }
+
+      .casino-game-item {
+        width: 100%;
+        max-width: 143px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          margin-bottom: 16px;
+          width: auto;
+          max-width: 100%;
+        }
+
+        a {
+          @include light-text();
+          padding: 11px 5px;
+          text-align: center;
+          display: flex;
+          flex-flow: row;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 143px;
+          height: 100%;
+          max-height: 50px;
+
+        }
+      }
+
+      a.red-btn {
+        @include light-text();
+        grid-column: 1 / -1;
+        padding: 17px 14px;
+        width: 100%;
+        max-width: max-content;
+        height: 100%;
+        max-height: 63px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+        @include for-big-phone {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .play-casino {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 594px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    @include for-desktop-mdl {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+
+    .play-casino-list {
+      width: 100%;
+      max-width: 594px;
+      height: 100%;
+      max-height: 100%;
+      @include for-desktop-mdl {
+        max-width: 100%;
+      }
+    }
+
+    .middle-title {
+      width: 100%;
+      max-width: 435px;
+      @include for-desktop-mdl {
+        max-width: 100%;
+      }
+    }
+
+    .play-casino-block {
+      margin-bottom: 30px;
+      height: 100%;
+      max-height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #FFFFFF;
+      filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+      @include for-desktop-mdl {
+        max-width: 100%;
+      }
+      @include for-tablet {
+        margin-bottom: 20px;
+      }
+
+      .play-casino-name {
+        position: relative;
+        padding: 27px 34px 32px 44px;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        @include for-tablet {
+          padding: 25px 34px 25px 25px;
+        }
+        @include for-big-phone {
+          padding: 20px;
+          display: flex;
+        }
+        @include for-phone {
+        }
+
+        span.casino-name {
+          @include violet-text;
+          background: linear-gradient(0deg, rgba(124, 0, 221, 0.2), rgba(124, 0, 221, 0.2)),
+          linear-gradient(0deg, #6667AB, #6667AB);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          @include for-middle-phone {
+            width: 100%;
+            max-width: 75%;
+          }
+        }
+      }
+
+      .play-casino-descr {
+        p {
+          @include violet-text;
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          margin-top: 0;
+        }
+
+        margin: 0;
+      }
+    }
+
+    a {
+      @include light-text;
+      padding: 20px 30px;
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 20px;
+      text-decoration: none;
+      @include for-tablet {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .info-image-after {
+    position: absolute;
+    display: block;
+    top: 52px;
+    right: 45px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    z-index: 0;
+    @include for-tablet {
+      opacity: .7;
+    }
+    @include for-big-phone {
+      right: 33px;
+      top: auto;
+      bottom: 25%;
+      max-width: 93px;
+      opacity: 1;
+    }
+  }
+}

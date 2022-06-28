@@ -1,0 +1,97 @@
+@import "../../abstracts/mixins/mixins";
+
+.user-reviews-section {
+  margin-bottom: 50px;
+
+  .user-review-block {
+    padding-top: 30px;
+    margin-bottom: 30px;
+
+    h2 {
+      @include middle-title();
+      color: #ffffff;
+      padding-left: 30px;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .user-reviews-list {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      max-width: 100%;
+
+      .user-review-item {
+        border-top: 3px solid #ffffff;
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 30px 30px 45px;
+        display: grid;
+        grid-template-columns: 150px 1fr auto;
+        grid-template-rows: auto;
+
+        svg {
+          width: 121px;
+          height: 121px;
+          margin-right: 30px;
+        }
+
+        .user-review-item-content {
+          display: flex;
+          flex-flow: column;
+          align-items: flex-start;
+          justify-content: center;
+          flex: 0 0 auto;
+
+          h5 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+            color: #ffffff;
+          }
+
+          .user-review-date {
+            margin-top: 0;
+            margin-bottom: 12px;
+            @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+            color: #ffffff;
+          }
+
+          .user-review-content {
+            @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+            color: #ffffff;
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        .ranks-wrap {
+          padding-right: 40px;
+
+          .rating-group {
+            margin-right: 51px;
+          }
+
+          .rank-value {
+            @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    width: 100%;
+    max-width: 327px;
+    height: 100%;
+    max-height: 47px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+  }
+}

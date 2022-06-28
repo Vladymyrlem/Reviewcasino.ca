@@ -1,0 +1,57 @@
+@import "sass/abstracts/mixins/mixins";
+
+a {
+  color: $color__link;
+
+  &:visited {
+    color: $color__link-visited;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+a.red-btn {
+  @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+  padding: 21px 20px;
+  text-align: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  background: $color__background__red-button;
+  box-shadow: inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  text-decoration: none;
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+  }
+}
+
+a.violet-btn {
+  @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+  }
+  text-align: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  text-decoration: none;
+}

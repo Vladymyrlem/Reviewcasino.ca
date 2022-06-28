@@ -1,0 +1,36 @@
+h3 {
+  font-family: 'Roboto Medium', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/*Bonus text content*/
+@import "bonuses/bonus-content";
+/*Top block*/
+@import "bonuses/top-block";
+/*Top Bonuses block*/
+@import "bonuses/top-bonuses_block";
+/*All Reviews*/
+@import "bonuses/perfect-casino";
+
+/*Bonuses & promotions*/
+@import "bonuses/bonuses-and-promotions";
+/*Calculator*/
+@import "bonuses/bonuses-calculator";
+/*Wagering requirements*/
+@import "bonuses/wagering-requirements";
+/*Other promotions*/
+@import "bonuses/other-promotions";
+/*Terms and Conditions*/
+@import "bonuses/terms-and-conditions";
+/*How much*/
+@import "bonuses/how-much";
+/*Want to play*/
+@import "bonuses/want-to-play";
+/*Most popular*/
+@import "bonuses/most-popular";

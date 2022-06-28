@@ -1,0 +1,113 @@
+@import "sass/abstracts/abstracts";
+
+.ranks-wrap {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 0;
+  height: auto;
+  max-height: 70px;
+  width: 100%;
+  max-width: max-content;
+  padding-left: 10px;
+  margin-top: 20px;
+
+  .rating-title {
+    @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+    color: #ffffff;
+  }
+
+  .aggregate {
+    height: 0;
+  }
+
+  .rank-wrap {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 7px;
+    margin-top: 22px;
+  }
+
+  .reviews-name {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FDCD0A;
+    margin: 0 10px 0 0;
+  }
+
+  .rank-count {
+    font-size: 54px;
+  }
+
+  .ranks-value {
+    width: 100%;
+    max-width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rank-value {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FDCD0A;
+  }
+
+  .rank-name {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FDCD0A;
+  }
+
+  .rating-group {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: max-content;
+    margin-bottom: 0;
+
+    .star-rating {
+      position: relative;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+
+      #star {
+        position: absolute;
+        overflow: hidden;
+        z-index: 5;
+      }
+
+      #star img {
+        width: auto;
+        max-width: 167px;
+        height: auto;
+        margin-top: 0;
+      }
+
+      img.empty-stars {
+        position: relative;
+        z-index: 1;
+        width: auto;
+        max-width: 167px;
+      }
+    }
+  }
+}

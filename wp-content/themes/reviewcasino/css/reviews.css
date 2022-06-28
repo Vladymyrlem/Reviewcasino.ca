@@ -1,0 +1,3735 @@
+/*Review Archive page*/
+/*Top block*/
+.top-block {
+    margin-bottom: 25px;
+}
+
+.top-block h2.middle-title {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 833px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .top-block h2.middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .top-block h2.middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .top-block h2.middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.top-block .top-content {
+    padding: 22px 17px 2px 17px;
+}
+
+.top-block .top-content p {
+    margin: 0 0 20px 0;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+/*Top Three casinos*/
+.top-casinos .top-casinos-grid {
+    display: grid;
+    gap: 0 43px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item {
+    background: #7159B5;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 288px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-rows: 45px 183px auto 1fr 45px auto 35px;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-top: 25px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-title {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    height: 45px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-title h3 {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 9px 9px 3px 9px;
+    margin: 0;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .logo-casino {
+    background: #ffffff;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .logo-casino .wp-post-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    margin-bottom: 8px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item.top-casino-item:nth-child(2) {
+    order: -1;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item.top-casino-item:nth-child(1) {
+    height: calc(100% + 25px);
+    max-height: calc(100% + 25px);
+    margin-top: 0;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-game-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-game-block h5 {
+    margin: 0 0 13px 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-game-block span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-bonuses-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-bonuses-block h5 {
+    margin: 0 0 13px 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-bonuses-block span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .win-rate-data, .top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .payout-data {
+    flex: 0 0 49%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .win-rate-data span, .top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .payout-data span {
+    margin: 0 0 13px 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .win-rate-data svg {
+    margin-bottom: 14px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .payout-data svg {
+    margin-bottom: 5px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info {
+    display: none;
+    background: #7159B5;
+    position: absolute;
+    bottom: 35px;
+    z-index: 999;
+    width: 100%;
+    max-width: 288px;
+    padding: 18px 26px 26px 5px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .deposit-methods {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 34px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .deposit-methods span {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .deposit-methods .deposits-method-grid {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .deposit-methods .deposits-method-grid a {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 55px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .deposit-methods .deposits-method-grid a img {
+    width: 55px;
+    height: 39px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .inform-review-results {
+    display: flex;
+    flex-flow: column;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .inform-review-results ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .inform-review-results ul > li {
+    padding-left: 20px;
+    font-family: "Robto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .inform-review-results ul > li h3 {
+    margin: 0;
+    font-family: "Robto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .inform-review-results ul > li::before {
+    display: block;
+    width: 14px;
+    height: 11px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: url("data:image/svg+xml,%0A%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6753 0.542007C13.9088 0.758816 13.9392 1.11245 13.7578 1.36452L13.708 1.42528L5.583 10.1753C5.34875 10.4276 4.95957 10.4401 4.7097 10.2172L4.65465 10.1616L0.279648 5.16157C0.0523468 4.90179 0.0786703 4.50694 0.338443 4.27964C0.578234 4.06983 0.933121 4.07612 1.16508 4.28264L1.22037 4.33844L5.13938 8.81625L12.792 0.574721C13.0088 0.341234 13.3625 0.310793 13.6145 0.492229L13.6753 0.542007Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .inform-review-results .red-btn {
+    width: 100%;
+    max-width: 223px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    padding: 12px 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .inform-review-results a {
+    text-decoration: none;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .bottom-top-three-block {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .bottom-top-three-block .payout-data {
+    flex: 0 0 49%;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .bottom-top-three-block .payout-data span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .bottom-top-three-block .payout-data svg {
+    margin-bottom: 5px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .bottom-top-three-block .win-rate-data {
+    flex: 0 0 49%;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .bottom-top-three-block .win-rate-data span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .hidden-info .bottom-top-three-block .win-rate-data svg {
+    margin-bottom: 12px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item a {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 223px;
+    height: 100%;
+    max-height: 45px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item button.open-details {
+    background: transparent;
+    border: none;
+    font-family: "Robto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+/*Choose best block*/
+.choose-best {
+    padding: 0 0 0 28px;
+}
+
+.choose-best .left-choose {
+    float: left;
+    padding-top: 27px;
+}
+
+.choose-best .left-choose .small-title {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.choose-best .left-choose .choose-best-content {
+    margin-top: 27px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 547px;
+}
+
+.choose-best .left-choose .choose-best-content p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.choose-best img {
+    float: right;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+/*Perfect Casinos List All Reviews*/
+.all-casino-review {
+    margin-bottom: 50px;
+}
+
+.all-casino-review h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.all-casino-review .all-reviews-list {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.all-casino-review .all-reviews-list article {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 160px auto minmax(auto, 238px);
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    padding: 0 34px 0 0;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.all-casino-review .all-reviews-list article:last-child {
+    margin-bottom: 0;
+}
+
+.all-casino-review .all-reviews-list article .logo-review-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.all-casino-review .all-reviews-list article .logo-review-block .country-flag {
+    width: 100%;
+    max-width: 57px;
+    height: 100%;
+    max-height: 54px;
+    margin-top: 10px;
+}
+
+.all-casino-review .all-reviews-list article .logo-review-block .review-number {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 25px;
+    height: 100%;
+    max-height: 25px;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block {
+    padding: 34px 20px 34px 37px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px !important;
+    width: 100%;
+    max-width: 100%;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .left-head-review {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: auto;
+    max-width: 230px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .left-head-review span.title-name {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .left-head-review .game-link {
+    width: 100%;
+    max-width: 220px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    word-break: break-word;
+    text-decoration: none;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: max-content;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data, .all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data {
+    flex: 0 0 49%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data svg, .all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data svg {
+    margin-bottom: 10px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data span, .all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data span {
+    margin: 0 0 13px 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data svg {
+    margin-bottom: 12px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data svg {
+    margin-bottom: 5px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 100%;
+    margin-bottom: 14px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses .top-info-name {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-value {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFF615;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-share {
+    display: flex;
+    flex-flow: row;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-share svg {
+    margin-right: 10px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-subtitle {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    width: 100%;
+    max-width: max-content;
+    text-align: center;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .bottom-links {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .bottom-links .red-btn {
+    width: 100%;
+    max-width: 162px;
+    height: 100%;
+    max-height: 43px;
+    margin-right: 50px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    padding: 10px 11px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .bottom-links .read-review {
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+    max-height: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    padding: 10px 10px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block {
+    width: 100%;
+    max-width: 238px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 34px 0 34px 10px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid .deposit-head {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid .deposit-head span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid .deposit-head a {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-head {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-head span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-head a {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 25px 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item {
+    background: #FFFFFF;
+    border-radius: 5px;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 61px;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item .thumbnail {
+    width: auto;
+    max-width: 30px;
+    height: auto;
+    max-height: 30px;
+    margin-bottom: 3px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item .thumbnail img {
+    width: auto;
+    max-width: 30px;
+    height: auto;
+    max-height: 30px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item .term-name {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.all-casino-review .more-reviews {
+    padding: 16px 15px 12px 16px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-list-casinos {
+    padding: 30px;
+}
+
+.full-list-casinos h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 20px;
+}
+
+.full-list-casinos form {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 71px;
+}
+
+.full-list-casinos form input[type=search] {
+    width: 100%;
+    max-width: 100%;
+    background: #ffffff;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 24px 0 19px 23px;
+    outline: none;
+}
+
+.full-list-casinos form input[type=search]::placeholder {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.full-list-casinos .all-reviews-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.full-list-casinos .all-reviews-list .review-post {
+    flex: 0 0 25%;
+    width: 100%;
+    max-width: 272px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.full-list-casinos .all-reviews-list .review-post a {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 70px;
+    padding: 24px 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Review criteria Block*/
+.review-criteria .description {
+    width: 100%;
+    max-width: 882px;
+}
+
+.review-criteria .description p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 560px) {
+    .review-criteria .description p {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.review-criteria .criteria-list {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+.review-criteria .criteria-list .criteria-list-item {
+    display: flex;
+    margin-bottom: 25px;
+    padding: 27px 46px 45px 28px;
+}
+
+.review-criteria .criteria-list .criteria-list-item .left-criteria {
+    float: left;
+    width: 100%;
+    max-width: 698px;
+}
+
+.review-criteria .criteria-list .criteria-list-item .left-criteria .criteria-title {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.review-criteria .criteria-list .criteria-list-item .left-criteria .criteria-content {
+    width: 100%;
+    max-width: 100%;
+}
+
+.review-criteria .criteria-list .criteria-list-item .left-criteria .criteria-content p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.review-criteria .criteria-list .criteria-list-item img {
+    float: right;
+    margin-left: auto;
+}
+
+/*Expert Ratings Block*/
+.expert-ratings .expert-container {
+    padding: 34px 19px 25px 29px;
+    display: flex;
+    flex-flow: column;
+}
+
+.expert-ratings .expert-container .middle-title {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    text-shadow: none !important;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .expert-ratings .expert-container .middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .expert-ratings .expert-container .middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .expert-ratings .expert-container .middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.expert-ratings .expert-container .rating-descr {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    margin-bottom: 19px;
+}
+
+.expert-ratings .expert-container .bottom-rating-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expert-ratings .expert-container .bottom-rating-block .right-decor-image {
+    float: left;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.expert-ratings .expert-container .bottom-rating-block .right-part {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+}
+
+.expert-ratings .expert-container .bottom-rating-block .right-part .expert-rating-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-left: 0;
+    padding-left: 22px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.expert-ratings .expert-container .bottom-rating-block .right-part .expert-rating-list .expert-rating-item {
+    font-family: "Robto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 17px;
+    width: auto;
+    max-width: 100%;
+}
+
+.expert-ratings .expert-container .ranks-wrap {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.expert-ratings .expert-container .ranks-wrap .rating-title {
+    margin: 0;
+}
+
+.expert-ratings .expert-container .ranks-wrap .rating-group {
+    margin-left: 20px;
+}
+
+.expert-ratings a {
+    color: #ffffff;
+    padding: 19px;
+    width: 100%;
+    max-width: 370px;
+    height: 100%;
+    max-height: 68px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+/*Choose Right Casino*/
+.choose-right {
+    margin-bottom: 0;
+}
+
+.choose-right .middle-title {
+    width: 100%;
+    max-width: 100%;
+}
+
+.choose-right .right-descr {
+    width: 100%;
+    max-width: 100%;
+}
+
+.choose-right .right-descr p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 560px) {
+    .choose-right .right-descr p {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.choose-right .choose-right-casinos-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.choose-right .choose-right-casinos-list > li {
+    display: grid;
+    grid-template-columns: 900px auto;
+    grid-template-rows: auto;
+    margin-bottom: 25px !important;
+}
+
+.choose-right .choose-right-casinos-list > li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.choose-right .choose-right-casinos-list > li .choose-right-title {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.choose-right .choose-right-casinos-list > li .left-part {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 900px;
+    padding: 25px 20px 29px 49px;
+}
+
+.choose-right .choose-right-casinos-list > li .left-part .content-right p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.choose-right .choose-right-casinos-list > li .img-right {
+    justify-self: center;
+    align-self: center;
+}
+
+.choose-right .choose-right-casinos-list > li .img-right img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+/*Single review*/
+/*Top review block*/
+.head-review-content {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.head-review-content .hidden {
+    display: none;
+}
+
+.head-review-content a.ShowMore {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: block;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    margin-top: 10px;
+    color: #ffffff !important;
+    text-decoration: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.head-review-content.top-info-block {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 160px 180px 153px 94px 197px 121px 214px;
+    place-content: space-between;
+    border-radius: 10px;
+    padding-right: 20px;
+}
+
+.head-review-content.top-info-block .deposit-method-list.part-items .more-items {
+    top: 75px;
+}
+
+.head-review-content.top-info-block .more-items {
+    display: none;
+    position: absolute;
+    top: auto;
+    left: 0;
+    padding: 8px 20px 15px 20px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.head-review-content.top-info-block .top-info-name {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+}
+
+.head-review-content.top-info-block .logo-review-block {
+    width: 100%;
+    max-width: 160px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.head-review-content.top-info-block .review-bonuses {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 180px;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+.head-review-content.top-info-block .review-bonuses #bonus-value {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFF615;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.head-review-content.top-info-block .review-bonuses #bonus-share {
+    display: flex;
+    flex-flow: row;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.head-review-content.top-info-block .review-bonuses #bonus-share svg {
+    margin-right: 10px;
+}
+
+.head-review-content.top-info-block .review-bonuses #bonus-subtitle {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 181px;
+    text-align: center;
+}
+
+.head-review-content.top-info-block .deposit-methods {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.head-review-content.top-info-block .deposit-methods .deposits-method-grid {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 153px;
+    position: relative;
+}
+
+.head-review-content.top-info-block .deposit-methods .deposits-method-grid span {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.head-review-content.top-info-block .deposit-methods .deposits-method-grid .deposit-method-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.head-review-content.top-info-block .deposit-methods .deposits-method-grid .deposit-method-list a {
+    margin-right: 10px;
+}
+
+.head-review-content.top-info-block .deposit-methods .deposits-method-grid .deposit-method-list a img {
+    width: 38px;
+    height: 28px;
+}
+
+.head-review-content.top-info-block .deposit-methods .deposits-method-grid .deposit-method-list a.ShowMore {
+    margin: 0;
+    text-align: center;
+    height: 14px;
+}
+
+.head-review-content.top-info-block .devices-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-review-content.top-info-block .devices-block .devices-list {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 21px 0 0 0;
+    padding: 0;
+}
+
+.head-review-content.top-info-block .devices-block .devices-list > li {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin-right: 10px;
+}
+
+.head-review-content.top-info-block .devices-block .devices-list > li:last-child {
+    margin-right: 0;
+}
+
+.head-review-content.top-info-block #games-grid {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-self: center;
+    position: relative;
+}
+
+.head-review-content.top-info-block #games-grid span {
+    margin-bottom: 10px;
+}
+
+.head-review-content.top-info-block #games-grid .games-type-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 197px;
+    position: relative;
+}
+
+.head-review-content.top-info-block #games-grid .games-type-list .more-items {
+    top: 75px;
+}
+
+.head-review-content.top-info-block #games-grid .games-type-list a {
+    flex: 0 0 auto;
+    width: 61px;
+    height: auto;
+    max-height: 70px;
+    padding: 4px 11px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.head-review-content.top-info-block #games-grid .games-type-list a .thumbnail {
+    width: 100%;
+    max-width: 30px;
+    height: 100%;
+    max-height: 30px;
+}
+
+.head-review-content.top-info-block #games-grid .games-type-list a span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    color: #000000;
+    text-align: center;
+}
+
+.head-review-content.top-info-block #games-grid .games-type-list .ShowMore {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.head-review-content.top-info-block .certifications {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-review-content.top-info-block .certifications span {
+    margin-bottom: 20px;
+}
+
+.head-review-content.top-info-block .certifications .empty-certificate {
+    width: 49px;
+    height: 44px;
+    background: #ffffff;
+}
+
+.head-review-content.top-info-block a.red-btn {
+    padding: 13px 30px;
+    text-align: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    color: #ffffff;
+    width: 100%;
+    max-width: 214px;
+    height: 100%;
+    max-height: 56px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 25px;
+}
+
+/*Information Review*/
+.information-review {
+    padding: 30px 27px 30px 17px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.information-review .info-review-block {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.information-review .info-review-block h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .information-review .info-review-block h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .information-review .info-review-block h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .information-review .info-review-block h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.information-review .info-review-block.left-info {
+    max-width: 623px;
+    z-index: 10;
+}
+
+.information-review .info-review-block.left-info .info-description {
+    width: 100%;
+    max-width: 575px;
+    margin-bottom: 30px;
+}
+
+.information-review .info-review-block.left-info .info-description p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.information-review .info-review-block.left-info .info-description p:last-child {
+    margin-bottom: 0;
+}
+
+.information-review .info-review-block.left-info .info-group {
+    padding-left: 13px;
+}
+
+.information-review .info-review-block.left-info .info-group h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .information-review .info-review-block.left-info .info-group h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .information-review .info-review-block.left-info .info-group h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .information-review .info-review-block.left-info .info-group h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list {
+    margin-bottom: 34px;
+    background: transparent;
+    border-radius: 10px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 612px;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    position: relative;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody {
+    padding: 2px;
+    position: relative;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    position: relative;
+    z-index: 99;
+    margin-bottom: 2px;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr:last-child {
+    margin-bottom: 0;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr > td {
+    flex: 0 0 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 306px;
+    padding: 10px 15px 17px 7px;
+    background: #ffffff;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr > td:first-child {
+    margin-right: 3px;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr > td .info-name, .information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr > td .info-value {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    flex: 0 0 49%;
+    word-break: break-all;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr:first-child > td {
+    padding-top: 22px;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list > tbody > tr:last-child > td {
+    padding-bottom: 25px;
+}
+
+.information-review .info-review-block.left-info .info-group .info-table-list::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), linear-gradient(0deg, #6667AB, #6667AB);
+    z-index: -1;
+}
+
+.information-review .info-review-block.left-info .advantages-grid {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 623px;
+}
+
+.information-review .info-review-block.left-info .advantages-grid h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-left: 17px;
+}
+
+@media (max-width: 768px) {
+    .information-review .info-review-block.left-info .advantages-grid h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .information-review .info-review-block.left-info .advantages-grid h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .information-review .info-review-block.left-info .advantages-grid h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block {
+    width: 100%;
+    max-width: 306px;
+    height: 100%;
+    max-height: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77)), #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px 5px 20px 10px;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block .advantages-title {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block .advantages-list {
+    flex: 0 0 49%;
+    width: 100%;
+    max-width: 100%;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block .advantages-list > li {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block .advantages-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block .advantages-list > li::before {
+    content: url("data:image/svg+xml,%0A%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 11C22 17.0751 17.0751 22 11 22C4.92485 22 0 17.0751 0 11C0 4.92485 4.92485 0 11 0C17.0751 0 22 4.92485 22 11ZM9.72764 16.8244L17.8889 8.66312C18.1661 8.38599 18.1661 7.93663 17.8889 7.6595L16.8853 6.65589C16.6082 6.37871 16.1588 6.37871 15.8816 6.65589L9.22581 13.3117L6.11835 10.2042C5.84122 9.9271 5.39186 9.9271 5.11469 10.2042L4.11107 11.2078C3.83394 11.485 3.83394 11.9343 4.11107 12.2115L8.72398 16.8244C9.00115 17.1015 9.45046 17.1015 9.72764 16.8244Z' fill='%236667AB'/%3E%3Cpath d='M22 11C22 17.0751 17.0751 22 11 22C4.92485 22 0 17.0751 0 11C0 4.92485 4.92485 0 11 0C17.0751 0 22 4.92485 22 11ZM9.72764 16.8244L17.8889 8.66312C18.1661 8.38599 18.1661 7.93663 17.8889 7.6595L16.8853 6.65589C16.6082 6.37871 16.1588 6.37871 15.8816 6.65589L9.22581 13.3117L6.11835 10.2042C5.84122 9.9271 5.39186 9.9271 5.11469 10.2042L4.11107 11.2078C3.83394 11.485 3.83394 11.9343 4.11107 12.2115L8.72398 16.8244C9.00115 17.1015 9.45046 17.1015 9.72764 16.8244Z' fill='url(%23paint0_linear_748_6288)' fill-opacity='0.2'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_748_6288' x1='11' y1='3.35099' x2='11' y2='19.8146' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.421875' stop-color='%23A119E0'/%3E%3Cstop offset='0.869792' stop-color='%23A119E0' stop-opacity='0.92'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block {
+    width: 100%;
+    max-width: 306px;
+    height: 100%;
+    max-height: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77)), #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px 5px 20px 10px;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block .disadvantages-title {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block .disadvantages-list {
+    flex: 0 0 49%;
+    width: 100%;
+    max-width: 100%;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block .disadvantages-list > li {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block .disadvantages-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block .disadvantages-list > li::before {
+    content: url("data:image/svg+xml,%0A%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 0C4.92489 0 0 4.92485 0 11C0 17.0751 4.92489 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92489 17.0751 0 11 0ZM16.7709 5.22908C19.6739 8.13202 19.8758 12.569 17.688 15.6807L6.31923 4.312C9.43312 2.12282 13.8696 2.32779 16.7709 5.22908ZM5.22908 16.7709C2.32615 13.868 2.12424 9.43104 4.31196 6.31928L15.6808 17.688C12.5669 19.8772 8.13042 19.6723 5.22908 16.7709Z' fill='%236667AB'/%3E%3Cpath d='M11 0C4.92489 0 0 4.92485 0 11C0 17.0751 4.92489 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92489 17.0751 0 11 0ZM16.7709 5.22908C19.6739 8.13202 19.8758 12.569 17.688 15.6807L6.31923 4.312C9.43312 2.12282 13.8696 2.32779 16.7709 5.22908ZM5.22908 16.7709C2.32615 13.868 2.12424 9.43104 4.31196 6.31928L15.6808 17.688C12.5669 19.8772 8.13042 19.6723 5.22908 16.7709Z' fill='url(%23paint0_linear_748_6296)' fill-opacity='0.2'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_748_6296' x1='11' y1='3.35099' x2='11' y2='19.8146' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.421875' stop-color='%23A119E0'/%3E%3Cstop offset='0.869792' stop-color='%23A119E0' stop-opacity='0.92'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.information-review .info-review-block.right-info {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 590px;
+    z-index: 10;
+}
+
+.information-review .info-review-block.right-info .editors-verdict h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .information-review .info-review-block.right-info .editors-verdict h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .information-review .info-review-block.right-info .editors-verdict h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .information-review .info-review-block.right-info .editors-verdict h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list {
+    display: flex;
+    flex-flow: column;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: initial !important;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block.open {
+    border-radius: 10px 10px 0 0;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-name {
+    position: relative;
+    z-index: 0;
+    padding: 16px 22px 17px 16px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-name .verdict-head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-name .verdict-head .verdict-name {
+    font-family: "Robto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-name .ranks-wrap {
+    margin-top: 0;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-name .ranks-wrap .rank-value {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0 20px;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-descr {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 23px 22px 17px 22px;
+    z-index: 99;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-descr p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-descr p:last-child {
+    margin-bottom: 0;
+}
+
+.information-review .info-review-block.right-info .info-description {
+    width: 100%;
+    max-width: 552px;
+}
+
+.information-review .info-review-block.right-info .info-description p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.information-review .info-review-block.right-info .info-description p:last-child {
+    margin-bottom: 0;
+}
+
+.information-review .info-review-after {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.verdict-middle {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+}
+
+.verdict-middle .verdict-middle-title {
+    font-family: "Robto Medium", sans-serif;
+    font-style: noraml;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.verdict-middle .editors-verdict-middle-group {
+    position: relative;
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+    max-height: 44px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 11px 10px 11px 40px;
+}
+
+.verdict-middle .editors-verdict-middle-group::before {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 11px;
+    content: url("data:image/svg+xml,%0A%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.9271 0.695722L6.48599 5.86696L1.02432 6.69889C0.0448775 6.84731 -0.347645 8.10887 0.362634 8.83144L4.31403 12.8544L3.37945 18.5373C3.21123 19.5645 4.24674 20.3339 5.11403 19.8535L10 17.1702L14.886 19.8535C15.7533 20.33 16.7888 19.5645 16.6206 18.5373L15.686 12.8544L19.6374 8.83144C20.3476 8.10887 19.9551 6.84731 18.9757 6.69889L13.514 5.86696L11.0729 0.695722C10.6355 -0.226039 9.36823 -0.237757 8.9271 0.695722Z' fill='%23FFE600'/%3E%3C/svg%3E%0A");
+    width: 20px;
+    height: 20px;
+}
+
+.verdict-middle .editors-verdict-middle-group .verdict-middle-value {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+/*Sliders Group*/
+.sliders-group {
+    justify-content: space-between;
+    padding: 30px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.sliders-group h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    margin-top: 0;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .sliders-group h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .sliders-group h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .sliders-group h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.sliders-group .images-slider, .sliders-group .video-slider {
+    width: 100%;
+    max-width: 600px;
+    flex: 0 0 49%;
+}
+
+.sliders-group .images-slider .slick-dots, .sliders-group .video-slider .slick-dots {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.sliders-group .images-slider .slick-dots li, .sliders-group .video-slider .slick-dots li {
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+.sliders-group .images-slider .slick-dots li button, .sliders-group .video-slider .slick-dots li button {
+    font-size: 0;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: none;
+}
+
+.sliders-group .images-slider .slick-dots li.slick-active button, .sliders-group .video-slider .slick-dots li.slick-active button {
+    background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%), linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+}
+
+.sliders-group .images-slider .slide, .sliders-group .video-slider .slide {
+    width: 100%;
+    max-width: 509px;
+    position: relative;
+    /*margin: 0 20px 0 0;*/
+    margin-right: 6px;
+    margin-left: 5px;
+}
+
+.sliders-group .video-slider .slide, .sliders-group .video-slider .slide iframe {
+    height: 439px !important;
+}
+
+.sliders-group .slider {
+    margin-bottom: 31px;
+}
+
+.sliders-group .images-slider .slide img, .sliders-group .images-slider .slide iframe, .sliders-group .video-slider .slide img, .sliders-group .video-slider .slide iframe {
+    width: 100%;
+    max-width: 509px;
+    height: auto;
+    max-height: 439px;
+}
+
+.sliders-group .images-slider .slick-list, .sliders-group .video-slider .slick-list {
+    margin: 0 auto 20px auto;
+    padding: 0 5px !important;
+    width: 100%;
+    max-width: 509px;
+    height: 100%;
+    max-height: 439px;
+}
+
+.sliders-group .images-slider .slick-arrow:focus, .sliders-group .video-slider .slick-arrow:focus {
+    outline: none;
+}
+
+.sliders-group .images-slider .slick-arrow, .sliders-group .video-slider .slick-arrow {
+    background: none;
+    border: 0;
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0;
+    width: 30px;
+    height: 44px;
+}
+
+.sliders-group .images-slider .slick-arrow:hover, .sliders-group .video-slider .slick-arrow:hover {
+    cursor: pointer;
+}
+
+.sliders-group .images-slider .slick-next, .sliders-group .video-slider .slick-next {
+    right: 5px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.sliders-group .images-slider .slick-prev, .sliders-group .video-slider .slick-prev {
+    left: 5px;
+}
+
+/*How Register Block*/
+.how-register {
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.how-register h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.how-register .content {
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 690px;
+}
+
+.how-register .content p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.how-register .content p:last-child {
+    margin-bottom: 0;
+}
+
+.how-register .users-data-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.how-register .users-data-list > li {
+    padding-left: 40px;
+    margin-bottom: 22px;
+    margin-top: 20px;
+    position: relative;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+}
+
+.how-register .users-data-list > li::before {
+    content: url("data:image/svg+xml, %3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.9167 0H2.08333C0.93316 0 0 0.93316 0 2.08333V17.3611C0 18.5113 0.93316 19.4444 2.08333 19.4444H22.9167C24.0668 19.4444 25 18.5113 25 17.3611V2.08333C25 0.93316 24.0668 0 22.9167 0ZM7.63889 4.16667C9.17101 4.16667 10.4167 5.41233 10.4167 6.94444C10.4167 8.47656 9.17101 9.72222 7.63889 9.72222C6.10677 9.72222 4.86111 8.47656 4.86111 6.94444C4.86111 5.41233 6.10677 4.16667 7.63889 4.16667ZM12.5 14.4444C12.5 14.9045 12.066 15.2778 11.5278 15.2778H3.75C3.21181 15.2778 2.77778 14.9045 2.77778 14.4444V13.6111C2.77778 12.2309 4.0842 11.1111 5.69444 11.1111H5.91146C6.44531 11.3325 7.02691 11.4583 7.63889 11.4583C8.25087 11.4583 8.83681 11.3325 9.36632 11.1111H9.58333C11.1936 11.1111 12.5 12.2309 12.5 13.6111V14.4444ZM22.2222 12.1528C22.2222 12.3437 22.066 12.5 21.875 12.5H15.625C15.434 12.5 15.2778 12.3437 15.2778 12.1528V11.4583C15.2778 11.2674 15.434 11.1111 15.625 11.1111H21.875C22.066 11.1111 22.2222 11.2674 22.2222 11.4583V12.1528ZM22.2222 9.375C22.2222 9.56597 22.066 9.72222 21.875 9.72222H15.625C15.434 9.72222 15.2778 9.56597 15.2778 9.375V8.68055C15.2778 8.48958 15.434 8.33333 15.625 8.33333H21.875C22.066 8.33333 22.2222 8.48958 22.2222 8.68055V9.375ZM22.2222 6.59722C22.2222 6.78819 22.066 6.94444 21.875 6.94444H15.625C15.434 6.94444 15.2778 6.78819 15.2778 6.59722V5.90278C15.2778 5.7118 15.434 5.55555 15.625 5.55555H21.875C22.066 5.55555 22.2222 5.7118 22.2222 5.90278V6.59722Z' fill='white'/%3E%3C/svg%3E");
+    display: block;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.how-register .users-data-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.how-register .register-img-after {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    right: 23px;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*Gaming Variety*/
+.game-variety {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.game-variety table.table-variety {
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    border-radius: 10px;
+    border-collapse: collapse;
+    border: 0;
+    border-spacing: 2px 3px;
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .game-variety table.table-variety {
+        background: transparent;
+    }
+}
+
+.game-variety table.table-variety caption {
+    width: 100%;
+    max-width: 100%;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: left;
+    color: #ffffff;
+    height: 100%;
+    max-height: 100%;
+    padding: 30px 20px 20px 30px;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    border-radius: 10px 10px 0 0;
+}
+
+.game-variety table.table-variety > thead {
+    background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%), linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+}
+
+.game-variety table.table-variety > thead > tr {
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 3px 0 0 0;
+}
+
+.game-variety table.table-variety > thead > tr > th {
+    padding: 30px 10px;
+    text-align: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0 3px 0 0;
+}
+
+.game-variety table.table-variety > thead > tr > th.fixed-side {
+    display: none;
+    background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%), linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+}
+
+@media (max-width: 900px) {
+    .game-variety table.table-variety > thead > tr > th.fixed-side {
+        display: block;
+    }
+}
+
+.game-variety table.table-variety > thead > tr > th:last-child {
+    border-right-width: 0;
+}
+
+@media (max-width: 900px) {
+    .game-variety table.table-variety > tbody > tr {
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        margin-bottom: 20px;
+        border: none;
+    }
+}
+
+.game-variety table.table-variety > tbody > tr > td {
+    padding: 30px 10px;
+    width: auto;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    text-align: center;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 3px 2px 0 0;
+}
+
+.game-variety table.table-variety > tbody > tr > td.fixed-side {
+    display: none;
+    background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%), linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+}
+
+@media (max-width: 900px) {
+    .game-variety table.table-variety > tbody > tr > td.fixed-side {
+        display: block;
+        text-align: center;
+        border-right-width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .game-variety table.table-variety > tbody > tr > td {
+        text-align: left;
+    }
+}
+
+.game-variety table.table-variety > tbody > tr > td:last-child {
+    width: auto;
+    max-width: 345px;
+    border-right: 0;
+}
+
+@media (max-width: 900px) {
+    .game-variety table.table-variety > tbody > tr > td:last-child {
+        max-width: 100%;
+    }
+}
+
+.game-variety table.table-variety > tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+/*Most Popular Games*/
+.most-popular-games {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.most-popular-games h2 {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.most-popular-games a {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 198px;
+}
+
+.most-popular-games a img {
+    width: 100%;
+    max-width: 198px;
+    height: 100%;
+    max-height: 139px;
+    border-radius: 10px;
+}
+
+/*Vip Programm*/
+.vip-programm {
+    padding: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.vip-programm h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.vip-programm .vip-content p {
+    font-family: "Robto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.vip-programm .vip-content p:last-child {
+    margin-bottom: 0;
+}
+
+/*Ruby Fortune*/
+.mobile-app-section {
+    margin-bottom: 50px;
+    padding-top: 30px;
+}
+
+.mobile-app-section h2.middle-title {
+    padding-left: 30px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .mobile-app-section h2.middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .mobile-app-section h2.middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .mobile-app-section h2.middle-title {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.mobile-app-section .top-block {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px 10px 30px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.mobile-app-section .top-block .content p {
+    font-family: "Robto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.mobile-app-section .top-block .steps-guide-list {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.mobile-app-section .top-block .steps-guide-list > li {
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    position: relative;
+}
+
+.mobile-app-section .top-block .steps-guide-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-app-section .top-block .steps-guide-list > li::before {
+    content: url("data:image/svg+xml,%0A%3Csvg width='19' height='25' viewBox='0 0 19 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4062 3.125H12.5C12.5 1.40137 11.0986 0 9.375 0C7.65137 0 6.25 1.40137 6.25 3.125H2.34375C1.0498 3.125 0 4.1748 0 5.46875V22.6562C0 23.9502 1.0498 25 2.34375 25H16.4062C17.7002 25 18.75 23.9502 18.75 22.6562V5.46875C18.75 4.1748 17.7002 3.125 16.4062 3.125ZM9.375 1.95312C10.0244 1.95312 10.5469 2.47559 10.5469 3.125C10.5469 3.77441 10.0244 4.29688 9.375 4.29688C8.72559 4.29688 8.20312 3.77441 8.20312 3.125C8.20312 2.47559 8.72559 1.95312 9.375 1.95312ZM15.293 13.2715L8.31055 20.1953C8.08105 20.4248 7.70996 20.4199 7.48047 20.1904L3.44727 16.123C3.21777 15.8936 3.22266 15.5225 3.45215 15.293L4.83887 13.916C5.06836 13.6865 5.43945 13.6914 5.66895 13.9209L7.91504 16.1865L13.0908 11.0498C13.3203 10.8203 13.6914 10.8252 13.9209 11.0547L15.2979 12.4414C15.5273 12.6758 15.5225 13.042 15.293 13.2715Z' fill='white'/%3E%3C/svg%3E%0A");
+    display: block;
+    width: 19px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mobile-app-section .top-block .mobs-apps-after-image {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    z-index: 0;
+}
+
+.mobile-app-section .devices-grid {
+    width: 100%;
+    max-width: 100%;
+    border-top: 3px solid #ffffff;
+    padding: 20px 30px 30px 30px;
+}
+
+.mobile-app-section .devices-grid .devices-list {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.mobile-app-section .devices-grid .devices-list > li {
+    flex: 0 0 auto;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 15px 20px 15px 20px;
+    height: 100%;
+    max-height: 54px;
+    width: 100%;
+    max-width: 154px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.mobile-app-section .devices-grid .devices-list > li:last-child {
+    margin-right: 0;
+}
+
+.mobile-app-section .devices-grid .devices-list > li svg {
+    margin-right: 10px;
+}
+
+.mobile-app-section .devices-grid .devices-list > li span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/*Customer Support*/
+.customer-support {
+    padding: 30px;
+    overflow: hidden;
+}
+
+.customer-support h2 {
+    margin-bottom: 20px;
+}
+
+.customer-support .customer-support-content {
+    margin-bottom: 30px;
+}
+
+.customer-support .customer-support-content p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.customer-support .customer-support-content p:last-child {
+    margin-bottom: 0;
+}
+
+.customer-support .support-list {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.customer-support .support-list .support-item {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 146px;
+    max-width: max-content;
+    padding: 15px 17px 13px 16px;
+    margin-right: 20px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.customer-support .support-list .support-item .support-ico {
+    margin-right: 10px;
+}
+
+.customer-support .support-list .support-item span {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.customer-support .languages-list {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(8, 1fr);
+    place-items: flex-start;
+    width: 100%;
+    max-width: 700px;
+}
+
+.customer-support .languages-list .flag-image {
+    width: auto;
+    max-width: 50px;
+    height: 100%;
+    max-height: 50px;
+}
+
+.customer-support .custom-support-image-after {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    right: -20px;
+    bottom: 50px;
+}
+
+/*Conclusion*/
+.conclusion-section {
+    padding: 33px 30px 30px 30px;
+    display: block;
+}
+
+.conclusion-section .top-conclusion {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.conclusion-section .top-conclusion h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.conclusion-section .top-conclusion .info-description {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.conclusion-section .top-conclusion .info-description p {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.conclusion-section .top-conclusion .info-description p:last-child {
+    margin-bottom: 0;
+}
+
+/*Full list*/
+.all-casino-review {
+    margin-bottom: 50px;
+}
+
+.all-casino-review h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.all-casino-review .all-reviews-list {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.all-casino-review .all-reviews-list article {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 160px auto minmax(auto, 238px);
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    padding: 0 34px 0 0;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.all-casino-review .all-reviews-list article:last-child {
+    margin-bottom: 0;
+}
+
+.all-casino-review .all-reviews-list article .logo-review-block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.all-casino-review .all-reviews-list article .logo-review-block .country-flag {
+    width: 100%;
+    max-width: 57px;
+    height: 100%;
+    max-height: 54px;
+    margin-top: 10px;
+}
+
+.all-casino-review .all-reviews-list article .logo-review-block .review-number {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 25px;
+    height: 100%;
+    max-height: 25px;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block {
+    padding: 34px 20px 34px 37px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px !important;
+    width: 100%;
+    max-width: 100%;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .left-head-review {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: auto;
+    max-width: 230px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .left-head-review span.title-name {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .left-head-review .game-link {
+    width: 100%;
+    max-width: 220px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    word-break: break-word;
+    text-decoration: none;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: max-content;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data, .all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data {
+    flex: 0 0 49%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data svg, .all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data svg {
+    margin-bottom: 10px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data span, .all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data span {
+    margin: 0 0 13px 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .win-rate-data svg {
+    margin-bottom: 12px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .top-block .payouts-block .payout-data svg {
+    margin-bottom: 5px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 100%;
+    margin-bottom: 14px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses .top-info-name {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-value {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFF615;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-share {
+    display: flex;
+    flex-flow: row;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-share svg {
+    margin-right: 10px;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .review-bonuses #bonus-subtitle {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    width: 100%;
+    max-width: max-content;
+    text-align: center;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .bottom-links {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .bottom-links .red-btn {
+    width: 100%;
+    max-width: 162px;
+    height: 100%;
+    max-height: 43px;
+    margin-right: 50px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    padding: 10px 11px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.all-casino-review .all-reviews-list article .middle-block .bottom-links .read-review {
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+    max-height: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    padding: 10px 10px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block {
+    width: 100%;
+    max-width: 238px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 34px 0 34px 10px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid .deposit-head {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid .deposit-head span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .deposits-method-grid .deposit-head a {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-head {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-head span {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-head a {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 25px 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item {
+    background: #FFFFFF;
+    border-radius: 5px;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 61px;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item .thumbnail {
+    width: auto;
+    max-width: 30px;
+    height: auto;
+    max-height: 30px;
+    margin-bottom: 3px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item .thumbnail img {
+    width: auto;
+    max-width: 30px;
+    height: auto;
+    max-height: 30px;
+}
+
+.all-casino-review .all-reviews-list article .right-review-block .games-block .games-type-list .game-item .term-name {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.all-casino-review .more-reviews {
+    padding: 16px 15px 12px 16px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-list-casinos {
+    padding: 30px;
+}
+
+.full-list-casinos h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 20px;
+}
+
+.full-list-casinos form {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 71px;
+}
+
+.full-list-casinos form input[type=search] {
+    width: 100%;
+    max-width: 100%;
+    background: #ffffff;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 24px 0 19px 23px;
+    outline: none;
+}
+
+.full-list-casinos form input[type=search]::placeholder {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normla;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.full-list-casinos .all-reviews-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.full-list-casinos .all-reviews-list .review-post {
+    flex: 0 0 25%;
+    width: 100%;
+    max-width: 272px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.full-list-casinos .all-reviews-list .review-post a {
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 70px;
+    padding: 24px 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Other casinos*/
+.other-online-casinos {
+    padding: 30px;
+}
+
+.other-online-casinos .other-casinos-grid {
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 231px;
+}
+
+.other-online-casinos .other-casinos-grid .other-casino-item {
+    flex: 0 0 33%;
+    width: 100%;
+    max-width: 380px;
+    height: 100%;
+    min-height: 231px;
+    max-height: 231px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-online-casinos .other-casinos-grid .other-casino-item .other-casino-link {
+    position: absolute;
+    left: 14px;
+    bottom: 13px;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.other-online-casinos .other-casinos-grid .other-casino-item .other-casino-link svg {
+    margin-left: 5px;
+}
+
+/*User reviews*/
+.user-reviews-section {
+    margin-bottom: 50px;
+}
+
+.user-reviews-section .user-review-block {
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.user-reviews-section .user-review-block h2 {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    color: #ffffff;
+    padding-left: 30px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .user-reviews-section .user-review-block h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+
+@media (max-width: 560px) {
+    .user-reviews-section .user-review-block h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .user-reviews-section .user-review-block h2 {
+        font-family: "Roboto Medium", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.user-reviews-section .user-review-block .user-reviews-list {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item {
+    border-top: 3px solid #ffffff;
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 30px 30px 45px;
+    display: grid;
+    grid-template-columns: 150px 1fr auto;
+    grid-template-rows: auto;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item svg {
+    width: 121px;
+    height: 121px;
+    margin-right: 30px;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .user-review-item-content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .user-review-item-content h5 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .user-review-item-content .user-review-date {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .user-review-item-content .user-review-content {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .user-review-item-content .user-review-content p {
+    margin: 0;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .ranks-wrap {
+    padding-right: 40px;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .ranks-wrap .rating-group {
+    margin-right: 51px;
+}
+
+.user-reviews-section .user-review-block .user-reviews-list .user-review-item .ranks-wrap .rank-value {
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.user-reviews-section a {
+    width: 100%;
+    max-width: 327px;
+    height: 100%;
+    max-height: 47px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}

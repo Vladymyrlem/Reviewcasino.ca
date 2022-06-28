@@ -1,0 +1,77 @@
+@import "../../abstracts/mixins/mixins";
+
+.choose-right {
+  margin-bottom: 0;
+
+  .middle-title {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .right-descr {
+    width: 100%;
+    max-width: 100%;
+
+    p {
+      @include light-text();
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  .choose-right-casinos-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+
+    > li {
+      display: grid;
+      grid-template-columns: 900px auto;
+      grid-template-rows: auto;
+      margin-bottom: 25px !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      .choose-right-title {
+        @include text-style('Roboto Medium', normal, 500, 30px, 35px);
+        color: #FFFFFF;
+      }
+
+      .left-part {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 900px;
+        padding: 25px 20px 29px 49px;
+
+        .content-right {
+          p {
+            @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .img-right {
+        justify-self: center;
+        align-self: center;
+
+        img {
+          //position: absolute;
+          //right: 20px;
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+          //top: 50%;
+          //transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,460 @@
+@import "../../abstracts/mixins/mixins";
+
+.top-online-casinos {
+  background: $color__violet_background;
+  padding-top: 58px;
+  padding-bottom: 60px;
+  position: relative;
+  @include for-tablet-landscape-up {
+    padding: 20px 0;
+  }
+
+  .container {
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    @include for-desktop-mdl {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include for-tablet-landscape-up {
+
+    }
+
+  }
+
+  .description p {
+    @include light-text;
+    width: 100%;
+    max-width: 469px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include for-desktop-mdl {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  a.red-btn {
+    padding: 12px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    color: #FFFFFF;
+    @include for-desktop-mdl {
+      max-width: 587px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .top-three {
+    flex: 0 0 49%;
+    width: 100%;
+    max-width: 587px;
+    height: 100%;
+    max-height: 100%;
+    @include for-desktop-mdl {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .top-games {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 587px;
+      margin-bottom: 10px;
+      @include for-desktop-mdl {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+      @include for-tablet {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .top-game {
+        background: #FFFFFF;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 150px 50px 120px 33%;
+        place-items: normal;
+        align-items: center;
+        gap: 20px;
+        padding: 26px 20px 25px 15px;
+        width: 100%;
+        max-width: 587px;
+        @include for-desktop-mdl {
+          grid-template-columns: 40% 90px auto 22%;
+          max-width: 100%;
+        }
+        @include for-tablet {
+          grid-template-columns: 33% 90px 124px auto;
+        }
+        @include for-tablet-portrait-up {
+          grid-template-columns: 128px 43px auto minmax(124px, auto);
+          gap: 10px;
+        }
+        @include for-middle-phone {
+          display: flex;
+          flex-flow: row;
+          flex-wrap: wrap;
+          align-items: center;
+          //place-items: center;
+          justify-content: space-between;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .top-game-link {
+          @include text-style('Roboto', normal, 400, 25px, 29px);
+          background: radial-gradient(67.88% 4051.4% at 50% 50%, rgba(255, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+          , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          text-transform: uppercase;
+          width: auto;
+          max-width: 100%;
+          display: flex;
+          align-items: center;
+          @include for-big-phone {
+            @include text-style('Roboto', normal, 400, 19px, 20px);
+            width: auto;
+            max-width: 94px;
+          }
+          @include for-middle-phone {
+            @include text-style('Roboto', normal, 400, 19px, 20px);
+            width: auto;
+            max-width: 94px;
+          }
+          @include for-phone {
+            flex: 0 0 49%;
+            @include text-style('Roboto', normal, 400, 14px, 12px);
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+
+        .country-image {
+          @include for-big-phone {
+            max-width: 42px;
+            img {
+              max-width: 42px;
+            }
+          }
+          @include for-phone {
+            flex: 0 0 40%;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+        }
+
+        .rating-top-block {
+          width: 100%;
+          max-width: 126px;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          margin-left: auto;
+          margin-right: auto;
+          @include for-big-phone {
+            @include text-style('Roboto', normal, 400, 17px, 20px);
+            //width: auto;
+            //max-width: 100%;
+            //flex: 0 0 100%;
+          }
+          @include for-middle-phone {
+            margin-right: 0;
+            margin-left: 0;
+            max-width: max-content;
+          }
+          @include for-phone {
+            max-width: 100% !important;
+          }
+
+          svg {
+            margin-right: 5px;
+          }
+
+          .top-rating-block {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: center;
+            @include for-phone {
+              flex: 0 0 100%;
+              width: 100%;
+              max-width: 100%;
+              justify-content: center;
+            }
+
+            .editors-verdict .verdict-middle {
+              @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+              color: #000000;
+              @include for-big-phone {
+                @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+              }
+              @include for-middle-phone {
+                @include text-style('Roboto Medium', normal, 500, 14px, 16px);
+              }
+
+              span {
+                @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+                color: #000000;
+                @include for-big-phone {
+                  @include text-style('Roboto Medium', normal, 500, 18px, 22px);
+                }
+                @include for-middle-phone {
+                  @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+                }
+              }
+            }
+
+          }
+
+          margin-bottom: 10px;
+
+          div.rating-name {
+            background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+            @include for-big-phone {
+              @include text-style('Roboto Medium', normal, 500, 13px, 22px);
+            }
+            @include for-middle-phone {
+              @include text-style('Roboto Medium', normal, 500, 10px, 20px);
+            }
+          }
+
+        }
+
+        .links-group {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          @include for-tablet-portrait-up {
+          }
+          @include for-big-phone {
+            flex: 1;
+            width: auto;
+            max-width: 134px;
+          }
+          @include for-phone {
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          a.play-btn {
+            @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+            color: #ffffff;
+            width: 100%;
+            max-width: 149px;
+            height: 100%;
+            max-height: 40px;
+            background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 17px;
+            @include for-middle-phone {
+              max-width: 100%;
+            }
+            @include for-phone {
+              margin-bottom: 20px;
+            }
+          }
+
+          a.title-link {
+            @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+            background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .online-casino-reviews {
+    flex: 0 0 49%;
+    width: 100%;
+    max-width: 594px;
+    @include for-desktop-mdl {
+      flex: 0 0 100%;
+      margin-top: 30px;
+      max-width: 100%;
+    }
+    @include for-tablet {
+      margin-top: 20px;
+    }
+
+    .review-block {
+      margin-bottom: 25px;
+      height: 100%;
+      max-height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #FFFFFF;
+      filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+
+      &:last-child {
+        @include for-tablet-landscape-up {
+          margin-bottom: 0;
+        }
+      }
+
+      .review-name {
+        position: relative;
+        padding: 27px 34px 32px 44px;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        @include for-big-phone {
+          max-height: 100% !important;
+          padding: 20px 34px 20px 25px;
+        }
+
+        span {
+          @include violet-text;
+          background: linear-gradient(0deg, rgba(124, 0, 221, 0.2), rgba(124, 0, 221, 0.2)),
+          linear-gradient(0deg, #6667AB, #6667AB);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+
+      .review-descr {
+        p {
+          @include violet-text;
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          margin-top: 0;
+        }
+
+        @include for-big-phone {
+          max-height: 100% !important;
+          padding: 0 20px 20px 20px;
+        }
+        margin: 0;
+      }
+    }
+
+  }
+
+  img.top-three-after {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @include for-big-phone {
+      display: none;
+    }
+  }
+}
+
+.accordion-grid {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
+  .accord-block {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    position: relative;
+
+    &.light-block {
+      background: #FFFFFF;
+      border-radius: 10px;
+
+      .accord-title {
+        .accord-name {
+          @include text-style('Roboto Medium', normal, 500, 30px, 35px);
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
+
+    &.dark-block {
+      background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+      border-radius: 10px;
+
+      .accord-title {
+        .accord-name {
+          @include text-style('Roboto Medium', normal, 500, 30px, 35px);
+          color: #ffffff;
+        }
+      }
+    }
+
+    .accord-title {
+      position: relative;
+      padding: 30px 44px 30px 44px;
+      height: 100%;
+      max-height: 82px;
+    }
+
+    .open-block {
+      position: absolute;
+      right: 34px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 22px;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .hidden-block {
+      display: none;
+      padding: 0 45px 45px 45px;
+    }
+  }
+}

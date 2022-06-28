@@ -1,0 +1,180 @@
+@import "sass/abstracts/mixins/mixins";
+
+body.home .site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+		"header header"
+		"main main"
+		"footer footer";
+  @include for-middle-phone {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+		"header"
+		"main"
+		"footer";
+  }
+
+  .site-main {
+    grid-area: main;
+    overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  }
+}
+
+.site {
+  /*	display: grid;*/
+  display: block;
+  grid-template-columns: auto;
+  grid-template-areas:
+		"main main"
+		"footer footer";
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  .main-content {
+    grid-area: main;
+  }
+}
+
+.widget-area {
+  float: right;
+  width: 100%;
+  max-width: 289px;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
+@import "no-sidebar";
+.left-content {
+  float: left;
+  width: 100%;
+  max-width: 950px;
+}
+
+.full-content {
+  float: left;
+  width: 100%;
+  max-width: 100%;
+}
+
+.myaccordion {
+  max-width: 289px;
+  background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.myaccordion .card {
+  border-bottom: 3px solid white;
+}
+
+.myaccordion .card,
+.myaccordion .card:last-child .card-header {
+  border: none;
+}
+
+.myaccordion .card-header {
+  border-bottom-color: #EDEFF0;
+  background: transparent;
+}
+
+.myaccordion .fa-stack {
+  font-size: 18px;
+}
+
+.myaccordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color: #004987;
+  padding: 0;
+}
+
+.myaccordion .btn-link:hover,
+.myaccordion .btn-link:focus {
+  text-decoration: none;
+}
+
+.myaccordion li + li {
+  margin-top: 10px;
+}
+
+.review-sidebar-widget {
+  background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 289px;
+  padding: 12px 10px;
+
+  .sidebar-title {
+    svg {
+      margin-right: 10px;
+    }
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include text-style('Roboto Medium', normal, 500, 27px, 32px);
+    color: #ffffff;
+  }
+
+  .games-type-list {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 5px;
+
+    a {
+      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      color: #000000;
+      padding: 8px 10px 9px 10px;
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+
+      img {
+        width: auto;
+        max-width: 28px;
+        height: auto;
+        max-height: 25px;
+        margin-right: 10px;
+      }
+
+      margin-right: 10px;
+      width: 100%;
+      max-width: 100%;
+      background: #FFFFFF;
+      border-radius: 5px;
+      height: 100%;
+      max-height: 42px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .deposits-method-grid {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .deposit-link {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 55px;
+      height: 100%;
+      max-height: 38px;
+      margin-bottom: 10px;
+    }
+  }
+}
