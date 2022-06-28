@@ -1,0 +1,230 @@
+// Center block
+//@import "../variables/typography";
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+  width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin for-phone {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin for-middle-phone {
+  @media (max-width: 445px) {
+    @content;
+  }
+}
+
+@mixin for-big-phone {
+  @media (max-width: 560px) {
+    @content;
+  }
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-mdl {
+  @media (max-width: 1190px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin for-middle-desktop-up {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+// Built from https://css-tricks.com/snippets/css/using-font-face/
+@mixin font-face( $font-name, $font-path, // path + file name. Ex : path/to/font/filename
+$font-weight: 400, $font-style: normal,$font-display: swap, $support-required: 'modern') {
+  @font-face {
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-display: $font-display;
+    @if $support-required=='oldie' {
+      src: url('#{$font-path}.eot');
+      src: url('#{$font-path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$font-path}.woff2') format('woff2'),
+      url('#{$font-path}.woff') format('woff'),
+      url('#{$font-path}.ttf') format('truetype');
+    }
+    @if $support-required=='recent' {
+      src: url('#{$font-path}.woff2') format('woff2'),
+      url('#{$font-path}.woff') format('woff'),
+      url('#{$font-path}.ttf') format('truetype');
+    }
+    @if $support-required=='modern' {
+      src: url('#{$font-path}.woff2') format('woff2'),
+      url('#{$font-path}.woff') format('woff');
+    }
+  }
+  @if $support-required !='oldie' and $support-required !='recent' and $support-required !='modern' {
+    @error 'Invalid support-required value. Must be "oldie"==>IE8 and above/ Android native browser 4+/ Safari 4.3 OR "recent"==>IE9+/ Android native browser 4.0+/ Safari 4.3+ OR "modern"==>IE9+/ Android native browser 4.4+/ Safari 5.1+';
+  }
+}
+
+@mixin text-style($family: 'Roboto',$style: normal,$weight: 400, $size: 24px, $line_height: 28px) {
+  font-family: $family, sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line_height;
+}
+
+@mixin image-sizes($width,$max-width) {
+  width: $width;
+  max-width: $max-width;
+}
+
+@mixin violet-text {
+  @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+  background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  @include for-tablet {
+    @include text-style('Roboto Medium', normal, 500, 18px, 20px);
+  }
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+  }
+  @include for-phone {
+    @include text-style('Roboto Medium', normal, 500, 14px, 20px);
+  }
+}
+
+@mixin violet-button {
+  background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+}
+
+@mixin light-text {
+  @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+  color: #ffffff;
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 18px, 24px);
+  }
+}
+
+@mixin big-title {
+  @include text-style('Roboto Medium', normal, 500, 48px, 56px);
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include for-tablet {
+    @include text-style('Roboto Medium', normal, 500, 40px, 50px);
+
+  }
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+
+  }
+  @include for-phone {
+    @include text-style('Roboto Medium', normal, 500, 22px, 24px);
+  }
+}
+
+@mixin bonus-title {
+  @include text-style('Roboto Medium', normal, 500, 38px, 45px);
+  color: #FFFFFF;
+  @include for-tablet {
+    @include text-style('Roboto Medium', normal, 500, 35px, 43px);
+
+  }
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+
+  }
+  @include for-phone {
+    @include text-style('Roboto Medium', normal, 500, 20px, 26px);
+  }
+}
+
+@mixin middle-title {
+  @include text-style('Roboto Medium', normal, 500, 40px, 47px);
+  color: #FFFFFF;
+  @include for-tablet {
+    @include text-style('Roboto Medium', normal, 500, 35px, 43px);
+
+  }
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+
+  }
+  @include for-phone {
+    @include text-style('Roboto Medium', normal, 500, 20px, 26px);
+  }
+}
+
+@mixin small-title {
+  @include text-style('Roboto Medium', normal, 500, 27px, 32px);
+  color: #FFFFFF;
+}
+
+@mixin description {
+  @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include for-tablet {
+    @include text-style('Roboto Medium', normal, 500, 20px, 25px);
+  }
+  @include for-big-phone {
+    @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+  }
+  @include for-phone {
+    @include text-style('Roboto Medium', normal, 500, 14px, 20px);
+  }
+}

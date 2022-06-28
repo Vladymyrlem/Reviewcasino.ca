@@ -1,0 +1,89 @@
+@import "sass/abstracts/mixins/mixins";
+
+.customer-support {
+  padding: 30px;
+  overflow: hidden;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .customer-support-content {
+    margin-bottom: 30px;
+
+    p {
+      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 20px;
+      margin-top: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .support-list {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    .support-item {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-width: 146px;
+      max-width: max-content;
+      padding: 15px 17px 13px 16px;
+      margin-right: 20px;
+      background: #FFFFFF;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+
+      .support-ico {
+        margin-right: 10px;
+      }
+
+      span {
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+      }
+    }
+  }
+
+  .languages-list {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(8, 1fr);
+    place-items: flex-start;
+    width: 100%;
+    max-width: 700px;
+
+    .flag-image {
+      width: auto;
+      max-width: 50px;
+      height: 100%;
+      max-height: 50px;
+    }
+  }
+
+  .custom-support-image-after {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    right: -20px;
+    bottom: 50px;
+  }
+
+}

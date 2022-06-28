@@ -1,0 +1,382 @@
+@import "../../abstracts/mixins/mixins";
+
+footer {
+  width: 100%;
+  max-width: 100%;
+  background: $color__violet_background;
+  padding-top: 27px;
+  display: flex;
+  flex-flow: column;
+
+  .top-foot {
+    border-bottom: 2px solid #FFFFFF;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    padding-bottom: 25px;
+
+    .foot-container {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .site-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    @include for-tablet-landscape-up {
+      flex-wrap: wrap;
+    }
+    @include for-tablet {
+      margin-bottom: 10px;
+    }
+    @include for-big-phone {
+      margin-bottom: 15px;
+    }
+
+    #foot-descr {
+      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      color: #ffffff;
+      width: 100%;
+      max-width: 683px;
+      @include for-tablet-landscape-up {
+        order: 3;
+        max-width: 100%;
+        margin-top: 20px;
+      }
+      @include for-big-phone {
+        display: none;
+      }
+    }
+
+    .follow-us {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: max-content;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      @include for-big-phone {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-top: 3px solid #ffffff;
+        padding-top: 25px;
+        margin-top: 15px;
+      }
+
+      span.follow-title {
+        @include text-style('Roboto', normal, 400, 20px, 23px);
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 14px;
+      }
+
+      .follow-us-list {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          width: auto;
+          max-width: 100%;
+          margin-right: 15px;
+        }
+
+        a:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .foot-categories-menu {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 32px 20px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    justify-content: space-between;
+    @include for-desktop {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 30px;
+    }
+    @include for-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      place-items: flex-start;
+    }
+    @include for-big-phone {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .foot-menu-item {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: max-content;
+      height: 100%;
+      max-height: 100%;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include for-big-phone {
+        max-width: 100%;
+        border-bottom: 3px solid #000000;
+        padding: 0 20px 20px 20px;
+      }
+
+      .foot-menu-parent {
+        margin-bottom: 29px;
+
+        .foot-parent-item-link {
+          @include text-style('Roboto Medium', normal, 700, 27px, 32px);
+          color: #000000;
+          text-decoration: none;
+        }
+
+        img {
+          width: auto;
+          max-width: 100%;
+          margin-right: 7px;
+        }
+      }
+
+      .foot-submenu-list {
+        .foot-submenu-item {
+          margin-bottom: 13px;
+          display: flex;
+          flex-flow: row;
+          justify-content: flex-start;
+          align-items: center;
+
+          .foot-submenu-link {
+            @include text-style('Roboto Medium', normal, 700, 20px, 23px);
+            color: #000000;
+            text-decoration: none;
+          }
+
+          img {
+            margin-right: 7px;
+          }
+
+        }
+
+        .foot-submenu-item:hover {
+          .foot-submenu-link {
+            background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+
+          img path, img source {
+            background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;;
+            fill: blue !important;
+          }
+        }
+
+        .foot-submenu-item:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+
+  .foot-links {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    margin-top: 25px;
+    padding-left: 152px;
+    @include for-tablet {
+      padding-left: 0;
+    }
+
+    a {
+      @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-color: #ffffff;
+      text-decoration-style: solid;
+      margin-right: 40px;
+    }
+
+    @include for-big-phone {
+      padding-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+  .bottom-foot {
+    background: $color__violet_background;
+    width: 100%;
+    max-width: 100%;
+
+    .news-subscribe {
+      padding-top: 25px;
+      padding-bottom: 10px;
+      justify-content: center;
+      border-radius: 6px;
+
+      .send-subscribe {
+        background: #FFFFFF;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        width: 100%;
+        max-width: 590px;
+        height: 100%;
+        max-height: 56px;
+        position: relative;
+        border: none;
+        margin-bottom: 10px;
+        @include for-big-phone {
+          max-height: 100%;
+          background: transparent;
+          box-shadow: none;
+        }
+      }
+
+      #wpcf7-f37-o1 input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 56px;
+        border: none;
+        border-radius: 7px;
+        padding: 20px 0 20px 17px;
+        @include for-big-phone {
+          background: transparent;
+          border: 1px solid white;
+        }
+
+        &::placeholder {
+          @include for-big-phone {
+            color: #ffffff;
+          }
+        }
+      }
+
+      .wpcf7-list-item {
+        margin-left: 0;
+      }
+
+      #wpcf7-f37-o1 input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      #wpcf7-f37-o1 input.wpcf7-submit {
+        background: #33C626;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+        padding: 20px 12px;
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFF;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 101px;
+        height: 100%;
+        max-height: 56px;
+        @include for-big-phone {
+          width: 100%;
+          max-width: 100%;
+          position: relative;
+          margin-top: 10px;
+        }
+      }
+
+      .wpcf7-spinner {
+        height: 0;
+        width: 0;
+      }
+
+      #wpcf7-f37-o1 p label {
+        @include text-style('Roboto Medium', normal, 500, 19px, 22px);
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 20px;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      #wpcf7-f37-o1 p {
+        margin-top: 0;
+        margin-bottom: 0 !important;
+        @include for-big-phone {
+          margin-top: -12px;
+        }
+      }
+
+      #wpcf7-f37-o1 .checkbox-570 {
+        margin-top: 20px;
+
+        .wpcf7-list-item-label {
+          @include text-style('Roboto Medium', normal, 500, 12px, 14px);
+          color: #ffffff;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .copyright {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: relative;
+
+      p {
+        @include text-style('Roboto Medium', normal, 500, 12px, 14px);
+        color: #ffffff;
+        margin: 0;
+      }
+    }
+
+    .copyright::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border-top: 2px solid #FFFFFF;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+      height: 2px;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+

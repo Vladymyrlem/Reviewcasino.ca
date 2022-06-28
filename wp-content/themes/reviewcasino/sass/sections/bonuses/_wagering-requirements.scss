@@ -1,0 +1,76 @@
+@import "sass/abstracts/mixins/mixins";
+
+.wagering-requirements {
+  position: relative;
+  padding: 30px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include text-style('Roboto Medium', normal, 500, 38px, 45px);
+  }
+
+  .wagering-list {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+    align-items: flex-start;
+
+    .wagering-item {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+
+      .wagering-value-block {
+        width: 100%;
+        max-width: 183px;
+        height: 100%;
+        max-height: 183px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        border: 7px solid #FFFFFF;
+        border-radius: 50%;
+        padding: 80px 30px;
+
+        span {
+          @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+          color: #ffffff;
+          text-align: center;
+          word-break: break-word;
+          width: 100%;
+          max-width: 110px;
+        }
+      }
+    }
+
+    .wagering-title {
+      width: 100%;
+      max-width: 343px;
+      @include text-style('Roboto Medium', normal, 500, 22px, 26px);
+      color: #ffffff;
+      text-align: center;
+      margin-top: 25px;
+    }
+  }
+
+  .wagering-content, .wagering-btm-content {
+    width: 100%;
+    max-width: 100%;
+
+    p {
+      @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #ffffff;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

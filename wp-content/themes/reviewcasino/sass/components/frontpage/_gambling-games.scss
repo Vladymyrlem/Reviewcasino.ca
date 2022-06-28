@@ -1,0 +1,137 @@
+@import "../../abstracts/mixins/mixins";
+
+.popular-gambling-games {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(124, 0, 221, 0.6), rgba(124, 0, 221, 0.6)), linear-gradient(102.89deg, #8FAFFF 61.58%, rgba(102, 103, 171, 0) 79.3%);
+  padding: 58px 0;
+  position: relative;
+  @include for-tablet {
+    padding: 20px 0;
+  }
+
+  .gambling-game-block {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    z-index: 9;
+
+    .main-title {
+      @include big-title;
+      margin-bottom: 25px;
+      margin-top: 0;
+      @include for-big-phone {
+        @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+      }
+    }
+
+    #gambling-game-descr {
+      @include description;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 469px;
+      @include for-big-phone {
+        max-width: 50%;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .gambling-games-list {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 100%;
+      @include for-tablet {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .gambling-link {
+        background: #FFFFFF;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 10px 11px 22px 11px;
+        width: 100%;
+        max-width: 169px;
+        height: 100%;
+        max-height: 155px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 33px;
+        text-decoration: underline;
+        @include for-tablet {
+          margin-bottom: 20px;
+          margin-right: 0;
+          flex: 0 0 auto;
+          max-width: 200px;
+        }
+        @include for-big-phone {
+          flex: 0 0 100%;
+          max-width: 100%;
+          flex-flow: row;
+          height: auto;
+          max-height: 100%;
+          justify-content: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+
+        span {
+          @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+          color: #000000;
+          width: 100%;
+          max-width: 100%;
+          margin-top: 10px;
+          text-align: center;
+          @include for-big-phone {
+            max-width: max-content;
+            margin-left: 30px;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          @include image-sizes(auto, 100%);
+          height: auto;
+          max-height: 100%;
+          @include for-big-phone {
+            max-width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .gambling-image-after {
+    @include image-sizes(auto, 458px);
+    height: auto;
+    max-height: 409px;
+    position: absolute;
+    display: block;
+    bottom: 30px;
+    right: 44px;
+    z-index: 0;
+    @include for-desktop {
+      opacity: .7;
+    }
+    @include for-tablet-landscape-up {
+      max-width: 50%;
+    }
+    @include for-big-phone {
+      max-width: 113px;
+      top: 11px;
+      right: 20px;
+    }
+  }
+}
+

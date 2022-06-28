@@ -1,0 +1,94 @@
+@import "sass/abstracts/mixins/mixins";
+
+.expert-ratings {
+  .expert-container {
+    padding: 34px 19px 25px 29px;
+    display: flex;
+    flex-flow: column;
+
+    .middle-title {
+      @include middle-title();
+      text-shadow: none !important;
+      margin-bottom: 20px;
+    }
+
+    .rating-descr {
+      @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+      color: #ffffff;
+      margin-bottom: 19px;
+    }
+
+    .bottom-rating-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .right-decor-image {
+        float: left;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .right-part {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        max-width: 100%;
+
+        .expert-rating-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          margin-left: 0;
+          padding-left: 22px;
+          margin-bottom: 0;
+          width: 100%;
+          max-width: 100%;
+          justify-items: center;
+          align-items: center;
+
+          .expert-rating-item {
+            @include text-style('Robto Medium', normal, 500, 24px, 29px);
+            color: #FFFFFF;
+            margin-bottom: 17px;
+            width: auto;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .ranks-wrap {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 40px;
+      margin-top: 0;
+
+      .rating-title {
+        margin: 0;
+      }
+
+      .rating-group {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  a {
+    color: #ffffff;
+    padding: 19px;
+    width: 100%;
+    max-width: 370px;
+    height: 100%;
+    max-height: 68px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+

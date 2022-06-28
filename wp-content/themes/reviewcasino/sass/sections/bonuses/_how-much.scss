@@ -1,0 +1,135 @@
+@import "sass/abstracts/mixins/mixins";
+
+/*How much*/
+.how-much {
+  padding: 30px;
+
+  h2 {
+    @include text-style('Roboto Medium', normal, 500, 38px, 45px);
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .how-much-content {
+    p {
+      @include text-style('Roboto Medium', normal, 500, 18px, 22px);
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      margin-top: 20px;
+      @include text-style('Roboto Medium', normal, 500, 18px, 22px);
+      color: #ffffff;
+    }
+  }
+}
+
+/*how Much Bonuses*/
+.how-much-bonuses {
+  padding: 30px 0 0 0;
+
+  h2 {
+    @include text-style('Roboto Medium', normal, 500, 38px, 45px);
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 30px;
+  }
+
+  .how-much-bonuses-descr {
+    padding: 0 40px 19px 30px;
+
+    p {
+      @include text-style('Roboto Medium', normal, 500, 18px, 22px);
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .how-much-table {
+    display: table;
+    table-layout: auto;
+    border-spacing: 0;
+    margin-bottom: 0;
+    vertical-align: center;
+    border-collapse: collapse;
+
+    thead {
+      background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+      , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+
+      > tr {
+        //display: flex;
+        //flex-flow: row;
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 3px 0 0 0;
+
+        > th {
+          padding: 18px 30px;
+          @include text-style('Roboto Medium', normal, 500, 30px, 35px);
+          text-align: center;
+
+          color: #ffffff;
+
+          &:first-child {
+            @include text-style('Roboto Medium', normal, 500, 38px, 45px);
+            width: 100%;
+            max-width: 878px;
+            text-align: left;
+          }
+
+          &:nth-child(2) {
+            border-style: solid;
+            border-color: #ffffff;
+            border-width: 0 3px 0 3px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 3px 0 0 0;
+
+        > td {
+          padding: 18px 30px;
+          @include text-style('Roboto Medium', normal, 500, 26px, 30px);
+          color: #ffffff;
+
+          &:first-child {
+            width: 100%;
+            max-width: 878px;
+          }
+
+          &.deposit-col {
+            border-style: solid;
+            border-color: #ffffff;
+            border-width: 0 3px 0 3px;
+            text-align: center;
+          }
+
+          &.bonus-col {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

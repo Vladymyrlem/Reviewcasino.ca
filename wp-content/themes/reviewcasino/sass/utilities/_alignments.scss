@@ -1,0 +1,43 @@
+.alignleft {
+
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+
+  @include center-block;
+
+  margin-bottom: 1.5em;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}

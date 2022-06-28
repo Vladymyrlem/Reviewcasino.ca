@@ -1,0 +1,122 @@
+@import "sass/abstracts/mixins/mixins";
+
+.game-variety {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 50px;
+
+  table.table-variety {
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+    border-radius: 10px;
+    border-collapse: collapse;
+    border: 0;
+    border-spacing: 2px 3px;
+    overflow: hidden;
+    @include for-tablet-landscape-up {
+      background: transparent;
+    }
+
+    caption {
+      width: 100%;
+      max-width: 100%;
+      @include text-style('Roboto Medium', normal, 500, 40px, 47px);
+      text-align: left;
+      color: #ffffff;
+      height: 100%;
+      max-height: 100%;
+      padding: 30px 20px 20px 30px;
+      background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+      border-radius: 10px 10px 0 0;
+    }
+
+    > thead {
+      background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+      , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+
+      > tr {
+        border-color: #ffffff;
+        border-style: solid;
+        border-width: 3px 0 0 0;
+
+        > th {
+          padding: 30px 10px;
+          text-align: center;
+          @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+          color: #ffffff;
+          border-color: #ffffff;
+          border-style: solid;
+          border-width: 0 3px 0 0;
+
+          &.fixed-side {
+            display: none;
+            background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+            , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+            @include for-tablet-landscape-up {
+              display: block;
+            }
+          }
+
+          &:last-child {
+            border-right-width: 0;
+          }
+        }
+
+      }
+    }
+
+    > tbody {
+      > tr {
+        @include for-tablet-landscape-up {
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          margin-bottom: 20px;
+          border: none;
+        }
+
+        > td {
+          padding: 30px 10px;
+          width: auto;
+          @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+          color: #ffffff;
+          text-align: center;
+          border-color: #ffffff;
+          border-style: solid;
+          border-width: 3px 2px 0 0;
+
+          &.fixed-side {
+            display: none;
+            background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+            , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+            @include for-tablet-landscape-up {
+              display: block;
+              text-align: center;
+              border-right-width: 0;
+            }
+          }
+
+          @include for-tablet-landscape-up {
+            text-align: left;
+          }
+
+          &:last-child {
+            width: auto;
+            max-width: 345px;
+            border-right: 0;
+            @include for-tablet-landscape-up {
+              max-width: 100%;
+            }
+          }
+        }
+
+        &:last-child {
+          > td {
+            border-bottom-width: 0;
+          }
+        }
+      }
+    }
+  }
+}

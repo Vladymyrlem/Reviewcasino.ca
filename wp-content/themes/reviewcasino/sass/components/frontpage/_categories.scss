@@ -1,0 +1,116 @@
+@import "../../abstracts/mixins/mixins";
+@import "../../abstracts/variables/colors";
+
+.all-categories {
+  background: $color__violet_background;
+  padding: 58px 20px 79px 20px;
+  @include for-tablet-landscape-up {
+    padding: 20px 0;
+  }
+  @include for-tablet {
+    padding-bottom: 0;
+  }
+  @include for-big-phone {
+    display: none;
+  }
+
+  .middle-title {
+    @include big-title();
+    margin-bottom: 52px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    @include for-tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  .all-categories-grid {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 31px 24px 31px 62px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: flex-start;
+    justify-content: space-between;
+    row-gap: 66px;
+    @include for-desktop {
+      grid-template-columns: repeat(3, 1fr);
+      padding-left: 24px;
+      row-gap: 30px;
+    }
+    @include for-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 20px;
+    }
+    @include for-big-phone {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .category-item {
+      .parent-category {
+        margin-bottom: 30px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        @include for-tablet {
+          margin-bottom: 16px;
+        }
+
+        .category-image {
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+          margin-right: 15px;
+        }
+
+        .category-link {
+          @include text-style('Roboto Medium', normal, 500, 27px, 32px);
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          @include for-tablet {
+            @include text-style('Roboto Medium', normal, 700, 22px, 25px);
+          }
+        }
+      }
+
+      .sub-categories {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+
+        .subcategory-link {
+          @include text-style('Roboto Medium', normal, 700, 20px, 23px);
+          color: #000000;
+          margin-bottom: 32px;
+          text-decoration: none;
+          @include for-tablet {
+            @include text-style('Roboto Medium', normal, 700, 16px, 19px);
+            margin-bottom: 16px;
+          }
+        }
+
+        .subcategory-link:last-child {
+          margin-bottom: 0;
+        }
+
+        .subcategory-link:hover, .subcategory-link:focus {
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}

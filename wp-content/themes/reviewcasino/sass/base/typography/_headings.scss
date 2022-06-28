@@ -1,0 +1,27 @@
+@import "../../abstracts/mixins/mixins";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
+.post-title {
+  @include middle-title;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+h2.large-title {
+  @include big-title;
+}
+
+h2.middle-title {
+  @include middle-title;
+
+}

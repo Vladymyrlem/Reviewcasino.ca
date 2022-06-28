@@ -1,0 +1,21 @@
+@import "sass/abstracts/mixins/mixins";
+
+.top-block {
+  h2.middle-title {
+    @include middle-title();
+    width: 100%;
+    max-width: 833px;
+  }
+
+  .top-content {
+    padding: 22px 17px 2px 17px;
+
+    p {
+      margin: 0 0 20px 0;
+      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      color: #ffffff;
+    }
+  }
+
+  margin-bottom: 50px;
+}

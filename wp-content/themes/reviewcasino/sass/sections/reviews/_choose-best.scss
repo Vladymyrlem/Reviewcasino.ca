@@ -1,0 +1,38 @@
+@import "sass/abstracts/mixins/mixins";
+
+.choose-best {
+  padding: 0 0 0 28px;
+
+  .left-choose {
+    float: left;
+    padding-top: 27px;
+
+    .small-title {
+      @include small-title();
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .choose-best-content {
+      margin-top: 27px;
+      margin-bottom: 40px;
+      width: 100%;
+      max-width: 547px;
+
+      p {
+        @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  img {
+    float: right;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
