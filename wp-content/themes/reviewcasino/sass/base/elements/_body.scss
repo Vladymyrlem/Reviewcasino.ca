@@ -1,5 +1,17 @@
 body {
   background: $color__background-body; // Fallback for when there is no custom background color defined.
+  .filter-overlay {
+    display: none;
+
+    &.active {
+      display: block;
+      background: rgba(114, 87, 182, 0.8);
+      width: 100%;
+      position: absolute;
+      height: 100vh;
+      z-index: 99;
+    }
+  }
 }
 
 #page {

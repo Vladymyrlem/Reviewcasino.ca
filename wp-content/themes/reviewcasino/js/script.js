@@ -18,13 +18,6 @@ jQuery.noConflict();
 
 jQuery(document).ready(function ($) {
     // jQuery('.dropdown-toggle').dropdown();
-
-
-    var windowWidth = jQuery(window).width();
-    if (windowWidth <= 560) {
-        jQuery('<li class="all-categories-list"></li>').appendTo('.nav-menu');
-        jQuery('.all-categories-grid').appendTo(jQuery(".nav-menu>li.all-categories-list"));
-    }
 });
 String.prototype.toNum = function () {
     return parseInt(this, 10);
@@ -89,7 +82,7 @@ jQuery(document).ready(function ($) {
     // 	});
     jQuery("#accordion").on("hide.bs.collapse show.bs.collapse", e => {
         jQuery(e.target)
-            .prev()
+            .parent()
             .find(".fa-stack")
             .toggleClass("show-ico");
     });
@@ -100,7 +93,18 @@ jQuery(document).ready(function ($) {
         jQuery(this).parent().find('ul.dropdown-menu').toggleClass('show');
         jQuery(this).parent().find('.menu-mobile-casinos-by-type-device-container ul.dropdown-menu').toggleClass('show');
     });
-    // });
+    jQuery('.site-header button.open-filter').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        jQuery(this).parent().find('.filter').toggleClass('show');
+        jQuery(this).parent().find('.filter .filter-sidebar .filter-head').append('<button class="close-filter">X</button>');
+        jQuery(this).parent().parent().find('.filter-overlay').toggleClass('active');
+    });
+    jQuery('.filter .filter-sidebar .filter-head button.close-filter').click(function (e) {
+        e.preventDefault();
+        jQuery(this).parent().parent().parent().find('.filter').addClass('test');
+        jQuery(this).parents().eq(7).find('.filter-overlay').removeClass('active');
+    });
     jQuery('.open-block').click(function (e) {
         e.preventDefault();
         const $this = $(this),

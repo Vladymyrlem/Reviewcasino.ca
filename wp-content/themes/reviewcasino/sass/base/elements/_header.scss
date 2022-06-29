@@ -1,4 +1,212 @@
 @import "../../abstracts/mixins/mixins";
+.filter {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  max-width: 359px;
+  background: #ffffff;
+  height: 100%;
+  max-height: 100%;
+  z-index: 999;
+
+  &.show {
+    display: flex !important;
+
+    .filter-sidebar {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 100%;
+
+      .sidebar-title {
+        svg {
+          margin-right: 10px;
+          margin-bottom: 5px;
+          fill: rgba(161, 25, 224, 0.2);
+        }
+
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 4px;
+        @include text-style('Roboto Medium', normal, 500, 15px, 16px);
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+
+    .myaccordion {
+      width: 100%;
+      max-width: 359px;
+      background: #FFFFFF;
+      overflow: initial;
+
+      .card {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          width: 100%;
+          max-width: 100%;
+          left: 0;
+          bottom: 0;
+          height: 3px;
+          background: linear-gradient(0deg, #6667AB, #6667AB),
+          linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%);
+          display: block;
+          content: '';
+        }
+
+        &:last-child::after {
+          display: none;
+        }
+
+        background: transparent;
+        border-radius: 0;
+
+        h2 button {
+          margin: 0;
+          display: flex;
+          flex-flow: row;
+          justify-content: flex-start;
+
+          .filter-name {
+            font-family: 'Roboto Medium', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 26px;
+            background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+
+        h5 {
+          font-family: 'Roboto Medium', sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+
+      .card:last-child {
+        border: none;
+      }
+
+      .card:first-child {
+        .card-header h2 button {
+          svg {
+            margin-right: 13px;
+          }
+
+          span.filter-name {
+            font-size: 27px;
+            line-height: 32px;
+            text-align: center;
+
+          }
+        }
+      }
+
+      .card-header {
+        background: transparent;
+        padding: 13px 14px 11px 10px !important;
+        border: none;
+
+        &:hover button {
+          outline: none;
+          border: none;
+        }
+      }
+
+      .fa-stack {
+        font-size: 18px;
+        margin-left: auto;
+
+        svg {
+          margin: 0 !important;
+
+          path {
+            fill: rgba(161, 25, 224, 1);
+          }
+        }
+
+        &.show-ico svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      .btn {
+        width: 100%;
+        padding: 0;
+        border: none;
+
+        &:hover {
+          outline: none;
+          border: none;
+        }
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+
+      .btn-link:hover,
+      .btn-link:focus {
+        text-decoration: none;
+        outline: none;
+      }
+
+      ul {
+        padding-left: 0;
+        margin-left: 0;
+        list-style-type: none;
+
+        > li {
+          display: flex;
+          flex-flow: row;
+          justify-content: flex-start;
+          align-items: center;
+          @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+
+          input[type="checkbox"] {
+            background: #FFFFFF;
+            border-radius: 5px;
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      li + li {
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
 
 .site-header {
   background: $color__violet_background;
@@ -6,12 +214,33 @@
   max-width: 100%;
   flex: 0 0 100%;
   padding: 12px 0 0 0;
+  position: relative;
+  @include for-big-phone {
+    padding-top: 44px;
+  }
 
   #mega-menu-wrap-head-mob-menu {
     display: none;
-    @include for-tablet {
+    @include for-desktop {
       display: block;
       order: 4;
+    }
+  }
+
+  #mega-menu-wrap-menu-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0;
+
+    #mega-menu-menu-2 {
+      padding-bottom: 0 !important;
+
+      > li.mega-menu-megamenu.mega-menu-item {
+
+        @include for-desktop-mdl {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 
@@ -25,7 +254,8 @@
         padding-bottom: 0;
 
         > li.mega-menu-item {
-          flex: 0 0 33%;
+          flex: 0 0 30%;
+          justify-content: flex-start;
           max-width: 100%;
         }
       }

@@ -25,7 +25,11 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="filter-overlay"></div>
 <header id="masthead" class="site-header">
+    <div class="hide filter">
+		<?php echo do_shortcode( '[filter_shortcode]' ) ?>
+    </div>
     <div class="mycontainer align-items-center">
         <div class="site-branding">
 			<?php

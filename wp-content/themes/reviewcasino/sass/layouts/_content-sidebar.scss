@@ -38,6 +38,10 @@ body.home .site {
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
   .main-content {
     grid-area: main;
+    display: block;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -45,6 +49,9 @@ body.home .site {
   float: right;
   width: 100%;
   max-width: 289px;
+  @include for-desktop-mdl {
+    order: 10;
+  }
 }
 
 .site-footer {
@@ -56,6 +63,12 @@ body.home .site {
   float: left;
   width: 100%;
   max-width: 950px;
+  @include for-desktop-up {
+    padding-right: 20px;
+    max-width: 100%;
+  }
+  @include for-desktop-mdl {
+  }
 }
 
 .full-content {
@@ -64,47 +77,151 @@ body.home .site {
   max-width: 100%;
 }
 
+.filter-sidebar {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  @include for-big-phone {
+    display: none;
+  }
+
+  .sidebar-title {
+    svg {
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 4px;
+    @include text-style('Roboto Medium', normal, 500, 15px, 16px);
+    color: #ffffff;
+  }
+}
+
 .myaccordion {
+  width: 100%;
   max-width: 289px;
   background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
   border-radius: 10px;
   overflow: hidden;
-}
 
-.myaccordion .card {
-  border-bottom: 3px solid white;
-}
 
-.myaccordion .card,
-.myaccordion .card:last-child .card-header {
-  border: none;
-}
+  .card {
+    border-bottom: 3px solid #ffffff;
+    background: transparent;
+    border-radius: 0;
 
-.myaccordion .card-header {
-  border-bottom-color: #EDEFF0;
-  background: transparent;
-}
+    h2 button {
+      margin: 0;
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-start;
 
-.myaccordion .fa-stack {
-  font-size: 18px;
-}
+      .filter-name {
+        font-family: 'Roboto Medium', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: #FFFFFF;
+      }
+    }
+  }
 
-.myaccordion .btn {
-  width: 100%;
-  font-weight: bold;
-  color: #004987;
-  padding: 0;
-}
+  .card:last-child {
+    border: none;
+  }
 
-.myaccordion .btn-link:hover,
-.myaccordion .btn-link:focus {
-  text-decoration: none;
-}
+  .card:first-child {
+    .card-header h2 button {
+      svg {
+        margin-right: 13px;
+      }
 
-.myaccordion li + li {
-  margin-top: 10px;
-}
+      span.filter-name {
+        font-size: 27px;
+        line-height: 32px;
+        text-align: center;
 
+      }
+    }
+  }
+
+  .card-header {
+    background: transparent;
+    padding: 13px 14px 11px 10px !important;
+    border: none;
+
+    &:hover button {
+      outline: none;
+      border: none;
+    }
+  }
+
+  .fa-stack {
+    font-size: 18px;
+    margin-left: auto;
+
+    svg {
+      margin: 0 !important;
+    }
+
+    &.show-ico svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0;
+    border: none;
+
+    &:hover {
+      outline: none;
+      border: none;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .btn-link:hover,
+  .btn-link:focus {
+    text-decoration: none;
+    outline: none;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: none;
+
+    > li {
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-start;
+      align-items: center;
+      @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+      color: #ffffff;
+
+      input[type="checkbox"] {
+        background: #FFFFFF;
+        border-radius: 5px;
+        width: 17px;
+        height: 17px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+}
 .review-sidebar-widget {
   background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);

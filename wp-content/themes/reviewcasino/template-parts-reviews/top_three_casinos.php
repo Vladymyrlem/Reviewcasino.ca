@@ -45,27 +45,39 @@
                                 </div>
                                 <div class="top-bonuses-block">
                                     <h5 class="top-bonuses-title">Bonus</h5>
-									<?php if ( have_rows( 'head_review_content', $top_post->ID ) ) : ?>
-										<?php while ( have_rows( 'head_review_content', $top_post->ID ) ) : the_row(); ?>
-											<?php if ( have_rows( 'bonuses', $top_post->ID ) ) : ?>
-												<?php while ( have_rows( 'bonuses', $top_post->ID ) ) : the_row(); ?>
+		                            <?php if ( have_rows( 'head_review_content', $top_post->ID ) ) : ?>
+			                            <?php while ( have_rows( 'head_review_content', $top_post->ID ) ) : the_row(); ?>
+				                            <?php if ( have_rows( 'bonuses', $top_post->ID ) ) : ?>
+					                            <?php while ( have_rows( 'bonuses', $top_post->ID ) ) : the_row(); ?>
                                                     <span class="bonus-value">
                                                     <?php the_sub_field( 'bonus_value' ); ?>
 												</span>
-												<?php endwhile; ?>
-											<?php endif; ?>
-										<?php endwhile; ?>
-									<?php endif; ?>
+
+					                            <?php endwhile; ?>
+				                            <?php else: ?>
+                                                <span class="bonus-value">
+                                                    N/A
+												</span>
+				                            <?php endif; ?>
+				                            <?php $play_link = get_sub_field( 'play_link' ); ?>
+				                            <?php if ( $play_link ) : ?>
+                                                <a class="red-btn" href="<?php echo esc_url( $play_link['url'] ); ?>"
+                                                   target="_blank"><?php echo esc_html( $play_link['title'] ); ?></a>
+				                            <?php else: ?>
+                                                <a class="red-btn" href="/" target="_blank">Play Now</a>
+				                            <?php endif; ?>
+			                            <?php endwhile; ?>
+		                            <?php endif; ?>
+
 
                                 </div>
-								<?php $permalink = get_permalink( $top_post->ID ); ?>
-                                <a class="red-btn" href="<?php echo $permalink ?>">Play Now</a>
+	                            <?php $permalink = get_permalink( $top_post->ID ); ?>
                                 <div class="bottom-top-three-block">
 
-									<?php if ( have_rows( 'information_review', $top_post->ID ) ) : ?>
-										<?php while ( have_rows( 'information_review', $top_post->ID ) ) : the_row(); ?>
-											<?php if ( have_rows( 'info_group', $top_post->ID ) ) : ?>
-												<?php while ( have_rows( 'info_group', $top_post->ID ) ) : the_row(); ?>
+		                            <?php if ( have_rows( 'information_review', $top_post->ID ) ) : ?>
+			                            <?php while ( have_rows( 'information_review', $top_post->ID ) ) : the_row(); ?>
+				                            <?php if ( have_rows( 'info_group', $top_post->ID ) ) : ?>
+					                            <?php while ( have_rows( 'info_group', $top_post->ID ) ) : the_row(); ?>
 													<?php if ( have_rows( 'info_table', $top_post->ID ) ) : ?>
 														<?php while ( have_rows( 'info_table', $top_post->ID ) ) : the_row(); ?>
 															<?php $value_8 = get_sub_field( 'payout_percentage' ); ?>

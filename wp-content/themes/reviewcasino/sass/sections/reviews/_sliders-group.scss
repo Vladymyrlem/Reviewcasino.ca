@@ -20,6 +20,14 @@
     width: 100%;
     max-width: 600px;
     flex: 0 0 49%;
+@include for-desktop-mdl {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
 
     .slick-dots {
       display: flex;

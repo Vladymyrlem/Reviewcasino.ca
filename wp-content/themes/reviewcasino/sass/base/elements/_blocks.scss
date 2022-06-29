@@ -10,8 +10,10 @@
   justify-content: space-between;
   position: relative !important;
   @include for-desktop-up {
-    padding: 0 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
+
   @include for-phone-only {
     padding: 0 10px !important;
   }

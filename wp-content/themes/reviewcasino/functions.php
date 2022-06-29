@@ -412,102 +412,125 @@ function review_right_widget_shortcode() {
 add_shortcode( 'filter_shortcode', 'sidebar_filter_shortcode' );
 function sidebar_filter_shortcode() {
 	ob_start(); ?>
-
-
-    <div id="accordion" class="myaccordion filter-sidebar">
-        <h3 class="filter-head">
+    <div class="filter-sidebar">
+        <h3 class="filter-head sidebar-title">
             <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.4369 0.828125H0.563154C0.0635131 0.828125 -0.188604 1.44265 0.165419 1.80152L4.5 6.19604V11.0916C4.5 11.2777 4.58955 11.452 4.73993 11.5587L6.61493 12.8887C6.98484 13.1512 7.5 12.8852 7.5 12.4216V6.19604L11.8347 1.80152C12.188 1.44336 11.9376 0.828125 11.4369 0.828125Z"
                       fill="white"/>
             </svg>
             Filter Casinos
         </h3>
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="d-flex align-items-center justify-content-between btn btn-link collapsed"
-                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
-                            aria-controls="collapseOne">
-                        <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.03958 14.0174C4.03958 10.6794 8.9343 8.47678 8.9343 4.83581C8.9343 2.7055 7.35085 0.855621 7.11333 0.74707C7.13196 0.896327 7.14128 1.05011 7.14128 1.19936C7.14128 5.36499 0.290527 8.16017 0.290527 13.348C0.290527 15.6004 1.79015 16.9302 3.38757 18.2463C6.41941 20.3585 7.02485 21.4757 7.02485 22.1632C7.02485 22.62 6.8013 22.9321 6.8013 23.1718C7.41139 22.4165 7.61165 21.729 7.61631 21.0732C7.61631 19.7344 6.6057 18.5267 5.55783 17.1608C4.81267 16.1522 4.03958 15.234 4.03958 14.0174ZM13.6008 12.2534C13.0373 9.23211 9.9682 6.62689 9.19045 6.3329L9.37673 6.65855C9.48851 6.88922 9.53508 7.15155 9.53508 7.43198C9.53508 9.45373 7.01087 12.4615 6.8991 12.7102C6.79664 12.9409 6.75007 13.1852 6.75007 13.4249C6.75007 14.334 7.45797 15.329 7.58371 15.329C7.69548 15.329 10.2197 12.8233 10.2895 11.3624C10.5876 11.8916 10.7134 12.3846 10.7134 12.8731C10.7134 14.7365 8.76664 17.2558 8.76664 17.2558C8.76664 17.7805 10.2523 19.662 10.4199 19.662C10.4665 19.662 10.5224 19.5987 10.569 19.5535C12.3341 17.7759 13.7033 15.709 13.7033 13.3661C13.7033 13.0042 13.6707 12.6334 13.6008 12.2534Z"
-                                  fill="white"/>
-                        </svg>
-                        Popular filters
-                        <span class="fa-stack"><svg width="13" height="8" viewBox="0 0 13 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-<path d="M7.22173 0.842484L12.0876 5.72057C12.4239 6.05773 12.4239 6.60293 12.0876 6.93651L11.279 7.74713C10.9427 8.08429 10.3989 8.08429 10.0661 7.74713L6.61707 4.28943L3.16803 7.74713C2.83171 8.08429 2.28787 8.08429 1.95513 7.74713L1.14654 6.93651C0.810223 6.59934 0.810223 6.05415 1.14654 5.72057L6.01242 0.842484C6.34158 0.505322 6.88541 0.505322 7.22173 0.842484Z"
+        <div id="accordion" class="myaccordion ">
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="d-flex align-items-center btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                                aria-controls="collapseOne">
+                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.03958 14.0174C4.03958 10.6794 8.9343 8.47678 8.9343 4.83581C8.9343 2.7055 7.35085 0.855621 7.11333 0.74707C7.13196 0.896327 7.14128 1.05011 7.14128 1.19936C7.14128 5.36499 0.290527 8.16017 0.290527 13.348C0.290527 15.6004 1.79015 16.9302 3.38757 18.2463C6.41941 20.3585 7.02485 21.4757 7.02485 22.1632C7.02485 22.62 6.8013 22.9321 6.8013 23.1718C7.41139 22.4165 7.61165 21.729 7.61631 21.0732C7.61631 19.7344 6.6057 18.5267 5.55783 17.1608C4.81267 16.1522 4.03958 15.234 4.03958 14.0174ZM13.6008 12.2534C13.0373 9.23211 9.9682 6.62689 9.19045 6.3329L9.37673 6.65855C9.48851 6.88922 9.53508 7.15155 9.53508 7.43198C9.53508 9.45373 7.01087 12.4615 6.8991 12.7102C6.79664 12.9409 6.75007 13.1852 6.75007 13.4249C6.75007 14.334 7.45797 15.329 7.58371 15.329C7.69548 15.329 10.2197 12.8233 10.2895 11.3624C10.5876 11.8916 10.7134 12.3846 10.7134 12.8731C10.7134 14.7365 8.76664 17.2558 8.76664 17.2558C8.76664 17.7805 10.2523 19.662 10.4199 19.662C10.4665 19.662 10.5224 19.5987 10.569 19.5535C12.3341 17.7759 13.7033 15.709 13.7033 13.3661C13.7033 13.0042 13.6707 12.6334 13.6008 12.2534Z"
+                                      fill="white"/>
+                            </svg>
+                            <span class="filter-name">Popular filters</span>
+                            <span class="fa-stack"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+<path d="M5.36703 7.72701L0.265434 2.46079C-0.087176 2.09681 -0.087176 1.50823 0.265434 1.14811L1.1132 0.272991C1.46581 -0.0909971 2.03599 -0.0909971 2.38485 0.272991L6.00098 4.00581L9.61711 0.272991C9.96972 -0.0909971 10.5399 -0.0909971 10.8888 0.272991L11.7365 1.14811C12.0891 1.5121 12.0891 2.10068 11.7365 2.46079L6.63493 7.72701C6.28982 8.091 5.71964 8.091 5.36703 7.72701Z"
       fill="white"/>
 </svg>
 </span>
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                    <ul>
-                        <li>Computer Science</li>
-                        <li>Economics</li>
-                        <li>Sociology</li>
-                        <li>Nursing</li>
-                        <li>English</li>
-                    </ul>
+                        </button>
+                    </h2>
+                    <h5>Slots, Roulette, Blackjack,Betting Vid...</h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="checkbox">Computer Science</li>
+                            <li>Economics</li>
+                            <li>Sociology</li>
+                            <li>Nursing</li>
+                            <li>English</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="d-flex align-items-center justify-content-between btn btn-link collapsed"
-                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                            aria-controls="collapseTwo">
-                        Postgraduate Studies
-                        <span class="fa-stack fa-2x">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
-          </span>
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                    <ul>
-                        <li>Informatics</li>
-                        <li>Mathematics</li>
-                        <li>Greek</li>
-                        <li>Biostatistics</li>
-                        <li>English</li>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="d-flex align-items-center btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.351 6.75H16.2693C16.7055 7.79027 16.514 9.04219 15.6849 9.89016L11.001 14.6805V16.3125C11.001 17.2445 11.7397 18 12.651 18H20.351C21.2623 18 22.001 17.2445 22.001 16.3125V8.4375C22.001 7.50551 21.2623 6.75 20.351 6.75ZM16.501 13.2187C16.0455 13.2187 15.676 12.8408 15.676 12.375C15.676 11.9088 16.0455 11.5312 16.501 11.5312C16.9564 11.5312 17.326 11.9088 17.326 12.375C17.326 12.8408 16.9564 13.2187 16.501 13.2187ZM14.907 6.65508L8.89379 0.505195C8.23516 -0.168398 7.16713 -0.168398 6.50851 0.505195L0.494945 6.65508C-0.16368 7.32867 -0.16368 8.42098 0.494945 9.09457L6.50816 15.2448C7.16679 15.9184 8.23482 15.9184 8.89344 15.2448L14.907 9.09492C15.5656 8.42098 15.5656 7.32867 14.907 6.65508ZM3.30098 8.71875C2.84551 8.71875 2.47598 8.34082 2.47598 7.875C2.47598 7.40883 2.84551 7.03125 3.30098 7.03125C3.75645 7.03125 4.12598 7.40883 4.12598 7.875C4.12598 8.34082 3.75645 8.71875 3.30098 8.71875ZM7.70098 13.2187C7.24551 13.2187 6.87598 12.8408 6.87598 12.375C6.87598 11.9088 7.24551 11.5312 7.70098 11.5312C8.15645 11.5312 8.52598 11.9088 8.52598 12.375C8.52598 12.8408 8.15645 13.2187 7.70098 13.2187ZM7.70098 8.71875C7.24551 8.71875 6.87598 8.34082 6.87598 7.875C6.87598 7.40883 7.24551 7.03125 7.70098 7.03125C8.15645 7.03125 8.52598 7.40883 8.52598 7.875C8.52598 8.34082 8.15645 8.71875 7.70098 8.71875ZM7.70098 4.21875C7.24551 4.21875 6.87598 3.84082 6.87598 3.375C6.87598 2.90883 7.24551 2.53125 7.70098 2.53125C8.15645 2.53125 8.52598 2.90883 8.52598 3.375C8.52598 3.84082 8.15645 4.21875 7.70098 4.21875ZM12.101 8.71875C11.6455 8.71875 11.276 8.34082 11.276 7.875C11.276 7.40883 11.6455 7.03125 12.101 7.03125C12.5564 7.03125 12.926 7.40883 12.926 7.875C12.926 8.34082 12.5564 8.71875 12.101 8.71875Z"
+                                      fill="white"/>
+                            </svg>
+
+                            <span class="filter-name">Casino Games</span>
+                            <span class="fa-stack"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+<path d="M5.36703 7.72701L0.265434 2.46079C-0.087176 2.09681 -0.087176 1.50823 0.265434 1.14811L1.1132 0.272991C1.46581 -0.0909971 2.03599 -0.0909971 2.38485 0.272991L6.00098 4.00581L9.61711 0.272991C9.96972 -0.0909971 10.5399 -0.0909971 10.8888 0.272991L11.7365 1.14811C12.0891 1.5121 12.0891 2.10068 11.7365 2.46079L6.63493 7.72701C6.28982 8.091 5.71964 8.091 5.36703 7.72701Z"
+      fill="white"/>
+</svg>
+
+</span>
+                        </button>
+                    </h2>
+                    <h5>Slots, Roulette, Blackjack,Betting Vid...</h5>
+
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>Informatics</li>
+                            <li>Mathematics</li>
+                            <li>Greek</li>
+                            <li>Biostatistics</li>
+                            <li>English</li>
                         <li>Nursing</li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                    <button class="d-flex align-items-center justify-content-between btn btn-link collapsed"
-                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
-                        Research
-                        <span class="fa-stack fa-2x">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
-          </span>
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                    <ul>
-                        <li>Astrophysics</li>
-                        <li>Informatics</li>
-                        <li>Criminology</li>
-                        <li>Economics</li>
-                    </ul>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.351 6.75H16.2693C16.7055 7.79027 16.514 9.04219 15.6849 9.89016L11.001 14.6805V16.3125C11.001 17.2445 11.7397 18 12.651 18H20.351C21.2623 18 22.001 17.2445 22.001 16.3125V8.4375C22.001 7.50551 21.2623 6.75 20.351 6.75ZM16.501 13.2187C16.0455 13.2187 15.676 12.8408 15.676 12.375C15.676 11.9088 16.0455 11.5312 16.501 11.5312C16.9564 11.5312 17.326 11.9088 17.326 12.375C17.326 12.8408 16.9564 13.2187 16.501 13.2187ZM14.907 6.65508L8.89379 0.505195C8.23516 -0.168398 7.16713 -0.168398 6.50851 0.505195L0.494945 6.65508C-0.16368 7.32867 -0.16368 8.42098 0.494945 9.09457L6.50816 15.2448C7.16679 15.9184 8.23482 15.9184 8.89344 15.2448L14.907 9.09492C15.5656 8.42098 15.5656 7.32867 14.907 6.65508ZM3.30098 8.71875C2.84551 8.71875 2.47598 8.34082 2.47598 7.875C2.47598 7.40883 2.84551 7.03125 3.30098 7.03125C3.75645 7.03125 4.12598 7.40883 4.12598 7.875C4.12598 8.34082 3.75645 8.71875 3.30098 8.71875ZM7.70098 13.2187C7.24551 13.2187 6.87598 12.8408 6.87598 12.375C6.87598 11.9088 7.24551 11.5312 7.70098 11.5312C8.15645 11.5312 8.52598 11.9088 8.52598 12.375C8.52598 12.8408 8.15645 13.2187 7.70098 13.2187ZM7.70098 8.71875C7.24551 8.71875 6.87598 8.34082 6.87598 7.875C6.87598 7.40883 7.24551 7.03125 7.70098 7.03125C8.15645 7.03125 8.52598 7.40883 8.52598 7.875C8.52598 8.34082 8.15645 8.71875 7.70098 8.71875ZM7.70098 4.21875C7.24551 4.21875 6.87598 3.84082 6.87598 3.375C6.87598 2.90883 7.24551 2.53125 7.70098 2.53125C8.15645 2.53125 8.52598 2.90883 8.52598 3.375C8.52598 3.84082 8.15645 4.21875 7.70098 4.21875ZM12.101 8.71875C11.6455 8.71875 11.276 8.34082 11.276 7.875C11.276 7.40883 11.6455 7.03125 12.101 7.03125C12.5564 7.03125 12.926 7.40883 12.926 7.875C12.926 8.34082 12.5564 8.71875 12.101 8.71875Z"
+                                      fill="white"/>
+                            </svg>
+                            <span class="filter-name">Casino games</span>
+                            <span class="fa-stack"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+<path d="M5.36703 7.72701L0.265434 2.46079C-0.087176 2.09681 -0.087176 1.50823 0.265434 1.14811L1.1132 0.272991C1.46581 -0.0909971 2.03599 -0.0909971 2.38485 0.272991L6.00098 4.00581L9.61711 0.272991C9.96972 -0.0909971 10.5399 -0.0909971 10.8888 0.272991L11.7365 1.14811C12.0891 1.5121 12.0891 2.10068 11.7365 2.46079L6.63493 7.72701C6.28982 8.091 5.71964 8.091 5.36703 7.72701Z"
+      fill="white"/>
+</svg>
+
+</span>
+                        </button>
+                    </h2>
+                    <h5>Slots, Roulette, Blackjack,Betting Vid...</h5>
+
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>Astrophysics</li>
+                            <li>Informatics</li>
+                            <li>Criminology</li>
+                            <li>Economics</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 	<?php
 	$myvariable = ob_get_clean();
 

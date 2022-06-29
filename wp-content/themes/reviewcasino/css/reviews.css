@@ -60,6 +60,37 @@
     color: #ffffff;
 }
 
+.top-block .open-filter {
+    display: none;
+    width: 100%;
+    max-width: 388px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-family: "Roboto Medium", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.top-block .open-filter svg {
+    margin-right: 10px;
+}
+
+@media (max-width: 560px) {
+    .top-block .open-filter {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 /*Top Three casinos*/
 .top-casinos .top-casinos-grid {
     display: grid;
@@ -80,10 +111,11 @@
     overflow: hidden;
     position: relative;
     display: grid;
-    grid-template-rows: 45px 183px auto 1fr 45px auto 35px;
+    grid-template-rows: 45px 183px auto auto auto 35px;
     grid-template-columns: 1fr;
     place-items: center;
     margin-top: 25px;
+    padding-bottom: 20px;
 }
 
 .top-casinos .top-casinos-grid .top-casino-item .top-title {
@@ -178,7 +210,9 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin-bottom: 11px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .top-casinos .top-casinos-grid .top-casino-item .top-bonuses-block h5 {
@@ -204,6 +238,14 @@
     width: 100%;
     max-width: 100%;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.top-casinos .top-casinos-grid .top-casino-item .top-bonuses-block a {
+    width: 100%;
+    max-width: 233px;
+    height: 100%;
+    max-height: 45px;
 }
 
 .top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block {
@@ -211,6 +253,7 @@
     flex-flow: row;
     justify-content: space-between;
     margin-top: 10px;
+    padding-bottom: 27px;
 }
 
 .top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .win-rate-data, .top-casinos .top-casinos-grid .top-casino-item .bottom-top-three-block .payout-data {
@@ -1356,10 +1399,20 @@
 .head-review-content.top-info-block {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 160px 180px 153px 94px 197px 121px 214px;
+    grid-template-columns: 160px 190px 153px 94px 197px 121px 214px;
+    grid-template-areas: "A B C D E F G";
     place-content: space-between;
     border-radius: 10px;
     padding-right: 20px;
+}
+
+@media (max-width: 1190px) {
+    .head-review-content.top-info-block {
+        grid-template-columns: 160px 20% 20% 20%;
+        grid-template-rows: auto;
+        grid-template-areas: "A B C D"
+ "A E F G";
+    }
 }
 
 .head-review-content.top-info-block .deposit-method-list.part-items .more-items {
@@ -1389,6 +1442,7 @@
 }
 
 .head-review-content.top-info-block .logo-review-block {
+    grid-area: A;
     width: 100%;
     max-width: 160px;
     background: #ffffff;
@@ -1399,13 +1453,20 @@
     align-items: center;
 }
 
+@media (max-width: 1190px) {
+    .head-review-content.top-info-block .logo-review-block {
+        justify-content: center;
+    }
+}
+
 .head-review-content.top-info-block .review-bonuses {
+    grid-area: B;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 180px;
+    max-width: 190px;
     padding-top: 30px;
     padding-bottom: 16px;
 }
@@ -1455,6 +1516,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    grid-area: C;
 }
 
 .head-review-content.top-info-block .deposit-methods .deposits-method-grid {
@@ -1501,6 +1563,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    grid-area: D;
 }
 
 .head-review-content.top-info-block .devices-block .devices-list {
@@ -1526,6 +1589,7 @@
 }
 
 .head-review-content.top-info-block #games-grid {
+    grid-area: E;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -1594,6 +1658,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    grid-area: F;
 }
 
 .head-review-content.top-info-block .certifications span {
@@ -1607,6 +1672,7 @@
 }
 
 .head-review-content.top-info-block a.red-btn {
+    grid-area: G;
     padding: 13px 30px;
     text-align: center;
     font-family: "Roboto Medium", sans-serif;
@@ -1630,6 +1696,13 @@
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .information-review {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .information-review .info-review-block {
@@ -1685,6 +1758,22 @@
 .information-review .info-review-block.left-info {
     max-width: 623px;
     z-index: 10;
+}
+
+@media (max-width: 1280px) {
+    .information-review .info-review-block.left-info {
+        flex: 0 0 49%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .information-review .info-review-block.left-info {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .information-review .info-review-block.left-info .info-description {
@@ -1844,6 +1933,14 @@
     max-width: 623px;
 }
 
+@media (max-width: 1024px) {
+    .information-review .info-review-block.left-info .advantages-grid {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 .information-review .info-review-block.left-info .advantages-grid h2 {
     font-family: "Roboto Medium", sans-serif;
     font-style: normal;
@@ -1906,6 +2003,14 @@
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     padding: 20px 5px 20px 10px;
+}
+
+@media (max-width: 1024px) {
+    .information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block {
+        flex: 0 0 49%;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .information-review .info-review-block.left-info .advantages-grid .advantages-section .advantages-block .advantages-title {
@@ -1975,6 +2080,14 @@
     padding: 20px 5px 20px 10px;
 }
 
+@media (max-width: 1024px) {
+    .information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block {
+        flex: 0 0 49%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 .information-review .info-review-block.left-info .advantages-grid .advantages-section .disadvantages-block .disadvantages-title {
     background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
     -webkit-background-clip: text;
@@ -2036,6 +2149,23 @@
     width: 100%;
     max-width: 590px;
     z-index: 10;
+}
+
+@media (max-width: 1280px) {
+    .information-review .info-review-block.right-info {
+        flex: 0 0 49%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .information-review .info-review-block.right-info {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
 }
 
 .information-review .info-review-block.right-info .editors-verdict h2 {
@@ -2117,6 +2247,12 @@
     grid-template-rows: auto;
     width: 100%;
     padding-right: 30px;
+}
+
+@media (max-width: 1280px) {
+    .information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-name .verdict-head {
+        grid-template-columns: 205px auto;
+    }
 }
 
 .information-review .info-review-block.right-info .editors-verdict .editors-verdict-list .editors-verdict-block .editors-verdict-name .verdict-head .verdict-name {
@@ -2318,6 +2454,17 @@
     width: 100%;
     max-width: 600px;
     flex: 0 0 49%;
+}
+
+@media (max-width: 1190px) {
+    .sliders-group .images-slider, .sliders-group .video-slider {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
 }
 
 .sliders-group .images-slider .slick-dots, .sliders-group .video-slider .slick-dots {
@@ -2536,6 +2683,7 @@
     padding: 30px 20px 20px 30px;
     background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
     border-radius: 10px 10px 0 0;
+    caption-side: top;
 }
 
 .game-variety table.table-variety > thead {
