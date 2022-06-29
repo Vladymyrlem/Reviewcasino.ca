@@ -16,14 +16,14 @@
 get_header();
 ?>
     <main id="primary" class="site-main">
-        <div class="mycontainer p-lg-0">
+        <div class="mycontainer ">
             <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 				<?php if ( function_exists( 'bcn_display' ) ) {
 					bcn_display();
 				} ?>
             </div>
         </div>
-        <div class="mycontainer p-lg-0">
+        <div class="mycontainer ">
             <div class="main-content">
 				<?php
 				get_sidebar(); ?>

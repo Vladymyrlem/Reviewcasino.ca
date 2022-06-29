@@ -207,13 +207,11 @@
   }
   .menu-toggle {
     position: relative;
-    display: flex !important;
+    //display: flex !important;
     margin-top: 3px;
     z-index: 99;
   }
-  .log-reg-buttons {
-    display: none;
-  }
+
   .left-head, .site-branding {
     margin-right: 0;
     padding-top: 0;

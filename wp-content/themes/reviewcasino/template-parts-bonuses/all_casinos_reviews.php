@@ -106,15 +106,25 @@
 						<?php endwhile; ?>
 					<?php endif; ?>
                     <div class="bottom-links">
-						<?php $permalink = get_permalink( $all_post->ID ); ?>
-                        <a class="red-btn" href="/">Play Now</a>
+		                <?php $permalink = get_permalink( $all_post->ID ); ?>
+		                <?php if ( have_rows( 'head_review_content', $all_post->ID ) ) : ?>
+			                <?php while ( have_rows( 'head_review_content', $all_post->ID ) ) : the_row(); ?>
+				                <?php $play_link = get_sub_field( 'play_link' ); ?>
+				                <?php if ( $play_link ) : ?>
+                                    <a class="red-btn" href="<?php echo esc_url( $play_link['url'] ); ?>"
+                                       target="_blank"><?php echo esc_html( $play_link['title'] ); ?></a>
+				                <?php endif; ?>
+			                <?php endwhile; ?>
+		                <?php else: ?>
+                            <a class="red-btn" href="/" target="_blank">Play Now</a>
+		                <?php endif; ?>
                         <a class="read-review" href="<?php echo $permalink; ?>">Read
                             Review <?php echo $all_post->post_title; ?></a>
                     </div>
                 </div>
-				<?php if ( have_rows( 'head_review_content', $all_post->ID ) ) : ?>
-					<?php while ( have_rows( 'head_review_content', $all_post->ID ) ) : the_row(); ?>
-						<?php global $post; ?>
+	            <?php if ( have_rows( 'head_review_content', $all_post->ID ) ) : ?>
+		            <?php while ( have_rows( 'head_review_content', $all_post->ID ) ) : the_row(); ?>
+			            <?php global $post; ?>
                         <div class="right-review-block">
                             <div class="games-block" id="games-grid">
                                 <div class="games-head">

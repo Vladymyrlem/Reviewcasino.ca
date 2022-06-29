@@ -29,10 +29,17 @@
   &.top-info-block {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 160px 180px 153px 94px 197px 121px 214px;
+    grid-template-columns: 160px 190px 153px 94px 197px 121px 214px;
+    grid-template-areas: "A B C D E F G";
     place-content: space-between;
     border-radius: 10px;
     padding-right: 20px;
+    @include for-desktop-mdl {
+      grid-template-columns: 160px 20% 20% 20%;
+      grid-template-rows: auto;
+      grid-template-areas: "A B C D"
+                       "A E F G";
+    }
 
     .deposit-method-list.part-items {
       .more-items {
@@ -59,6 +66,7 @@
     }
 
     .logo-review-block {
+      grid-area: A;
       width: 100%;
       max-width: 160px;
       background: #ffffff;
@@ -68,15 +76,19 @@
       display: flex;
       flex-flow: column;
       align-items: center;
+      @include for-desktop-mdl {
+        justify-content: center;
+      }
     }
 
     .review-bonuses {
+      grid-area: B;
       display: flex;
       flex-flow: column;
       align-items: center;
       justify-content: center;
       width: 100%;
-      max-width: 180px;
+      max-width: 190px;
       padding-top: 30px;
       padding-bottom: 16px;
 
@@ -114,6 +126,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      grid-area: C;
 
       .deposits-method-grid {
         display: flex;
@@ -160,6 +173,7 @@
       flex-flow: column;
       align-items: center;
       justify-content: center;
+      grid-area: D;
 
       .devices-list {
         display: flex;
@@ -185,6 +199,7 @@
     }
 
     #games-grid {
+      grid-area: E;
       display: flex;
       flex-flow: column;
       align-items: center;
@@ -250,6 +265,7 @@
       flex-flow: column;
       align-items: center;
       justify-content: center;
+      grid-area: F;
 
       span {
         margin-bottom: 20px;
@@ -263,6 +279,7 @@
     }
 
     a.red-btn {
+      grid-area: G;
       padding: 13px 30px;
       text-align: center;
       @include text-style('Roboto Medium', normal, 500, 25px, 29px);

@@ -4,6 +4,7 @@
 	<?php if ( $game ) : ?>
 		<?php foreach ( $game as $game_post ) : ?>
 			<?php setup_postdata( $game_post ); ?>
+			<?php $permalink = get_permalink( $game_post->ID ); ?>
             <article class="dark-decor-section other-review-item">
                 <div class="logo-review-block">
 					<?php
@@ -86,8 +87,15 @@
 						<?php endif; ?>
                     </div>
                     <div class="bottom-links">
-						<?php $permalink = get_permalink( $game_post->ID ); ?>
-                        <a class="red-btn" href="/">Visit site</a>
+						<?php if ( have_rows( 'head_review_content', $game_post->ID ) ) : ?>
+							<?php while ( have_rows( 'head_review_content', $game_post->ID ) ) : the_row(); ?>
+								<?php $play_link = get_sub_field( 'play_link' ); ?>
+								<?php if ( $play_link ) : ?>
+                                    <a class="red-btn" href="<?php echo esc_url( $play_link['url'] ); ?>"
+                                       target="_blank">Visit Site</a>
+								<?php endif; ?>
+							<?php endwhile; ?>
+						<?php endif; ?>
                         <a class="read-review"
                            href="<?php echo $permalink; ?>">Read <?php echo $game_post->post_title; ?> Review</a>
                     </div>

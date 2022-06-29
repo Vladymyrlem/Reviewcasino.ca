@@ -18,5 +18,30 @@
     }
   }
 
+  .open-filter {
+    display: none;
+    width: 100%;
+    max-width: 388px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+    color: #ffffff;
+    border-radius: 10px;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    @include for-big-phone {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+    }
+    margin-top: 15px;
+  }
+
   margin-bottom: 25px;
 }

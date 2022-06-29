@@ -1,6 +1,6 @@
 <?php if ( get_row_layout() == 'top_three_bonuses' ) : ?>
     <section class="top-casinos left-content">
-        <div class="container">
+        <div class="mycontainer">
             <h2 class="middle-title">
                 <h2 class="middle-title"><?php the_sub_field( 'main_title' ); ?></h2>
             </h2>
@@ -53,14 +53,25 @@
                                                         <span class="bonus-value">
                                                     <?php the_sub_field( 'bonus_value' ); ?>
 												</span>
+
 													<?php endwhile; ?>
+												<?php else: ?>
+                                                    <span class="bonus-value">
+                                                    N/A
+												</span>
+												<?php endif; ?>
+												<?php $play_link = get_sub_field( 'play_link' ); ?>
+												<?php if ( $play_link ) : ?>
+                                                    <a class="red-btn"
+                                                       href="<?php echo esc_url( $play_link['url'] ); ?>"
+                                                       target="_blank"><?php echo esc_html( $play_link['title'] ); ?></a>
+												<?php else: ?>
+                                                    <a class="red-btn" href="/" target="_blank">Play Now</a>
 												<?php endif; ?>
 											<?php endwhile; ?>
 										<?php endif; ?>
 
                                     </div>
-									<?php $permalink = get_permalink( $top_post->ID ); ?>
-                                    <a class="red-btn" href="<?php echo $permalink ?>">Play Now</a>
                                     <div class="bottom-top-three-block">
 
 										<?php if ( have_rows( 'information_review', $top_post->ID ) ) : ?>
@@ -210,19 +221,27 @@
 																	}
 																	echo '</ul>';
 																	?>
-																	<?php $permalink = get_permalink( $top_post->ID ); ?>
-                                                                    <a href="<?php echo $permalink; ?>" class="red-btn">Play
-                                                                        Now</a>
-
-                                                                    <a href="<?php echo $permalink ?>">Read
-																		<?php echo $top_post->post_title; ?> Review
-                                                                    </a>
 																<?php endwhile; ?>
 															<?php endif; ?>
 														<?php endwhile; ?>
 													<?php endif; ?>
 												<?php endwhile; ?>
 											<?php endif; ?>
+	                                        <?php if ( have_rows( 'head_review_content', $post->ID ) ) : ?>
+		                                        <?php while ( have_rows( 'head_review_content', $post->ID ) ) : the_row(); ?>
+			                                        <?php $play_link = get_sub_field( 'play_link' ); ?>
+			                                        <?php if ( $play_link ) : ?>
+                                                        <a class="red-btn"
+                                                           href="<?php echo esc_url( $play_link['url'] ); ?>"
+                                                           target="_blank"><?php echo esc_html( $play_link['title'] ); ?></a>
+			                                        <?php endif; ?>
+		                                        <?php endwhile; ?>
+	                                        <?php else: ?>
+                                                <a class="red-btn" href="/" target="_blank">Play Now</a>
+	                                        <?php endif; ?>
+                                            <a href="<?php echo $permalink ?>">Read
+		                                        <?php echo $top_post->post_title; ?> Review
+                                            </a>
                                         </div>
                                     </div>
                                     <button class="open-details">More details</button>
