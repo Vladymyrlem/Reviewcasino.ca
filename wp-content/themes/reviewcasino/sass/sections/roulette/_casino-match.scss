@@ -1,0 +1,145 @@
+@import "sass/abstracts/mixins/mixins";
+
+.casino-match {
+  padding: 0;
+
+  .casino-match-head {
+    padding: 12px 12px 20px 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 3px solid #FFFFFF;
+    @include for-tablet-portrait-up {
+      flex-flow: column;
+      align-items: center;
+    }
+
+    .left-match-head {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      width: auto;
+      max-width: max-content;
+
+      .casino-match-title {
+        @include text-style('Roboto', normal, 500, 38px, 45px);
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .casino-match-subtitle {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .cas-match-logo {
+      @include for-big-phone {
+        display: none;
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      margin-bottom: 20px;
+    }
+  }
+
+  .casino-match-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 20px 22px 30px 22px;
+
+    .middle-title {
+      @include small-title;
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .casino-match-descr {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 27px;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .casino-match-grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px 25px;
+      @include for-tablet-landscape-up {
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+      }
+      @include for-big-phone {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      //@include for-middle-phone{
+      //  grid-template-columns: 1fr;
+      //}
+      .casino-match-item {
+        background: #FFFFFF;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 20px 20px 23px 20px;
+        width: 100%;
+        max-width: 169px;
+        height: 100%;
+        max-height: 155px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(72px, auto) auto;
+        place-items: center;
+        align-content: space-between;
+
+        .casino-name {
+          @include text-style('Roboto', normal, 500, 20px, 23px);
+          color: #000000;
+        }
+
+        .casino-image {
+          width: auto;
+          max-width: 92px;
+          height: auto;
+          max-height: 82px;
+        }
+      }
+    }
+
+    .casino-match-img-before {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+    }
+
+    .casino-match-img-after {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

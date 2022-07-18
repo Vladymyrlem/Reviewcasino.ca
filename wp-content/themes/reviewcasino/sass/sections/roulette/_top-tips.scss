@@ -1,0 +1,101 @@
+@import "sass/abstracts/mixins/mixins";
+
+.top-tips-section {
+  padding: 30px;
+  margin-bottom: 50px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include for-big-phone {
+      text-align: center;
+    }
+  }
+
+  .top-tips-descr {
+    margin-bottom: 15px;
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 20px;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: awesome-counter; // Set up a counter
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    column-count: 2;
+    @include for-big-phone {
+      column-count: 1;
+    }
+
+    > li {
+      line-height: 33px;
+      padding-left: 45px;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      max-width: max-content;
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 25px;
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+      @include for-big-phone {
+        max-width: 100%;
+      }
+
+      &::before {
+        content: counter(awesome-counter);
+        counter-increment: awesome-counter;
+        color: #6667AB;
+        background: white;
+        //text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 100%;
+        max-width: 30px;
+        height: 30px;
+        max-height: 30px;
+        border-radius: 50%;
+        padding: 0 9.32px;
+        margin-right: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        //transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include for-big-phone {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

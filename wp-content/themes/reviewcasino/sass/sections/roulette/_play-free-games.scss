@@ -1,0 +1,190 @@
+@import "sass/abstracts/mixins/mixins";
+
+.play-free-games-grid::-webkit-scrollbar {
+  width: 19px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.play-free-games-grid::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  &::before {
+    display: block;
+    width: 7px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    position: absolute;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='9' viewBox='0 0 7 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.19107 4.02202L5.12891 0.198219C5.40109 -0.0660731 5.8412 -0.0660731 6.11048 0.198219L6.76485 0.833646C7.03703 1.09794 7.03703 1.5253 6.76485 1.78679L3.97652 4.5L6.76775 7.2104C7.03992 7.47469 7.03992 7.90206 6.76775 8.16354L6.11337 8.80178C5.8412 9.06607 5.40109 9.06607 5.13181 8.80178L1.19397 4.97798C0.918901 4.71368 0.918901 4.28632 1.19107 4.02202Z' fill='%236667AB'/%3E%3Cpath d='M1.19107 4.02202L5.12891 0.198219C5.40109 -0.0660731 5.8412 -0.0660731 6.11048 0.198219L6.76485 0.833646C7.03703 1.09794 7.03703 1.5253 6.76485 1.78679L3.97652 4.5L6.76775 7.2104C7.03992 7.47469 7.03992 7.90206 6.76775 8.16354L6.11337 8.80178C5.8412 9.06607 5.40109 9.06607 5.13181 8.80178L1.19397 4.97798C0.918901 4.71368 0.918901 4.28632 1.19107 4.02202Z' fill='url(%23paint0_linear_255_29066)' fill-opacity='0.2'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_255_29066' x1='3.97959' y1='1.37086' x2='3.97959' y2='8.10596' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.421875' stop-color='%23A119E0'/%3E%3Cstop offset='0.869792' stop-color='%23A119E0' stop-opacity='0.92'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  }
+}
+
+.play-free-games-grid::-webkit-scrollbar-thumb {
+  background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+  border-radius: 10px;
+}
+
+.play-free-section {
+  margin-bottom: 50px;
+
+  h2 {
+    @include middle-title;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 0;
+    padding-right: 30px;
+    @include for-big-phone {
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  .game-descr {
+    padding-left: 0;
+    padding-right: 30px;
+    @include for-big-phone {
+      padding-right: 0;
+    }
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 0;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+
+    margin-bottom: 25px;
+  }
+
+  .play-free-games-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 23px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+    }
+    @include for-big-phone {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: nowrap;
+      overflow: auto;
+      padding-bottom: 15px;
+    }
+    @include for-middle-phone {
+      //grid-template-columns: 1fr;
+    }
+
+    .play-free-grid-item {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 130px auto;
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      @include for-tablet {
+        width: 100%;
+        max-width: 220px;
+      }
+      @include for-big-phone {
+        flex: 0 0 220px;
+        width: 100%;
+        max-width: 220px;
+        margin-right: 20px;
+      }
+
+      .game-thumb-block {
+        position: relative;
+        width: 100%;
+        max-width: 221px;
+        height: 100%;
+        max-height: 330px;
+        border-radius: 10px;
+
+        .hide-modal-group {
+          display: none;
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          max-height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          background: rgba(112, 88, 180, 0.82);
+          border-radius: 10px;
+
+          a.free-game-link {
+            text-decoration: none;
+            @include text-style('Roboto', normal, 500, 16px, 19px);
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 8px;
+          }
+
+          a.site-game-link {
+            text-decoration: none;
+            @include text-style('Roboto', normal, 500, 16px, 19px);
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: 16px 20px;
+            width: 100%;
+            max-width: 127px;
+            text-align: center;
+
+            &:hover {
+              background: transparent;
+              border: 1px solid white;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        &:hover .hide-modal-group {
+          display: flex;
+        }
+
+        img {
+          width: 100%;
+          max-width: 221px;
+          height: 100%;
+          max-height: 100%;
+          border-radius: 10px;
+          position: relative;
+        }
+      }
+
+      footer {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 20px;
+        background: white;
+
+        img {
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}

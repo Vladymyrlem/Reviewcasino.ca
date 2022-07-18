@@ -1,0 +1,384 @@
+@import "sass/abstracts/mixins/mixins";
+
+.all-casino-review {
+  margin-bottom: 50px;
+
+  h2 {
+    @include text-style('Roboto', normal, 500, 40px, 47px);
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .all-reviews-list {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+
+    article {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 160px auto minmax(auto, 238px);
+      grid-template-areas: "A B C";
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 50px;
+      padding: 0 34px 0 0;
+      filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+      overflow: hidden;
+      border-radius: 10px;
+      @include for-desktop {
+        grid-template-areas: "A B"
+      "A C";
+        grid-template-columns: 160px auto;
+        padding-right: 0;
+      }
+      @include for-big-phone {
+        padding: 0;
+        grid-template-areas: "A"
+      "B"
+      "C";
+        grid-template-columns: auto;
+        grid-template-rows: 178px auto;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .logo-review-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        border-radius: 10px;
+        position: relative;
+        grid-area: A;
+
+        .country-flag {
+          width: 100%;
+          max-width: 57px;
+          height: 100%;
+          max-height: 54px;
+          margin-top: 10px;
+        }
+
+        .wp-post-image, img {
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 80px;
+          margin-bottom: 8px;
+        }
+
+        .review-number {
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          border-radius: 2px;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          max-width: 25px;
+          height: 100%;
+          max-height: 25px;
+          padding: 2px 2px 2px 2px;
+          text-align: center;
+          color: #ffffff;
+          @include text-style('Roboto', normal, 500, 16px, 19px);
+          @include for-big-phone {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            padding-top: 4px;
+            padding-bottom: 4px;
+          }
+        }
+      }
+
+      .middle-block {
+        padding: 34px 20px 34px 37px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        grid-area: B;
+        @include for-desktop {
+          padding-bottom: 0;
+        }
+        @include for-tablet {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        @include for-big-phone {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .inform-review-results {
+          width: 100%;
+          max-width: 320px;
+          padding-right: 20px;
+          @include for-desktop {
+            max-width: 100%;
+          }
+          @include for-tablet {
+            max-width: 100%;
+            margin-bottom: 20px;
+            padding-right: 0;
+          }
+
+          .bonus-decor-list {
+            margin-left: 0;
+            padding-left: 0;
+            margin-bottom: 20px;
+            position: relative;
+            list-style-type: none;
+            @include for-big-phone {
+              margin-left: auto;
+              margin-right: auto;
+              width: 100%;
+              max-width: max-content;
+            }
+
+            > li {
+              @include text-style('Roboto', normal, 500, 20px, 23px);
+              color: #ffffff;
+              margin-bottom: 20px;
+              position: relative;
+              padding-left: 40px;
+              word-break: break-word;
+
+              h3 {
+                @include text-style('Roboto', normal, 500, 20px, 23px);
+                color: #ffffff;
+                margin: 0;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              &::before {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: 25px;
+                height: 25px;
+                content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.2188 12.7246C24.2188 19.4141 18.7988 24.834 12.1094 24.834C5.41992 24.834 0 19.4141 0 12.7246C0 6.03516 5.41992 0.615234 12.1094 0.615234C18.7988 0.615234 24.2188 6.03516 24.2188 12.7246ZM12.9395 18.2861L19.5557 11.6699C20.0146 11.2109 20.0146 10.4688 19.5557 10.0146L18.7256 9.18457C18.2666 8.72559 17.5244 8.72559 17.0703 9.18457L12.1094 14.1455L7.14844 9.18457C6.68945 8.72559 5.94727 8.72559 5.49316 9.18457L4.66309 10.0146C4.2041 10.4736 4.2041 11.2158 4.66309 11.6699L11.2793 18.2861C11.7383 18.7451 12.4805 18.7451 12.9395 18.2861Z' fill='white'/%3E%3C/svg%3E%0A");
+              }
+            }
+          }
+
+        }
+
+        img.real-money-thumb {
+          width: 100%;
+          max-width: 218px;
+          height: 100%;
+          max-height: 169px;
+          border-radius: 10px;
+          @include for-big-phone {
+            max-width: 100%;
+            max-height: 175px;
+          }
+        }
+      }
+
+      .right-review-block {
+        width: 100%;
+        max-width: 238px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 34px 0 34px 10px;
+        margin-left: auto;
+        grid-area: C;
+        @include for-desktop {
+          max-width: 100%;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        @include for-big-phone {
+          padding-left: 0;
+        }
+
+        .bottom-links {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 100%;
+          @include for-desktop {
+            flex-flow: row;
+            align-items: center;
+            justify-content: flex-start;
+          }
+          @include for-tablet {
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .red-btn {
+            width: 100%;
+            max-width: 210px;
+            height: 100%;
+            max-height: 43px;
+            margin-right: auto;
+            margin-left: auto;
+            @include text-style('Roboto', normal, 500, 18px, 21px);
+            color: #ffffff;
+            padding: 10px 11px;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 20px;
+            @include for-desktop {
+              flex-flow: row;
+              align-items: center;
+              margin-bottom: 0;
+              margin-right: 20px;
+              margin-left: 30px;
+            }
+            @include for-tablet {
+              width: 100%;
+              max-width: calc(100% - 40px);
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 20px;
+            }
+          }
+
+          .read-review {
+            width: 100%;
+            max-width: 210px;
+            height: 100%;
+            max-height: 100%;
+            border: 1px solid #FFFFFF;
+            border-radius: 10px;
+            background: transparent;
+            text-align: center;
+            text-decoration: none;
+            @include text-style('Roboto', normal, 500, 18px, 21px);
+            color: #ffffff;
+            padding: 10px 10px;
+            @include for-tablet {
+              width: 100%;
+              max-width: calc(100% - 40px);
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .more-reviews {
+    padding: 24px 15px 24px 16px;
+    @include text-style('Roboto', normal, 500, 20px, 23px);
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+    max-height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    @include for-big-phone {
+      max-width: 100%;
+    }
+  }
+}
+
+.full-list-casinos {
+  padding: 30px;
+
+  h2 {
+    @include text-style('Roboto', normal, 500, 40px, 47px);
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 71px;
+
+    input[type=search] {
+      width: 100%;
+      max-width: 100%;
+      background: #ffffff;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding: 24px 0 19px 23px;
+      outline: none;
+
+      &::placeholder {
+        @include text-style('Roboto', normla, 500, 24px, 28px);
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+
+  .all-reviews-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    .review-post {
+      flex: 0 0 25%;
+      width: 100%;
+      max-width: 272px;
+      margin-bottom: 20px;
+      background: #FFFFFF;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+
+      a, .more-reviews {
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 70px;
+        padding: 24px 30px;
+        text-align: center;
+        text-decoration: none;
+        @include for-big-phone {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

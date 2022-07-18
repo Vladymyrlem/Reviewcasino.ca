@@ -1,0 +1,205 @@
+@import "sass/abstracts/mixins/mixins";
+
+.roulette-variations-tabs {
+  padding-top: 30px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    @include for-big-phone {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+  .roulette-variations-descr {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px 20px 30px;
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+    @include for-tablet {
+      //padding-bottom: 0;
+    }
+    @include for-big-phone {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 20px;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ul.nav-tabs {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 0;
+    margin-left: 20px;
+    @include for-tablet {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    @include for-big-phone {
+      flex-flow: column;
+      align-items: center;
+    }
+
+    > li {
+      background: #FFFFFF;
+      border-radius: 10px;
+      margin-right: 15px;
+      border: 0;
+      @include for-big-phone {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      a {
+        @include text-style('Roboto', normal, 500, 15px, 18px);
+        border-radius: 10px;
+        padding: 16px;
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        &.active {
+          color: #6667AB;
+        }
+
+        @include for-big-phone {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    position: relative;
+    padding: 0 30px 37px 20px;
+    display: block;
+    @include for-tablet {
+      padding-right: 20px;
+    }
+    @include for-big-phone {
+      padding-bottom: 0;
+    }
+
+    .tab-pane {
+
+      &.active {
+        @include for-tablet {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    h2 {
+      @include middle-title;
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-left: 0;
+      @include for-big-phone {
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 600px;
+      @include for-desktop {
+        max-width: calc(100% - 300px);
+      }
+      @include for-tablet {
+        max-width: 100%;
+        order: 3;
+        text-align: center;
+
+      }
+      @include for-big-phone {
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      width: auto;
+      max-width: 224px;
+      height: 100%;
+      max-height: 127px;
+      @include for-tablet {
+        position: relative;
+        margin: 0 auto 20px auto;
+        order: 2;
+        right: auto;
+        top: auto;
+      }
+    }
+
+    a {
+      background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+      , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+      border-radius: 10px;
+      color: #ffffff;
+      @include text-style('Roboto', normal, 500, 20px, 23px);
+      width: 100%;
+      max-width: 174px;
+      height: 100%;
+      max-height: 50px;
+      text-align: center;
+      padding: 14px 20px;
+      margin-top: 15px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include for-tablet {
+        position: relative;
+        margin: 0 auto 20px auto;
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+      }
+
+    }
+  }
+}
