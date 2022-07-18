@@ -1,0 +1,183 @@
+@import "sass/abstracts/mixins/mixins";
+
+.deposit-table-section {
+  padding-top: 30px;
+  margin-bottom: 50px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .bonus-descr-text {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 0;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+
+    margin-bottom: 21px;
+  }
+
+  .table-wrapper {
+    overflow: auto;
+  }
+
+  table.bonus-casino-table {
+    display: table;
+    table-layout: auto;
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 3px 0;
+
+    thead {
+      > tr {
+        background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+
+        > th {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          padding: 12px;
+          text-align: center;
+          border-style: solid;
+          border-color: #ffffff;
+          border-width: 0 3px 0 0;
+
+          &:first-child {
+            border-left-width: 3px;
+            width: 117px;
+          }
+
+          &:nth-child(3) {
+            width: 108px;
+          }
+        }
+      }
+    }
+
+    tbody > tr {
+      > td {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        padding: 12px;
+        text-align: center;
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 3px 3px 0 0;
+        @include for-tablet {
+          width: 100%;
+          border-right-width: 0;
+        }
+
+        &:first-child {
+          border-left-width: 3px;
+        }
+
+        &:last-child {
+          text-align: center;
+
+          a {
+            width: 100%;
+            max-width: 100%;
+            @include text-style('Roboto', normal, 500, 18px, 21px);
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+
+      &:last-child {
+        > td {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    table.bonus-casino-table {
+      //border: 0;
+      border-width: 0 3px 3px 0;
+    }
+
+    table.bonus-casino-table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table.bonus-casino-table tr {
+      border-width: 0 0 0 3px;
+      display: block;
+      //margin-bottom: 30px;
+    }
+
+    table.bonus-casino-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-right-width: 0;
+
+      &:first-child {
+        border-left-width: 0 !important;
+      }
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+
+        justify-content: center;
+
+        a {
+          width: 100%;
+          @include for-big-phone {
+            max-width: 100% !important;
+          }
+        }
+      }
+    }
+
+    table.bonus-casino-table td::before {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+    }
+
+    table.bonus-casino-table td:last-child {
+      border-right-width: 0;
+    }
+  }
+
+  caption {
+    display: none;
+  }
+}

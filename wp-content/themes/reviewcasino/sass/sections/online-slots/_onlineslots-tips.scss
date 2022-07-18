@@ -1,0 +1,92 @@
+@import "sass/abstracts/mixins/mixins";
+
+.onlineslots-tips-section {
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-right: 30px;
+    @include for-big-phone {
+      text-align: center;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  .onlineslots-tips-head-content {
+    padding: 0 30px 20px 30px;
+
+    .onlineslots-tips-content {
+      width: 100%;
+      max-width: 917px;
+    }
+
+    @include for-tablet-landscape-up {
+      max-width: 100%;
+    }
+  }
+
+  .onlineslots-tips-content-item {
+    padding: 20px 70px 0 30px;
+    width: 100%;
+    max-width: 100%;
+    border-top: 3px solid rgba(255, 255, 255, 1);
+    @include for-tablet-landscape-up {
+      padding-right: 30px;
+    }
+
+    h3 {
+      @include small-title;
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      flex-flow: row;
+      justify-content: flex-start;
+      @include for-big-phone {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+      }
+
+      .onlineslots-tips-ico {
+        width: 100%;
+        max-width: 30px;
+        height: 100%;
+        max-height: 30px;
+        margin-right: 15px;
+      }
+
+      @include for-big-phone {
+        text-align: center;
+      }
+    }
+  }
+
+  .onlineslots-tips-content {
+    padding-right: 30px;
+    @include for-tablet {
+      padding-right: 0;
+    }
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 0;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+
+    margin-bottom: 21px;
+  }
+}

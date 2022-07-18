@@ -1,0 +1,87 @@
+@import "sass/abstracts/mixins/mixins";
+
+.game-guides-section {
+  margin-bottom: 30px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-right: 30px;
+    @include for-big-phone {
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .game-guide-content {
+    margin-bottom: 15px;
+    @include text-style('Roboto', normal, 500, 18px, 21px);
+    color: #ffffff;
+    @include for-big-phone {
+      text-align: center;
+    }
+    @include for-middle-phone {
+      @include text-style('Roboto', normal, 500, 16px, 21px);
+    }
+  }
+
+  .game-guides-grid {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    @include for-desktop-mdl {
+      flex-wrap: wrap;
+    }
+    @include for-big-phone {
+      justify-content: center;
+    }
+
+    .game-guide-item {
+      flex: 0 0 25%;
+      width: 100%;
+      max-width: 290px;
+      height: 100%;
+      max-height: 180px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      @include for-desktop-mdl {
+        flex: 0 0 auto;
+      }
+      @include for-tablet {
+        flex: 0 0 49%;
+      }
+      @include for-big-phone {
+        flex: 0 0 100%;
+      }
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        margin-bottom: 10px;
+      }
+
+      a {
+        @include text-style('Roboto', normal, 500, 24px, 28px);
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        svg {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

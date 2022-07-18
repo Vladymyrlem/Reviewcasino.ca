@@ -1,0 +1,133 @@
+@import "sass/abstracts/mixins/mixins";
+
+.real-free-section {
+  padding-top: 30px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    @include for-big-phone {
+      text-align: center;
+    }
+  }
+
+  .real-subtitle {
+    padding: 0 30px;
+    @include text-style('Roboto', normal, 500, 18px, 21px);
+    color: #ffffff;
+    margin-bottom: 18px;
+    @include for-big-phone {
+      text-align: center;
+    }
+    @include for-middle-phone {
+      @include text-style('Roboto', normal, 500, 16px, 21px);
+    }
+  }
+
+  .free-game-table {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    margin-bottom: 0;
+
+    ul {
+      flex: 0 0 49%;
+      width: 100%;
+      max-width: 100%;
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+      grid-template-rows: auto;
+      @include for-big-phone {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+      }
+      margin-bottom: 0;
+      @include for-big-phone {
+        grid-template-columns: 1fr;
+      }
+
+      > li {
+        &:nth-child(odd) {
+          @include for-big-phone {
+            flex: 0 0 100%;
+            order: 1;
+            padding-left: 60px;
+            text-align: left;
+            border-left-width: 0;
+            border-right-width: 0;
+          }
+        }
+
+        &:nth-child(even) {
+          border-right-width: 0;
+
+          @include for-big-phone {
+            flex: 0 0 100%;
+            order: 2;
+            padding-left: 60px;
+            text-align: left;
+            border-left-width: 0;
+            border-right-width: 0;
+          }
+        }
+
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 3px 3px 0 0;
+
+        &.head-item {
+          background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+          , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          padding: 15px 30px;
+          text-align: left;
+
+          @include for-big-phone {
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          //&:last-child{
+          //  border-right-width: 0;
+          //}
+        }
+
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        padding: 15px 30px 15px 70px;
+        text-align: left;
+
+        vertical-align: middle;
+        position: relative;
+        @include for-big-phone {
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        svg {
+          margin-right: 15px;
+          float: left;
+          position: absolute;
+          left: 30px;
+          top: 50%;
+          transform: translateY(-50%);
+          @include for-big-phone {
+            left: 23px;
+          }
+        }
+      }
+    }
+  }
+
+}

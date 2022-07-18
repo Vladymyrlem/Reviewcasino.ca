@@ -1,0 +1,150 @@
+@import "sass/abstracts/mixins/mixins";
+
+.play-free-section {
+  margin-bottom: 50px;
+
+  h2 {
+    @include middle-title;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 0;
+    padding-right: 30px;
+    @include for-big-phone {
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  .game-descr {
+    padding-left: 0;
+    padding-right: 30px;
+    @include for-big-phone {
+      padding-right: 0;
+    }
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 0;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+
+    margin-bottom: 25px;
+  }
+
+  .play-free-games-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 45px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+    }
+    @include for-big-phone {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-middle-phone {
+      grid-template-columns: 1fr;
+    }
+
+    .play-free-grid-item {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 130px auto;
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      @include for-tablet {
+        width: 100%;
+        max-width: 220px;
+      }
+
+      .game-thumb-block {
+        position: relative;
+        width: 100%;
+        max-width: 221px;
+        height: 100%;
+        max-height: 330px;
+        border-radius: 10px;
+
+        .hide-modal-group {
+          display: none;
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          max-height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          background: rgba(112, 88, 180, 0.82);
+          border-radius: 10px;
+
+          a.free-game-link {
+            text-decoration: none;
+            @include text-style('Roboto', normal, 500, 16px, 19px);
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 8px;
+          }
+
+          a.site-game-link {
+            text-decoration: none;
+            @include text-style('Roboto', normal, 500, 16px, 19px);
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: 16px 20px;
+            width: 100%;
+            max-width: 127px;
+            text-align: center;
+
+            &:hover {
+              background: transparent;
+              border: 1px solid white;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        &:hover .hide-modal-group {
+          display: flex;
+        }
+
+        img {
+          width: 100%;
+          max-width: 221px;
+          height: 100%;
+          max-height: 100%;
+          border-radius: 10px;
+          position: relative;
+        }
+      }
+
+      footer {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 20px;
+        background: white;
+
+        img {
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
