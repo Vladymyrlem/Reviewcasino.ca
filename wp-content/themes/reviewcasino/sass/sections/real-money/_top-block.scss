@@ -1,0 +1,61 @@
+@import "sass/abstracts/mixins/mixins";
+
+.top-block {
+  h2.middle-title {
+    @include middle-title();
+    width: 100%;
+    max-width: 833px;
+    margin-bottom: 25px;
+  }
+
+  .top-content {
+    padding: 22px 17px 2px 17px;
+
+    p {
+      margin: 0 0 20px 0;
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+  }
+
+  .open-filter {
+    display: none;
+    width: 100%;
+    max-width: 388px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @include text-style('Roboto', normal, 500, 20px, 23px);
+    color: #ffffff;
+    border-radius: 10px;
+    background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    @include for-desktop-up {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+    }
+    @include for-big-phone {
+      width: 100%;
+      max-width: 100%;
+    }
+    margin-top: 15px;
+  }
+
+  margin-bottom: 50px;
+}

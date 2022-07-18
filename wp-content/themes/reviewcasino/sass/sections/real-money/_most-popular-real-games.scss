@@ -1,0 +1,80 @@
+@import "sass/abstracts/mixins/mixins";
+
+.most-popular-games-section {
+  padding: 30px 45px 30px 30px;
+
+  h2.middle-title {
+    @include middle-title();
+    width: 100%;
+    max-width: 833px;
+  }
+
+  .most-popular-descr {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 25px;
+
+    p {
+      margin: 0 0 20px 0;
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+  }
+
+  .real-money-games-table {
+    display: table;
+    table-layout: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    max-height: 100%;
+    border: 3px solid #FFFFFF;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    tbody > tr {
+      border: 3px solid #FFFFFF;
+
+      > td {
+        padding: 15px 20px 15px 16px;
+        @include text-style('Roboto', normal, 500, 25px, 30px);
+        color: #ffffff;
+        width: 50%;
+        border-style: solid;
+        border-color: #ffffff;
+        @include for-big-phone {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          padding: 12px 15px;
+        }
+        @include for-middle-phone {
+        }
+
+        &:first-child {
+          border-width: 0 3px 3px 0;
+        }
+
+        &:last-child {
+          border-width: 0 0 3px 0;
+        }
+      }
+
+      &:last-child {
+        > td {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+}

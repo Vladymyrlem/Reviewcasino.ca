@@ -1,0 +1,98 @@
+@import "sass/abstracts/mixins/mixins";
+
+.real-banking-methods {
+  padding: 30px;
+  display: flex;
+  flex-flow: column;
+
+  h2.middle-title {
+    @include middle-title();
+    color: #ffffff;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 900px;
+    @include for-big-phone {
+      text-align: center;
+    }
+  }
+
+  .banking-methods-descr {
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+
+    p {
+      margin: 0 0;
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    z-index: 10;
+  }
+
+  .banking-methods-name {
+    @include text-style('Roboto', normal, 500, 18px, 21px);
+    color: #ffffff;
+    margin-bottom: 15px;
+    z-index: 10;
+  }
+
+  .banking-methods-list {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    position: relative;
+    list-style-type: none;
+    column-count: 2;
+    z-index: 10;
+    width: 100%;
+    max-width: 800px;
+
+    > li {
+      @include text-style('Roboto', normal, 500, 20px, 24px);
+      color: #ffffff;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 25px;
+        height: 25px;
+        content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.2188 12.7246C24.2188 19.4141 18.7988 24.834 12.1094 24.834C5.41992 24.834 0 19.4141 0 12.7246C0 6.03516 5.41992 0.615234 12.1094 0.615234C18.7988 0.615234 24.2188 6.03516 24.2188 12.7246ZM12.9395 18.2861L19.5557 11.6699C20.0146 11.2109 20.0146 10.4688 19.5557 10.0146L18.7256 9.18457C18.2666 8.72559 17.5244 8.72559 17.0703 9.18457L12.1094 14.1455L7.14844 9.18457C6.68945 8.72559 5.94727 8.72559 5.49316 9.18457L4.66309 10.0146C4.2041 10.4736 4.2041 11.2158 4.66309 11.6699L11.2793 18.2861C11.7383 18.7451 12.4805 18.7451 12.9395 18.2861Z' fill='white'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  .banking-methods-image {
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    z-index: 0;
+  }
+}

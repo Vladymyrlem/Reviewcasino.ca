@@ -1,0 +1,170 @@
+@import "sass/abstracts/mixins/mixins";
+
+.deposit-table-section {
+  padding-top: 30px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .bonus-descr-text {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 0;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+
+    margin-bottom: 21px;
+  }
+
+  .table-wrapper {
+    overflow: auto;
+  }
+
+  table.bonus-casino-table {
+    display: table;
+    table-layout: auto;
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 3px 0;
+
+    thead {
+      > tr {
+        > th {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          padding: 12px;
+          text-align: center;
+          border-style: solid;
+          border-color: #ffffff;
+          border-width: 0 3px 0 0;
+
+          &:last-child {
+            border-right-width: 0;
+          }
+        }
+      }
+    }
+
+    tbody > tr {
+      > td {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        padding: 12px;
+        text-align: center;
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 3px 3px 0 0;
+        @include for-tablet {
+          width: 100%;
+          border-right-width: 0;
+        }
+
+        &:last-child {
+          border-right-width: 0;
+
+          a {
+            width: 100%;
+            max-width: 193px;
+            @include text-style('Roboto', normal, 500, 18px, 21px);
+            color: #ffffff;
+            padding: 8px 20px;
+            text-align: center;
+          }
+        }
+      }
+
+      &:last-child {
+        > td {
+          border-bottom-width: 0;
+        }
+      }
+    }
+
+    caption {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      padding: 15px 30px 30px 30px;
+      @include for-big-phone {
+        padding: 15px 20px 20px 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    table.bonus-casino-table {
+      //border: 0;
+      border-width: 0 3px 3px 0;
+    }
+
+    table.bonus-casino-table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table.bonus-casino-table tr {
+      border-width: 0 0 0 3px;
+      display: block;
+      //margin-bottom: 30px;
+    }
+
+    table.bonus-casino-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-right-width: 0;
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+
+        justify-content: center;
+
+        a {
+          width: 100%;
+          @include for-big-phone {
+            max-width: 100% !important;
+          }
+        }
+      }
+    }
+
+    table.bonus-casino-table td::before {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+    }
+
+    table.bonus-casino-table td:last-child {
+      border-right-width: 0;
+    }
+  }
+}
