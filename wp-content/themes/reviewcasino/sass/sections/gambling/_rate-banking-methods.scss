@@ -1,0 +1,222 @@
+@import "sass/abstracts/mixins/mixins";
+
+.rate-banking-methods {
+  padding: 30px 0 0 0;
+
+  .banking-title {
+    @include middle-title;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    @include for-big-phone {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+  .rate-subtitle {
+    @include text-style('Roboto', normal, 500, 18px, 21px);
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-left: 30px;
+  }
+
+  .banking-method-title {
+    @include small-title;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    width: 100%;
+    max-width: 700px;
+    @include for-tablet {
+      margin-bottom: 0;
+
+    }
+    @include for-big-phone {
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
+
+  .banking-method-descr {
+    padding-left: 30px;
+    padding-right: 0;
+    width: 73%;
+    max-width: 700px;
+    @include for-tablet {
+      order: 3;
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      padding-right: 20px;
+      padding-left: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 0;
+      @include for-tablet {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+    }
+
+    //margin-bottom: 30px;
+  }
+
+  .banking-methods-list {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+
+    .banking-methods-item {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      border-top: 3px solid rgba(255, 255, 255, 1);
+      padding-top: 21px;
+      padding-bottom: 20px;
+
+      .banking-method-gallery {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: auto;
+        max-width: 100%;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include for-tablet {
+          position: relative;
+          margin: 15px auto;
+          right: auto;
+          top: auto;
+          transform: none;
+        }
+
+        img {
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  .bottom-banking-methods {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 72px 30px 0;
+    background: radial-gradient(162.1% 6819.09% at 84.57% 33.05%, rgba(255, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+
+    @include for-tablet {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .left-block {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      position: relative;
+
+      .banking-method-title {
+        @include for-tablet {
+          order: 1;
+          padding-left: 0;
+
+        }
+      }
+
+      .banking-method-descr {
+        width: 100%;
+        max-width: calc(100% - 180px);
+        margin-bottom: 15px;
+        @include for-tablet {
+          order: 3;
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          padding-right: 0;
+          padding-left: 0;
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 0;
+
+        }
+
+        p {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          @include for-big-phone {
+            text-align: center;
+            margin-bottom: 0;
+          }
+          @include for-middle-phone {
+            @include text-style('Roboto', normal, 500, 16px, 21px);
+          }
+        }
+      }
+
+      .banking-method-link {
+        width: 100%;
+        max-width: 352px;
+        height: 100%;
+        max-height: 60px;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 30px;
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        @include for-tablet {
+          order: 4;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 20px;
+        }
+      }
+
+      .bank-rating {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        width: 100%;
+        max-width: 159px;
+        height: 100%;
+        max-height: 159px;
+        padding: 50px 40px;
+        border: 8px solid #FFFFFF;
+        text-align: center;
+        @include text-style('Roboto', normal, 500, 36px, 42px);
+        color: #ffffff;
+        @include for-tablet-landscape-up {
+          top: 45px;
+        }
+        @include for-tablet {
+          order: 2;
+          position: relative;
+          right: auto;
+          margin: 25px auto;
+          top: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,278 @@
+@import "sass/abstracts/mixins/mixins";
+
+.want-play {
+  margin-bottom: 50px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    @include for-big-phone {
+      text-align: center;
+    }
+    @include for-phone {
+    }
+  }
+
+  article.other-review-item {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 220px auto;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    padding: 0 34px 0 0;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+    border-radius: 10px;
+    @include for-big-phone {
+      grid-template-rows: minmax(183px, auto) 1fr;
+      grid-template-columns: 1fr;
+      padding-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .logo-review-block {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      //border-radius: 10px;
+      position: relative;
+      @include for-big-phone {
+        height: 100%;
+        max-height: 183px;
+      }
+
+      .country-flag {
+        width: 100%;
+        max-width: 57px;
+        height: 100%;
+        max-height: 54px;
+        margin-top: 10px;
+      }
+
+      .review-number {
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        border-radius: 2px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 25px;
+        height: 100%;
+        max-height: 25px;
+        padding: 2px 2px 2px 2px;
+        text-align: center;
+        color: #ffffff;
+        @include text-style('Roboto', normal, 500, 16px, 19px);
+      }
+    }
+
+    .middle-block {
+      padding: 33px 80px 33px 50px;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: space-between;
+      @include for-desktop {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      @include for-tablet-landscape-up {
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+
+      .review-bonuses {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        max-height: 100%;
+        margin-bottom: 14px;
+        @include for-desktop {
+          flex: 0 0 49%;
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+        }
+        @include for-tablet {
+          flex: 0 0 100%;
+          margin-bottom: 20px;
+        }
+        @include for-big-phone {
+          align-items: center;
+        }
+
+        .top-info-name {
+          margin-bottom: 10px;
+          width: 100%;
+          max-width: 100%;
+          text-align: left;
+          @include text-style('Roboto', normal, 500, 16px, 19px);
+          color: #ffffff;
+          @include for-big-phone {
+            text-align: center;
+          }
+        }
+
+        #bonus-value {
+          @include text-style('Roboto', normal, 500, 20px, 23px);
+          color: #FFF615;
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+
+        #bonus-share {
+          display: flex;
+          flex-flow: row;
+          @include text-style('Roboto', normal, 500, 20px, 23px);
+          color: #ffffff;
+          margin-bottom: 5px;
+
+          svg {
+            margin-right: 9px;
+          }
+        }
+
+        #bonus-subtitle {
+          @include text-style('Roboto', normal, 500, 16px, 19px);
+          color: #ffffff;
+          width: 100%;
+          max-width: max-content;
+          text-align: center;
+        }
+      }
+
+      .payouts-block {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: max-content;
+        @include for-desktop {
+          flex: 0 0 49%;
+          width: 100%;
+          max-width: 100%;
+        }
+        @include for-tablet {
+          flex: 0 0 100%;
+        }
+
+        .win-rate-data, .payout-data {
+          flex: 0 0 49%;
+          width: 100%;
+          max-width: 100%;
+          margin: 0 0;
+          text-align: center;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          @include text-style('Roboto', normal, 500, 22px, 26px);
+          color: #ffffff;
+
+          span {
+            margin: 0 0 13px 0;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            @include text-style('Roboto', normal, 500, 16px, 19px);
+            color: #ffffff;
+          }
+        }
+
+        .win-rate-data svg {
+          margin-bottom: 12px;
+        }
+
+        .payout-data svg {
+          margin-bottom: 5px;
+        }
+      }
+
+      .bottom-links {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: max-content;
+        flex: 0 0 auto;
+        @include for-desktop {
+          flex: 0 0 100%;
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          flex-flow: row;
+          justify-content: flex-start;
+          margin-top: 20px;
+        }
+        @include for-tablet {
+          flex-flow: column;
+          align-items: center;
+        }
+
+        .red-btn {
+          width: 100%;
+          max-width: 251px;
+          height: 100%;
+          max-height: 55px;
+          @include text-style('Roboto', normal, 500, 20px, 23px);
+          color: #ffffff;
+          padding: 14px 11px;
+          text-align: center;
+          text-decoration: none;
+          margin-bottom: 20px;
+          @include for-desktop {
+            margin-right: 20px;
+            margin-bottom: 0;
+          }
+          @media screen and (max-width: 800px) {
+            @include text-style('Roboto', normal, 500, 20px, 23px);
+          }
+          @include for-tablet {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+          @include for-big-phone {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+
+        .read-review {
+          width: 100%;
+          max-width: 251px;
+          height: 100%;
+          max-height: 55px;
+          border: 1px solid #FFFFFF;
+          border-radius: 10px;
+          background: transparent;
+          text-align: center;
+          text-decoration: none;
+          @include text-style('Roboto', normal, 500, 20px, 23px);
+          color: #ffffff;
+          padding: 14px 10px;
+          @media screen and (max-width: 800px) {
+            @include text-style('Roboto', normal, 500, 20px, 23px);
+          }
+          @include for-big-phone {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
