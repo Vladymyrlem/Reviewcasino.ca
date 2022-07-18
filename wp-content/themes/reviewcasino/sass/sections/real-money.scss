@@ -1,0 +1,42 @@
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/*Bonus text content*/
+@import "real-money/bonus-content";
+/*Top block*/
+@import "real-money/top-block";
+
+/*Top real-money block*/
+@import "real-money/top-real-money-block";
+/*All Reviews*/
+@import "real-money/perfect-casino";
+/*Top Rated Block*/
+@import "real-money/top-rated-block";
+/*Best Slider*/
+@import "real-money/best-slider";
+/*Casino Match*/
+@import "real-money/casino-match";
+/*Casino Guides*/
+@import "real-money/casino-guides";
+/*Calculator*/
+@import "real-money/bonuses-calculator";
+/*Most popular Real Money games*/
+@import "real-money/most-popular-real-games";
+/*Banking Methods*/
+@import "real-money/casino-banking-methods";
+/*Want to play*/
+@import "real-money/want-to-play";
+/*Most popular*/
+@import "real-money/most-popular";
+
+@import "real-money/deposit-tables";
+/*Rate Banking Methods*/
+@import "real-money/rate-banking-methods";

@@ -1,0 +1,38 @@
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/*Top block*/
+@import "gambling/top-block";
+
+/*Top gambling block*/
+@import "gambling/top-gambling-block";
+/*All Reviews*/
+@import "gambling/perfect-casino";
+/*Top Rated Block*/
+@import "gambling/top-rated-block";
+/*Best Slider*/
+@import "gambling/best-slider";
+/*Other Gambling*/
+@import "gambling/other-gambling";
+/*Benefits Gambling*/
+@import 'gambling/benefits-gamblings';
+/*Gambling tips*/
+@import "gambling/gambling-tips";
+/*Banking Methods*/
+@import "gambling/casino-banking-methods";
+/*Want to play*/
+@import "gambling/want-to-play";
+/*Most popular*/
+@import "gambling/most-popular";
+
+@import "gambling/deposit-tables";
+/*Rate Banking Methods*/
+@import "gambling/rate-banking-methods";

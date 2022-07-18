@@ -1,0 +1,35 @@
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/*Top block*/
+@import "payouts/top-block";
+/*Discover More*/
+@import "payouts/discover-more";
+/*Text Content*/
+@import "payouts/bonus-content";
+/*Discover More*/
+@import "payouts/payout-odds";
+/*All Reviews*/
+@import "payouts/perfect-casino";
+/*Top Rated Block*/
+@import "payouts/top-rated-block";
+/*Better Payout*/
+@import "payouts/better-payout";
+/*Payout Odds*/
+@import "payouts/payout-odds";
+/*Best casino odds*/
+@import "payouts/best-odds";
+/*Want to play*/
+@import "payouts/want-to-play";
+/*Most popular*/
+@import "payouts/most-popular";
+
+@import "payouts/deposit-tables";

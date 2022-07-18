@@ -1,0 +1,23 @@
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/*Top block*/
+@import "games/top-block";
+/*Games type Slider*/
+@import "games/game-type-slider";
+@import "games/all-games";
+@import "games/free-casino-games";
+/*Most Popular*/
+@import "games/most-popular";
+/*Game guides*/
+@import "games/games-guide";
+/*Real Money vs Free Games*/
+@import "games/real-free-games";

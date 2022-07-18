@@ -1,0 +1,294 @@
+@import "sass/abstracts/mixins/mixins";
+
+.latest-bonuses {
+  margin-bottom: 50px;
+
+  .latest-bonuses-title {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .latest-bonuses-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+    .latest-bonuses-item {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 25px;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 60px 35px 25px 32px;
+      position: relative;
+
+      &#latest-bonus-2 {
+        .bonus-number {
+          padding-left: 17px;
+        }
+      }
+
+      @include for-tablet {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+
+      .bonus-number {
+        background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+        border-radius: 10px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: max-content;
+        @include text-style('Roboto', normal, 500, 22px, 26px);
+        color: #ffffff;
+        padding: 10px 17px 10px 17px;
+        text-align: center;
+        @include for-big-phone {
+          width: 100%;
+          max-width: 100%;
+          //padding-left: 0;
+        }
+      }
+
+      .bonuses-name {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        @include small-title;
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 16px;
+        @include for-tablet {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: calc(100% - 40px);
+        }
+        @include for-big-phone {
+          display: none;
+        }
+      }
+
+      .left-bonuses-group {
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 19px 40px 18px 37px;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: max-content;
+        margin-right: 30px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        @include for-tablet {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        img.wp-post-image {
+          width: auto;
+          max-width: 120px;
+          margin-bottom: 20px;
+        }
+
+        .ranks-wrap {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          margin-top: 15px;
+          margin-bottom: 15px;
+
+          .rating-title {
+            @include text-style('Roboto', normal, 500, 15px, 18px);
+            background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            margin-bottom: 16px;
+            margin-top: 0;
+          }
+        }
+
+        a.review-link {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          text-decoration-line: underline;
+          color: #7159B5;
+        }
+      }
+
+      .right-bonuses-group {
+        width: 100%;
+        max-width: 100%;
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .bonuses-data-group {
+          display: grid;
+          list-style-type: none;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          background: #ffffff;
+          border-radius: 10px;
+          margin-bottom: 15px;
+          width: 100%;
+          max-width: 607px;
+          padding-left: 0;
+          margin-left: 0;
+          @include for-tablet-landscape-up {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          }
+          @include for-tablet {
+            max-width: calc(100% - 40px);
+            margin-left: auto;
+            margin-right: auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin-top: 15px;
+          }
+          @include for-big-phone {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          }
+
+          > li {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            border-style: solid;
+            border-color: #6C5FB0;
+            border-width: 0 0 3px 0;
+            padding: 26px 10px 19px 10px;
+
+            &:nth-child(2) {
+              border-width: 0 3px 3px 3px;
+            }
+
+            &:nth-child(5) {
+              border-width: 0 3px 3px 3px;
+            }
+
+            @include for-tablet-landscape-up {
+              border-width: 0 3px 3px 3px;
+              &:nth-child(2), &:nth-child(4) {
+                border-width: 0 3px 3px 0;
+              }
+              &:nth-child(5) {
+                border-width: 0 3px 3px 3px;
+              }
+              &:last-child {
+                border-width: 0 3px 3px 0;
+              }
+            }
+            @include for-tablet {
+              border-width: 0 0 3px 0;
+              &:nth-child(2) {
+                border-width: 0 3px 3px 3px;
+              }
+              &:nth-child(5) {
+                border-width: 0 3px 3px 3px;
+              }
+              &:nth-child(4), &:last-child {
+                border-width: 0 0 3px 0;
+              }
+            }
+            @include for-big-phone {
+              border-width: 0 3px 3px 3px;
+              &:nth-child(2), &:nth-child(4) {
+                border-width: 0 3px 3px 0 !important;
+              }
+              &:nth-child(5) {
+                border-width: 0 3px 3px 3px;
+                border-radius: 0 0 0 3px;
+              }
+              &:last-child {
+                border-width: 0 3px 3px 0;
+                border-radius: 0 0 3px 0;
+              }
+            }
+
+            .bonus-data-name {
+              @include text-style('Roboto', normal, 500, 15px, 18px);
+              color: #000000;
+              margin-bottom: 10px;
+              @include for-big-phone {
+                color: #7159B5;
+              }
+            }
+
+            .bonus-data-value {
+              @include text-style('Roboto', normal, 500, 20px, 23px);
+              color: #000000;
+              @include for-big-phone {
+                color: #7159B5;
+              }
+            }
+
+          }
+        }
+
+        a.bonus-link {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          width: 100%;
+          max-width: max-content;
+          padding: 20px 30px;
+          height: 100%;
+          max-height: 57px;
+          @include for-tablet {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: calc(100% - 40px);
+          }
+          @include for-tablet {
+            width: 100%;
+          }
+        }
+
+        &#right-bonuses-group-1 a {
+          width: 100%;
+          max-width: 100%;
+          @include for-desktop-up {
+            max-width: 607px;
+          }
+          @include for-tablet {
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+            max-width: calc(100% - 40px);
+          }
+        }
+      }
+    }
+  }
+
+  a.show-more-bonuses {
+    width: 100%;
+    max-width: max-content;
+    height: 100%;
+    max-height: 70px;
+    @include text-style('Roboto', normal, 500, 20px, 23px);
+    color: #ffffff;
+    padding: 25px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    @include for-big-phone {
+      max-width: 100%;
+    }
+  }
+}

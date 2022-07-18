@@ -1,0 +1,39 @@
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/*Top block*/
+@import "payments/top-block";
+/*Payments Category List*/
+@import "payments/payments-list";
+/*Text Content*/
+@import 'payments/payments-text-content';
+/*Other Payments*/
+@import "payments/other-payments";
+
+/*Payment Post Page*/
+/*Top Reviews*/
+@import "payments/top-casinos";
+/*Rate Banking Methods*/
+@import "payments/rate-banking-methods";
+/*Make Deposit*/
+@import "payments/make-deposit";
+/*Rated Block*/
+@import "payments/rated-block";
+/*Pros And Cons*/
+@import "payments/pros-and-cons";
+/*Want To Play*/
+@import "payments/want-to-play";
+/*Payments Tips Content*/
+@import "payments/payments-tips";
+/*Payments Three*/
+@import "payments/payments-three";
+/*Payments Citation*/
+@import "payments/payment-excerption";
