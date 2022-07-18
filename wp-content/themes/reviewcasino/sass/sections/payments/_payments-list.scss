@@ -1,0 +1,167 @@
+@import "sass/abstracts/mixins/mixins";
+
+.payments {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
+  .payments-cat-item {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+
+    .payments-cat-link {
+      text-decoration: none;
+      width: 100%;
+      max-width: 100%;
+
+      h2 {
+        @include middle-title();
+        color: #ffffff;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+      }
+    }
+
+    .payments-cat-list {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 25px 70px;
+      @include for-big-phone {
+        grid-template-columns: 1fr;
+        place-items: center;
+        align-self: center;
+      }
+
+      > li {
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 440px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 131px auto;
+        padding-bottom: 0;
+        @include for-big-phone {
+          max-width: 100%;
+          grid-template-rows: 140px auto;
+        }
+
+        .top-payment {
+          background: #ffffff;
+          border-radius: 10px;
+          padding: 20px;
+          //margin-bottom: 15px;
+          display: flex;
+          flex-flow: row;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 90px;
+          }
+        }
+
+        .payment-content {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto 47px;
+          padding: 15px 20px 20px 20px;
+          place-items: center;
+
+          .payments-cat-title {
+            @include small-title;
+            @include for-big-phone {
+              text-align: center;
+            }
+          }
+
+          .payments-cat-descr {
+            margin-bottom: 15px;
+
+            p {
+              @include text-style('Roboto', normal, 500, 18px, 21px);
+              color: #ffffff;
+              margin-bottom: 20px;
+              text-align: center;
+
+              @include for-middle-phone {
+                @include text-style('Roboto', normal, 500, 16px, 21px);
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .payments-post-link {
+            color: #ffffff;
+            padding: 11px 20px;
+            width: 100%;
+            max-width: 254px;
+            height: 100%;
+            max-height: 47px;
+            @include for-big-phone {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &#payments-cat-17 {
+      .payments-cat-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px 43px;
+        @include for-tablet {
+          grid-template-columns: repeat(2, 1fr);
+          place-items: center;
+          align-self: center;
+        }
+        @include for-big-phone {
+          grid-template-columns: 1fr;
+          width: 100%;
+        }
+
+        > li {
+          width: 100%;
+          max-width: 289px;
+          grid-template-rows: 105px auto;
+          @include for-big-phone {
+            max-width: 100%;
+            grid-template-rows: 140px auto;
+          }
+
+          .payment-content {
+            padding: 15px 20px 20px 20px;
+
+            .payments-post-link {
+              @include text-style('Roboto', normal, 500, 18px, 21px);
+              color: #ffffff;
+              padding: 11px 20px;
+              width: 100%;
+              max-width: 249px;
+              height: 100%;
+              max-height: 47px;
+              @include for-big-phone {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

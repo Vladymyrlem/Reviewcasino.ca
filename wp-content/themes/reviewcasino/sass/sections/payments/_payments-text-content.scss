@@ -1,0 +1,43 @@
+@import "sass/abstracts/mixins/mixins";
+
+.bonus-content-section {
+  padding: 30px;
+  margin-bottom: 50px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @include for-big-phone {
+      text-align: center;
+    }
+  }
+
+  .bonus-text-content {
+    //margin-bottom: 20px;
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 20px;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul > li, ol > li {
+      @include text-style('Roboto', normal, 500, 20px, 23px);
+      color: #ffffff;
+
+    }
+  }
+}

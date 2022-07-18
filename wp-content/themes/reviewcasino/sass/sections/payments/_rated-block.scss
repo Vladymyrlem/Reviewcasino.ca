@@ -1,0 +1,60 @@
+@import "sass/abstracts/mixins/mixins";
+
+.top-rated-payments {
+  padding: 32px 20px 30px 15px;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: column;
+
+  h2.middle-title {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .top-rated-link {
+    background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    @include text-style('Roboto', normal, 500, 20px, 23px);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 16px 12px 16px;
+    width: 100%;
+    max-width: max-content;
+    text-align: center;
+    height: 100%;
+    max-height: 51px;
+    @include for-tablet {
+      order: 3;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include for-big-phone {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .top-rated-image-after {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    z-index: 0;
+    @include for-tablet {
+      position: relative;
+      order: 2;
+      margin: 5px auto 20px auto;
+      right: 0;
+    }
+  }
+}

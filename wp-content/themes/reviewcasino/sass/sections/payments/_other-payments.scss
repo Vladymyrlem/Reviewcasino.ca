@@ -1,0 +1,84 @@
+@import "sass/abstracts/mixins/mixins";
+
+.other-payments {
+  margin-bottom: 50px;
+
+  h2 {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    @include for-big-phone {
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  .other-methods-list {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    @include for-desktop {
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+      align-self: center;
+      row-gap: 20px;
+    }
+    @include for-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-big-phone {
+      grid-template-columns: 1fr;
+    }
+
+    .other-payment-item {
+      width: 100%;
+      max-width: 290px;
+      height: 100%;
+      max-height: 180px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 30px;
+      padding: 30px 20px 15px 20px;
+      @include for-tablet {
+        max-width: 100%;
+      }
+
+      .post-thumbnail {
+        @include for-desktop {
+          margin-bottom: 15px;
+        }
+      }
+
+      img {
+        width: auto;
+        max-width: 188px;
+      }
+
+      .other-payment-link {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        @include text-style('Roboto', normal, 500, 24px, 28px);
+        background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-decoration: none;
+
+        svg {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
