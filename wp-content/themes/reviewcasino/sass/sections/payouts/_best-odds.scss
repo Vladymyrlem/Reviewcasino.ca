@@ -1,0 +1,108 @@
+@import "sass/abstracts/mixins/mixins";
+
+.best-casino-odds-section {
+  padding: 30px 0 0 0;
+  width: 100%;
+  max-width: 100%;
+
+  h2.middle-title {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include for-big-phone {
+      text-align: center;
+    }
+  }
+
+  .best-casino-odds-descr {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 20px;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .best-casino-odds-table {
+    display: table;
+    width: 100%;
+    table-layout: auto;
+    border-spacing: 0;
+    border-collapse: separate;
+    margin-bottom: 0;
+
+    caption {
+      display: none;
+    }
+
+    > thead {
+      background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+      , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+
+      > tr > th {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        padding: 15px 30px;
+        text-align: left;
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 3px 3px 0 0;
+        @include for-big-phone {
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        &:last-child {
+          border-right-width: 0;
+        }
+      }
+    }
+
+    > tbody {
+      > tr {
+        > td {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          padding: 15px 30px;
+          text-align: left;
+          border-style: solid;
+          border-color: #ffffff;
+          border-width: 3px 3px 0 0;
+          @include for-big-phone {
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          &:last-child {
+            border-right-width: 0;
+          }
+        }
+
+        &:last-child {
+          > td {
+            border-bottom-width: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import "sass/abstracts/mixins/mixins";
+
+.discover-more-section {
+  margin-bottom: 80px;
+  @include for-big-phone {
+    margin-bottom: 30px;
+  }
+
+  .discover-more-title {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include for-big-phone {
+      text-align: center;
+    }
+  }
+
+  .discover-more-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "A B C";
+
+    grid-gap: 40px 40px;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    @include for-desktop-up {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      place-items: center;
+      grid-template-areas: "A B"
+    "C C";
+    }
+    @include for-tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      place-items: center;
+      grid-template-areas: "A"
+   "B"
+    "C";
+    }
+
+    .discover-more-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(160px, auto) auto auto 52px;
+      width: 100%;
+      max-width: 400px;
+      background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+      max-height: 100%;
+      padding-bottom: 30px;
+      @include for-big-phone {
+        max-width: 100%;
+      }
+
+      &:first-child {
+        grid-area: A;
+      }
+
+      &:nth-child(2) {
+        grid-area: B;
+      }
+
+      &:last-child {
+        grid-area: C;
+        @include for-desktop-up {
+
+        }
+      }
+
+      .discover-more-top {
+        background: #FFFFFF;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+        }
+      }
+
+      .discover-title {
+        @include small-title;
+        color: #ffffff;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        margin-top: 25px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        @include for-big-phone {
+          max-width: 100%;
+        }
+      }
+
+      .discover-more-excerpt {
+        @include for-big-phone {
+          max-width: 100%;
+        }
+
+        p {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          margin-top: 0;
+          margin-bottom: 20px;
+          text-align: center;
+
+          @include for-big-phone {
+            text-align: center;
+          }
+          @include for-middle-phone {
+            @include text-style('Roboto', normal, 500, 16px, 21px);
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .discover-more-link {
+        margin-left: auto;
+        margin-right: auto;
+        @include text-style('Roboto', normal, 500, 24px, 28px);
+        color: #ffffff;
+        width: 100%;
+        max-width: calc(100% - 40px);
+        padding: 12px 20px;
+        text-align: center;
+      }
+    }
+  }
+}

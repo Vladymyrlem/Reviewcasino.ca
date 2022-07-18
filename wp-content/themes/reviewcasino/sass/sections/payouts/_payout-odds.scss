@@ -1,0 +1,259 @@
+@import "sass/abstracts/mixins/mixins";
+
+.payout-odds-section {
+  padding: 30px 0 0 0;
+
+  h2.middle-title {
+    @include middle-title;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include for-big-phone {
+      text-align: center;
+    }
+  }
+
+  .payouts-odds-head {
+    .head-odds-content {
+      margin-bottom: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      p {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        margin-bottom: 20px;
+        @include for-big-phone {
+          text-align: center;
+        }
+        @include for-middle-phone {
+          @include text-style('Roboto', normal, 500, 16px, 21px);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .odds-list-content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+
+    .odds-list-item {
+      border-top: 3px solid #ffffff;
+      width: 100%;
+      max-width: 100%;
+      padding: 20px 30px;
+
+      h3.odds-list-content-title {
+        @include small-title;
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 15px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        svg {
+          margin-right: 15px;
+          width: 17px;
+          height: 17px;
+        }
+
+        @include for-big-phone {
+          text-align: center;
+          justify-content: center;
+
+        }
+      }
+
+      .odds-list-content-block {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 100%;
+
+        p {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          margin-bottom: 20px;
+          @include for-big-phone {
+            text-align: center;
+          }
+          @include for-middle-phone {
+            @include text-style('Roboto', normal, 500, 16px, 21px);
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .best-casino-odds-descr {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    p {
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
+      margin-bottom: 20px;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .odds-table {
+    display: table;
+    width: 100%;
+    table-layout: auto;
+    border-spacing: 0;
+    border-collapse: separate;
+    margin-bottom: 0;
+
+    > thead {
+      background: radial-gradient(846.08% 7825.73% at 72.28% 77.36%, rgba(255, 0, 0, 0.2) 33.33%, rgba(231, 39, 39, 0.003125) 99.99%, rgba(231, 39, 39, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+      , linear-gradient(0deg, rgba(135, 0, 57, 0.2), rgba(135, 0, 57, 0.2)), #6667AB;
+
+      > tr > th {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        padding: 15px 30px;
+        text-align: left;
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: 3px 3px 0 0;
+        @include for-big-phone {
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        &:last-child {
+          border-right-width: 0;
+        }
+      }
+    }
+
+    > tbody {
+      > tr {
+        > td {
+          @include text-style('Roboto', normal, 500, 18px, 21px);
+          color: #ffffff;
+          padding: 15px 30px;
+          text-align: left;
+          border-style: solid;
+          border-color: #ffffff;
+          border-width: 3px 3px 0 0;
+          @include for-big-phone {
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          &:last-child {
+            border-right-width: 0;
+          }
+        }
+
+        &:last-child {
+          > td {
+            border-width: 3px 3px 3px 0;
+
+            &:last-child {
+              border-right-width: 0;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .table-list-content {
+    height: auto;
+
+    .list-title {
+      height: auto;
+      @include small-title;
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 15px;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: flex-start;
+      @include for-big-phone {
+        text-align: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        margin-right: 15px;
+      }
+
+      @include for-big-phone {
+        text-align: center;
+      }
+    }
+
+    .list-content {
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 30px;
+      height: auto;
+      @include for-tablet {
+        padding-right: 0;
+      }
+
+      p {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+        color: #ffffff;
+        margin-bottom: 20px;
+        @include for-big-phone {
+          text-align: center;
+        }
+        @include for-middle-phone {
+          @include text-style('Roboto', normal, 500, 16px, 21px);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    padding: 30px 30px 20px 30px;
+  }
+}
