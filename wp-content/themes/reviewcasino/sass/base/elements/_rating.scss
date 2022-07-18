@@ -14,7 +14,7 @@
   margin-top: 20px;
 
   .rating-title {
-    @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+    @include text-style('Roboto', normal, 500, 25px, 29px);
     color: #ffffff;
   }
 
@@ -93,13 +93,17 @@
         position: absolute;
         overflow: hidden;
         z-index: 5;
+
       }
 
       #star img {
         width: auto;
         max-width: 167px;
         height: auto;
-        margin-top: 0;
+        margin-top: -5px;
+        @include for-tablet-portrait-up {
+          max-width: 120px;
+        }
       }
 
       img.empty-stars {
@@ -107,6 +111,9 @@
         z-index: 1;
         width: auto;
         max-width: 167px;
+        @include for-tablet-portrait-up {
+          max-width: 120px;
+        }
       }
     }
   }

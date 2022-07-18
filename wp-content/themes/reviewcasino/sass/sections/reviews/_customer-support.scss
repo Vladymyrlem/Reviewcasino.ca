@@ -4,18 +4,23 @@
   padding: 30px;
   overflow: hidden;
 
-  h2 {
+  h3.small-title {
+    color: #ffffff;
     margin-bottom: 20px;
+    @include small-title;
   }
 
   .customer-support-content {
     margin-bottom: 30px;
 
     p {
-      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      @include text-style('Roboto', normal, 500, 18px, 21px);
       color: #ffffff;
       margin-bottom: 20px;
       margin-top: 0;
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 20px);
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -30,6 +35,10 @@
     width: 100%;
     max-width: 100%;
     margin-bottom: 30px;
+    @include for-tablet-landscape-up {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
     .support-item {
       display: flex;
@@ -44,6 +53,17 @@
       background: #FFFFFF;
       box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
+      @include for-tablet-landscape-up {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: max-content;
+        margin-bottom: 20px;
+      }
+      @include for-big-phone {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+      }
 
       .support-ico {
         margin-right: 10px;
@@ -55,7 +75,7 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
-        @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+        @include text-style('Roboto', normal, 500, 20px, 23px);
       }
     }
   }
@@ -66,12 +86,26 @@
     place-items: flex-start;
     width: 100%;
     max-width: 700px;
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    @include for-big-phone {
+      justify-content: center;
+    }
 
     .flag-image {
       width: auto;
       max-width: 50px;
       height: 100%;
       max-height: 50px;
+      @include for-tablet-landscape-up {
+        flex: 0 0 auto;
+        margin-bottom: 20px;
+        margin-right: 20px;
+      }
     }
   }
 

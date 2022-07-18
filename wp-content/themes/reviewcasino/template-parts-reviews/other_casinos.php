@@ -1,7 +1,7 @@
 <section class="full-list-casinos full-content dark-decor-section">
     <h2 class="middle-title">Browse our full list of casino reviews</h2>
     <form action="get" id="search-all-reviews">
-        <input type="search" class="search-reviews" placeholder="Search ...">
+        <input type="search" class="search-reviews search-field" placeholder="Search ...">
     </form>
 	<?php
 	//global $post;
@@ -30,6 +30,12 @@
 		endwhile;
 		?>
     </ul>
+    <ul class="codyshop-ajax-search"></ul>
+    <a class="red-btn" id="view-all-casinos">View all casinos + <?php
+		$count_posts     = wp_count_posts( 'reviews' );
+		$published_posts = $count_posts->publish;
+		echo $published_posts ?></a>
+
 </section>
 
 <section class="other-online-casinos dark-decor-section full-content">

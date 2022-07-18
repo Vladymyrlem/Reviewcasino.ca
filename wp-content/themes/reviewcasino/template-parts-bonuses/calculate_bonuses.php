@@ -1,38 +1,41 @@
 <section class="full-content calculate-bonus-section">
     <div class="left-calculate-block">
         <h2 class="bonus-title"><?php the_sub_field( 'main_title' ); ?></h2>
-        <div class="calculate-content">
-			<?php the_sub_field( 'content' ); ?>
-        </div>
 		<?php if ( have_rows( 'tip_content' ) ) : ?>
             <div class="tip-block-content dark-decor-section">
-				<?php while ( have_rows( 'tip_content' ) ) : the_row(); ?>
+	            <?php while ( have_rows( 'tip_content' ) ) : the_row(); ?>
                     <h3 class="tip-title">
-						<?php the_sub_field( 'tip_title' ); ?>
+			            <?php the_sub_field( 'tip_title' ); ?>
                     </h3>
                     <div class="tip-content">
-						<?php the_sub_field( 'tip_content' ); ?>
+			            <?php the_sub_field( 'tip_content' ); ?>
                     </div>
-				<?php endwhile; ?>
+	            <?php endwhile; ?>
             </div>
 		<?php endif; ?>
+
+        <div class="calculate-content">
+		    <?php the_sub_field( 'content' ); ?>
+        </div>
     </div>
     <div class="calculator dark-decor-section">
 		<?php if ( have_rows( 'calculator' ) ) : ?>
 
 			<?php while ( have_rows( 'calculator' ) ) : the_row(); ?>
                 <div class="head-calculator">
-                    <h4 class="calculator-title">
-						<?php the_sub_field( 'calculate_title' ); ?>
-                    </h4>
-                    <span class="calculate-subtitle">
+                    <div class="left-head">
+                        <h2 class="calculator-title middle-title">
+							<?php the_sub_field( 'calculate_title' ); ?>
+                        </h2>
+                        <span class="calculate-subtitle">
         <?php the_sub_field( 'calculate_subtitle' ); ?>
 		</span>
-                    <form action="" method="post" class="calculate-form">
-                        <input type="number" id="bonus-val" placeholder="$ 100">
+                    </div>
+                    <div class="calculate-form">
+                        <input type="number" id="bonus-val" placeholder="С$ 100" value="100">
                         <input type="submit" id="get-result" value="Calculate">
 						<?php //the_sub_field( 'bonus_value' ); ?>
-                    </form>
+                    </div>
                 </div>
                 <div class="calculator-table">
                     <div class="tab-row">
@@ -74,34 +77,58 @@
                         </div>
                         <span class="claim-col"></span>
                     </div>
-					<?php $bonus_review = get_sub_field( 'bonus_review' ); ?>
-					<?php if ( $bonus_review ) : ?>
-						<?php foreach ( $bonus_review as $post ) : ?>
-							<?php setup_postdata( $post ); ?>
-                            <div class="tab-row">
-                                <div class="logo-casino">
-                                    <a href="<?php the_permalink(); ?>">
-										<?php echo get_the_post_thumbnail( $post->ID );  // The thumbnail?>
-                                    </a>
-                                </div>
-                                <div class="bonus-value"><?php if ( have_rows( 'head_review_content', $post->ID ) ) : ?>
+                    <div class="bonuses-group row p-0 flex-nowrap">
+
+						<?php $bonus_review = get_sub_field( 'bonus_review' ); ?>
+						<?php if ( $bonus_review ) : ?>
+							<?php foreach ( $bonus_review as $post ) : ?>
+								<?php setup_postdata( $post ); ?>
+                                <div class="tab-row bonus-tab-col col-4 p-0">
+                                    <div class="logo-casino">
+                                        <a href="<?php the_permalink(); ?>">
+											<?php echo get_the_post_thumbnail( $post->ID );  // The thumbnail?>
+                                        </a>
+                                    </div>
+									<?php if ( have_rows( 'head_review_content', $post->ID ) ) : ?>
 										<?php while ( have_rows( 'head_review_content', $post->ID ) ) : the_row(); ?>
 											<?php if ( have_rows( 'bonuses', $post->ID ) ) : ?>
 												<?php while ( have_rows( 'bonuses', $post->ID ) ) : the_row(); ?>
-
-													<?php the_sub_field( 'bonus_value' ); ?>
+                                                    <div class="bonus-value bon-val">
+                                                        <span></span>
+                                                        <input type="hidden"
+                                                               value="<?php the_sub_field( 'bonus_value_calculate' ); ?>"
+                                                               class="coef">
+                                                        <input type="hidden"
+                                                               value="<?php the_sub_field( 'bonus_share_calculate' ); ?>"
+                                                               class="maxval">
+                                                    </div>
+                                                    <div class="bankroll-col"><?php //the_sub_field( 'bankroll_value' ); ?>
+                                                        <input type="hidden"
+                                                               value="<?php the_sub_field( 'bankroll_value' ); ?>"
+                                                               class="roll">
+                                                        <span></span>
+                                                    </div>
+                                                    <!--                                                <div class="bonus-share-col" style="height: 0;display: none;">-->
+                                                    <!--	                                                --><?php //the_sub_field( 'bonus_share' ); ?>
+                                                    <!--                                                </div>-->
+                                                    <div class="claim-col claim-bonus-value">
+														<?php $claim_bonus_link = get_sub_field( 'claim_bonus_link' ); ?>
+														<?php if ( $claim_bonus_link ) : ?>
+                                                            <a href="<?php echo esc_url( $claim_bonus_link['url'] ); ?>"
+                                                               target="_blank"><?php echo esc_html( $claim_bonus_link['title'] ); ?></a>
+														<?php endif; ?>
+                                                    </div>
 												<?php endwhile; ?>
 											<?php endif; ?>
 										<?php endwhile; ?>
-									<?php endif; ?></div>
-                                <div class="bankroll-col"></div>
-                                <div class="claim-col claim-bonus-value">
-                                    <button>Claim Bonus</button>
+									<?php endif; ?>
+
                                 </div>
-                            </div>
-						<?php endforeach; ?>
-						<?php wp_reset_postdata(); ?>
-					<?php endif; ?>
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+                    </div>
+
                 </div>
                 <div class="calculate-caption">
 					<?php the_sub_field( 'calculate_caption' ); ?>

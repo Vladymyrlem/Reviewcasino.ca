@@ -1,8 +1,8 @@
 <section class="popular-gambling-games">
     <div class="mycontainer">
         <div class="gambling-game-block">
-            <h2 class="main-title">    <?php the_sub_field( 'title' ); ?>
-            </h2>
+            <h1 class="main-title">    <?php the_sub_field( 'title' ); ?>
+            </h1>
             <div id="gambling-game-descr"><?php the_sub_field( 'gambling_games_descr' ); ?>
             </div>
 			<?php if ( have_rows( 'gambling_games_link' ) ) : ?>

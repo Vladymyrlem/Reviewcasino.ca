@@ -11,18 +11,18 @@
 			<?php while ( have_rows( 'criterias_list' ) ) : the_row(); ?>
                 <li class="dark-decor-section criteria-list-item">
                     <div class="left-criteria">
-                        <h5 class="criteria-title">
+                        <h3 class="criteria-title">
 							<?php the_sub_field( 'criteria_title' ); ?>
-                        </h5>
+                        </h3>
                         <div class="criteria-content">
 							<?php the_sub_field( 'criteria_content' ); ?>
                         </div>
+						<?php $criteria_icon = get_sub_field( 'criteria_icon' ); ?>
+						<?php if ( $criteria_icon ) : ?>
+                            <img src="<?php echo esc_url( $criteria_icon['url'] ); ?>"
+                                 alt="<?php echo esc_attr( $criteria_icon['alt'] ); ?>"/>
+						<?php endif; ?>
                     </div>
-					<?php $criteria_icon = get_sub_field( 'criteria_icon' ); ?>
-					<?php if ( $criteria_icon ) : ?>
-                        <img src="<?php echo esc_url( $criteria_icon['url'] ); ?>"
-                             alt="<?php echo esc_attr( $criteria_icon['alt'] ); ?>"/>
-					<?php endif; ?>
                 </li>
 			<?php endwhile; ?>
 		<?php endif; ?>

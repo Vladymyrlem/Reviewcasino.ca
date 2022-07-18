@@ -6,10 +6,19 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-@include for-desktop {
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  @include for-desktop {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  @include for-tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include for-big-phone {
+    padding-right: 17px;
+  }
 
   .info-review-block {
     flex: 0 0 auto;
@@ -43,12 +52,19 @@
         width: 100%;
         max-width: 575px;
         margin-bottom: 30px;
+        @include for-desktop {
+          text-align: center;
+          max-width: 100%;
+        }
 
         p {
           margin-top: 0;
           margin-bottom: 15px;
-          @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+          @include text-style('Roboto', normal, 500, 18px, 21px);
           color: #ffffff;
+          @include for-desktop-mdl {
+            padding-right: 20px;
+          }
 
           &:last-child {
             margin-bottom: 0;
@@ -58,83 +74,207 @@
 
       .info-group {
         padding-left: 13px;
+        @include for-tablet {
+          padding-left: 0;
+        }
+        @include for-desktop {
+          margin-left: auto;
+          margin-right: auto;
+        }
 
         h2 {
           @include middle-title();
           margin-bottom: 15px;
+          @include for-desktop {
+            text-align: center;
+          }
         }
 
-        .info-table-list {
+        //.info-table-list {
+        //  margin-bottom: 34px;
+        //  background: transparent;
+        //  border-radius: 10px;
+        //  display: table;
+        //  table-layout: fixed;
+        //  width: 100%;
+        //  max-width: 612px;
+        //  border-spacing: 2px;
+        //  border-collapse: collapse;
+        //  position: relative;
+        //  border: 2px solid transparent;
+        //  overflow: hidden;
+        //
+        //  > tbody {
+        //    padding: 2px;
+        //    position: relative;
+        //
+        //    > tr {
+        //      display: flex;
+        //      flex-flow: row;
+        //      justify-content: space-between;
+        //      position: relative;
+        //      z-index: 99;
+        //      margin-bottom: 2px;
+        //
+        //      &:last-child {
+        //        margin-bottom: 0;
+        //      }
+        //
+        //      & > td {
+        //        flex: 0 0 50%;
+        //        display: flex;
+        //        flex-flow: row;
+        //        justify-content: space-between;
+        //        position: relative;
+        //        z-index: 10;
+        //        width: 100%;
+        //        max-width: 306px;
+        //        padding: 10px 15px 17px 7px;
+        //        background: #ffffff;
+        //
+        //        &:first-child {
+        //          margin-right: 3px;
+        //        }
+        //
+        //        .info-name, .info-value {
+        //          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+        //          -webkit-background-clip: text;
+        //          -webkit-text-fill-color: transparent;
+        //          background-clip: text;
+        //          text-fill-color: transparent;
+        //          @include text-style('Roboto', normal, 500, 14px, 16px);
+        //          flex: 0 0 49%;
+        //          word-break: break-word;
+        //        }
+        //
+        //        .info-value {
+        //          @include for-phone {
+        //            padding-left: 10px;
+        //          }
+        //        }
+        //      }
+        //
+        //    }
+        //  }
+        //
+        //  > tbody > tr:first-child {
+        //    > td {
+        //      padding-top: 22px;
+        //    }
+        //  }
+        //
+        //  > tbody > tr:last-child {
+        //    > td {
+        //      padding-bottom: 25px;
+        //    }
+        //  }
+        //
+        //  &::before {
+        //    content: '';
+        //    position: absolute;
+        //    display: block;
+        //    width: 100%;
+        //    max-width: 100%;
+        //    height: 100%;
+        //    max-height: 100%;
+        //    background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%),
+        //    linear-gradient(0deg, #6667AB, #6667AB);
+        //    z-index: -1;
+        //  }
+        //}
+        ul.info-table-list {
           margin-bottom: 34px;
           background: transparent;
           border-radius: 10px;
-          display: table;
-          table-layout: fixed;
+          display: flex;
+          flex-flow: row;
+          flex-wrap: wrap;
           width: 100%;
           max-width: 612px;
-          border-spacing: 2px;
-          border-collapse: collapse;
+
           position: relative;
           border: 2px solid transparent;
           overflow: hidden;
+          padding-left: 0;
+          margin-left: 0;
+          @include for-desktop {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          @include for-big-phone {
+            flex-flow: column;
+          }
 
-          > tbody {
-            padding: 2px;
+          & > li {
+            flex: 0 0 49%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
             position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 306px;
+            padding: 10px 15px 17px 7px;
+            background: #ffffff;
+            margin-bottom: 3px;
 
-            > tr {
-              display: flex;
-              flex-flow: row;
-              justify-content: space-between;
-              position: relative;
-              z-index: 99;
-              margin-bottom: 2px;
+            &:nth-child(2) {
+              border-radius: 0 10px 0 0;
+              @include for-big-phone {
+                border-radius: 0;
+              }
+            }
 
+            &:last-child {
+              border-radius: 0 0 10px 0;
+              @include for-big-phone {
+                border-radius: 0 0 10px 0;
+              }
+            }
+
+            &:nth-last-child(2) {
+              border-radius: 0 0 0 10px;
+              @include for-big-phone {
+                border-radius: 0;
+              }
+            }
+
+            @include for-tablet {
+              max-width: 100%;
+            }
+            @include for-big-phone {
+              flex: 0 0 100%;
+              max-width: 100%;
               &:last-child {
-                margin-bottom: 0;
+                border-radius: 0 0 10px 10px;
               }
+            }
 
-              & > td {
-                flex: 0 0 50%;
-                display: flex;
-                flex-flow: row;
-                justify-content: space-between;
-                position: relative;
-                z-index: 10;
-                width: 100%;
-                max-width: 306px;
-                padding: 10px 15px 17px 7px;
-                background: #ffffff;
+            &:nth-child(odd) {
+              margin-right: 3px;
+            }
 
-                &:first-child {
-                  margin-right: 3px;
-                }
+            .info-name, .info-value {
+              background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+              @include text-style('Roboto', normal, 500, 14px, 16px);
+              flex: 0 0 49%;
+              word-break: break-word;
+            }
 
-                .info-name, .info-value {
-                  background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  background-clip: text;
-                  text-fill-color: transparent;
-                  @include text-style('Roboto Medium', normal, 500, 14px, 16px);
-                  flex: 0 0 49%;
-                  word-break: break-all;
-                }
+            .info-value {
+              @include for-phone {
+                padding-left: 10px;
               }
-
             }
           }
 
-          > tbody > tr:first-child {
-            > td {
-              padding-top: 22px;
-            }
-          }
 
-          > tbody > tr:last-child {
-            > td {
-              padding-bottom: 25px;
-            }
+          > li:first-child {
+            padding-top: 22px;
           }
 
           &::before {
@@ -150,6 +290,7 @@
             z-index: -1;
           }
         }
+
       }
 
       .advantages-grid {
@@ -171,6 +312,9 @@
           margin-top: 0;
           margin-bottom: 15px;
           margin-left: 17px;
+          @include for-tablet {
+            margin-left: 0;
+          }
         }
 
         .advantages-section {
@@ -181,6 +325,9 @@
           align-items: flex-start;
           width: 100%;
           max-width: 100%;
+          @include for-tablet-mdl {
+            flex-wrap: wrap;
+          }
 
           .advantages-block {
             width: 100%;
@@ -191,10 +338,15 @@
             box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
             border-radius: 10px;
             padding: 20px 5px 20px 10px;
+            flex: 0 0 49%;
             @include for-desktop {
               flex: 0 0 49%;
               width: 100%;
               max-width: 100%;
+            }
+            @include for-tablet-mdl {
+              flex: 0 0 100%;
+              margin-bottom: 20px;
             }
 
             .advantages-title {
@@ -203,7 +355,7 @@
               -webkit-text-fill-color: transparent;
               background-clip: text;
               text-fill-color: transparent;
-              @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+              @include text-style('Roboto', normal, 500, 25px, 29px);
               width: 100%;
               max-width: 100%;
               text-align: center;
@@ -259,10 +411,15 @@
             box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
             border-radius: 10px;
             padding: 20px 5px 20px 10px;
+            flex: 0 0 49%;
+
             @include for-desktop {
               flex: 0 0 49%;
               width: 100%;
               max-width: 100%;
+            }
+            @include for-tablet-mdl {
+              flex: 0 0 100%;
             }
 
             .disadvantages-title {
@@ -271,7 +428,7 @@
               -webkit-text-fill-color: transparent;
               background-clip: text;
               text-fill-color: transparent;
-              @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+              @include text-style('Roboto', normal, 500, 25px, 29px);
               width: 100%;
               max-width: 100%;
               text-align: center;
@@ -336,9 +493,16 @@
         width: 100%;
         max-width: 100%;
         margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .editors-verdict {
+        @include for-desktop {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
         h2 {
           @include middle-title();
           width: 100%;
@@ -346,6 +510,9 @@
           //flex: 0 0 100%;
           margin-top: 0;
           margin-bottom: 15px;
+          @include for-desktop {
+            text-align: center;
+          }
         }
 
         .editors-verdict-list {
@@ -374,6 +541,9 @@
               padding: 16px 22px 17px 16px;
               width: 100%;
               max-width: 100%;
+              @include for-middle-phone {
+                max-height: 100%;
+              }
 
               .verdict-head {
                 display: grid;
@@ -384,20 +554,49 @@
                 @include for-desktop-up {
                   grid-template-columns: 205px auto;
                 }
+                @include for-tablet {
+                  grid-template-columns: max-content auto;
+                  grid-column-gap: 30px;
+                }
+                @include for-tablet-portrait-up {
+                  grid-template-columns: 33% auto;
+                }
+                @include for-middle-phone {
+                  grid-template-columns: 1fr;
+                  grid-template-rows: auto;
+                  place-items: center;
+                  max-height: 100%;
+                }
 
                 .verdict-name {
-                  @include text-style('Robto Medium', normal, 500, 20px, 23px);
+                  @include text-style('Roboto', normal, 500, 20px, 23px);
                   background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
                   background-clip: text;
                   text-fill-color: transparent;
+                  @include for-tablet-portrait-up {
+                    @include text-style('Roboto', normal, 500, 16px, 20px);
+                  }
+                  @include for-middle-phone {
+                    margin-bottom: 20px;
+                    max-height: 100%;
+                  }
                 }
 
               }
 
               .ranks-wrap {
                 margin-top: 0;
+                @include for-tablet-portrait-up {
+                  max-width: 100%;
+                  justify-content: space-between;
+                }
+                @include for-tablet {
+                  width: 100%;
+                  max-width: 100%;
+                  padding-left: 0;
+                }
 
                 .rank-value {
                   background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
@@ -405,8 +604,8 @@
                   -webkit-text-fill-color: transparent;
                   background-clip: text;
                   text-fill-color: transparent;
-                  @include text-style('Roboto Medium', normal, 500, 18px, 21px);
-                  padding: 0 20px;
+                  @include text-style('Roboto', normal, 500, 18px, 21px);
+                  padding: 0 15px;
                 }
               }
             }
@@ -416,7 +615,7 @@
               border: 1px solid #FFFFFF;
               border-radius: 0 0 10px 10px;
               position: absolute;
-              top: 59px;
+              top: 58px;
               left: 0;
               width: 100%;
               max-width: 100%;
@@ -424,7 +623,7 @@
               z-index: 99;
 
               p {
-                @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+                @include text-style('Roboto', normal, 500, 18px, 21px);
                 background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -471,7 +670,7 @@
       //      height: 20px;
       //    }
       //    .verdict-middle-value{
-      //      @include text-style('Roboto Medium', normal,500,18px,21px);
+      //      @include text-style('Roboto', normal,500,18px,21px);
       //      color: #000000;
       //    }
       //  }
@@ -483,7 +682,7 @@
         p {
           margin-top: 0;
           margin-bottom: 15px;
-          @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+          @include text-style('Roboto', normal, 500, 18px, 21px);
           color: #ffffff;
 
           &:last-child {
@@ -502,6 +701,9 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    @include for-big-phone {
+      position: relative;
+    }
   }
 }
 
@@ -509,6 +711,7 @@
   display: flex;
   flex-flow: row;
   justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 100%;
   margin-bottom: 25px;
@@ -517,6 +720,7 @@
     @include text-style('Robto Medium', noraml, 500, 30px, 35px);
     color: #ffffff;
     margin-right: 10px;
+    margin-bottom: 0;
   }
 
   .editors-verdict-middle-group {
@@ -540,7 +744,7 @@
     }
 
     .verdict-middle-value {
-      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      @include text-style('Roboto', normal, 500, 18px, 21px);
       color: #000000;
     }
   }

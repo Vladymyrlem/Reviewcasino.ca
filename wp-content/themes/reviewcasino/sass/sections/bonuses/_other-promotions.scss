@@ -8,6 +8,14 @@
     margin-top: 0;
     margin-bottom: 20px;
     padding-left: 30px;
+    @include middle-title;
+    @include for-big-phone {
+      padding-left: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include for-phone {
+    }
   }
 
   .other-casino-content {
@@ -16,11 +24,26 @@
     max-width: 100%;
     border-top: 3px solid #ffffff;
 
+    .bonus-decor-list {
+      margin-bottom: 20px;
+    }
+
+    @include for-big-phone {
+      border-top: 0;
+      padding-top: 0;
+    }
+
     p {
-      @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+      @include text-style('Roboto', normal, 500, 18px, 21px);
       margin-top: 0;
       margin-bottom: 15px;
       color: #ffffff;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -29,10 +52,16 @@
   }
 
   p {
-    @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+    @include text-style('Roboto', normal, 500, 18px, 21px);
     margin-top: 0;
     margin-bottom: 15px;
     color: #ffffff;
+    @include for-big-phone {
+      text-align: center;
+    }
+    @include for-middle-phone {
+      @include text-style('Roboto', normal, 500, 16px, 21px);
+    }
 
     &:last-child {
       margin-bottom: 0;

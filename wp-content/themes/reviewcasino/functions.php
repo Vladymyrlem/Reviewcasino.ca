@@ -155,8 +155,8 @@ function is_post_type( $type ) {
 function reviewcasino_scripts() {
 	wp_enqueue_style( 'reviewcasino-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'reviewcasino-style', 'rtl', 'replace' );
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', '', '4.3.1' );
-//	wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap-grid.css', '', '4.3.1');
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', '', '5.2.0' );
+	wp_enqueue_style( 'bootstrap-grid', get_template_directory_uri() . '/css/bootstrap-grid.css', '', '5.2.0' );
 //	wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap-reboot.css', '', '4.3.1', '');
 	if ( is_page( 117 ) || is_page( 121 ) || is_post_type( 'reviews' ) ) {
 		wp_enqueue_style( 'reviewcasino-reviews-style', get_template_directory_uri() . '/css/reviews.css', array(), '1.0' );
@@ -164,21 +164,46 @@ function reviewcasino_scripts() {
 	if ( is_page( array( 349, 355 ) ) || is_post_type( 'bonuses' ) || is_tax( 'bonuses_cat' ) ) {
 		wp_enqueue_style( 'reviewcasino-bonuses-style', get_template_directory_uri() . '/css/bonuses.css', array(), '1.0' );
 	}
+	if ( is_page( array( 351 ) ) ) {
+		wp_enqueue_style( 'reviewcasino-real-money-style', get_template_directory_uri() . '/css/real-money.css', array(), '1.0' );
+	}
+	if ( is_page( array( 353 ) ) ) {
+		wp_enqueue_style( 'reviewcasino-gambling-style', get_template_directory_uri() . '/css/gambling.css', array(), '1.0' );
+	}
+	if ( is_page( array( 1260 ) ) ) {
+		wp_enqueue_style( 'reviewcasino-payouts-style', get_template_directory_uri() . '/css/payouts.css', array(), '1.0' );
+	}
+	if ( is_page( array( 335 ) ) || is_post_type( 'payments' ) ) {
+		wp_enqueue_style( 'reviewcasino-payments-style', get_template_directory_uri() . '/css/payments.css', array(), '1.0' );
+	}
+	if ( is_page( array( 169 ) ) || is_post_type( 'games' ) ) {
+		wp_enqueue_style( 'reviewcasino-games-style', get_template_directory_uri() . '/css/games.css', array(), '1.0' );
+	}
+	if ( is_page( array( 1643 ) ) ) {
+		wp_enqueue_style( 'reviewcasino-online-slots-style', get_template_directory_uri() . '/css/online-slots.css', array(), '1.0' );
+	}
+	if ( is_page( array( 1766 ) ) ) {
+		wp_enqueue_style( 'reviewcasino-roulette-style', get_template_directory_uri() . '/css/roulette.css', array(), '1.0' );
+	}
 	wp_enqueue_style( 'tables-style', get_template_directory_uri() . '/css/responsive-tables.min.css', '', '2.2.1', '' );
 
 	wp_enqueue_style( 'carousel', get_template_directory_uri() . '/css/slick.css' );
 	wp_enqueue_style( 'carousel', get_template_directory_uri() . '/css/slick-theme.css', '', '1.8.1', '' );
+	wp_enqueue_style( 'vg-nav', get_template_directory_uri() . '/css/vgnav.css' );
+	wp_enqueue_style( 'vg-nav-theme', get_template_directory_uri() . '/css/vgnav-theme.css' );
+
 //	wp_enqueue_style('shor-more-style', get_template_directory_uri().'/css/show-more.min.css');
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.4.1.min.js', array( 'jquery' ), '3.4.1', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/vgnav.min.js', '', '', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', '', '4.3.1', true );
 	wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', '', '4.3.1', true );
 	wp_enqueue_script( 'bootstrap-popper', get_template_directory_uri() . '/js/popper.js', '', '1.12.9', true );
 	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui.min.js', array( 'jquery' ), '1.12.1', true );
 	wp_enqueue_script( 'reviewcasino-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '1.1', true );
 	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.8.1', true );
-	wp_enqueue_script( 'responsive-table', get_template_directory_uri() . '/js/jquery.responsive-tables.js', array( 'jquery' ), '2.2.1', true );
-
+//	wp_enqueue_script( 'responsive-table', get_template_directory_uri() . '/js/jquery.responsive-tables.js', array( 'jquery' ), '2.2.1', true );
+//	wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js', [], '2.5.17' );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -419,112 +444,183 @@ function sidebar_filter_shortcode() {
                       fill="white"/>
             </svg>
             Filter Casinos
+            <button class="close-filter">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.375 4.375L15.625 15.625" stroke="#6667AB" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M4.375 4.375L15.625 15.625" stroke="url(#paint0_linear_3_3020)" stroke-opacity="0.2"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.625 4.375L4.375 15.625" stroke="#6667AB" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M15.625 4.375L4.375 15.625" stroke="url(#paint1_linear_3_3020)" stroke-opacity="0.2"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_3_3020" x1="10" y1="6.08858" x2="10" y2="14.5075"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop offset="0.421875" stop-color="#A119E0"/>
+                            <stop offset="0.869792" stop-color="#A119E0" stop-opacity="0.92"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_3_3020" x1="10" y1="6.08858" x2="10" y2="14.5075"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop offset="0.421875" stop-color="#A119E0"/>
+                            <stop offset="0.869792" stop-color="#A119E0" stop-opacity="0.92"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </button>
         </h3>
         <div id="accordion" class="myaccordion ">
 
             <div class="card">
                 <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="d-flex align-items-center btn btn-link collapsed"
+                    <div class="mb-0">
+                        <button class="d-flex align-items-center btn collapsed"
                                 data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
                                 aria-controls="collapseOne">
-                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                            <svg class="left-ico" width="14" height="24" viewBox="0 0 14 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.03958 14.0174C4.03958 10.6794 8.9343 8.47678 8.9343 4.83581C8.9343 2.7055 7.35085 0.855621 7.11333 0.74707C7.13196 0.896327 7.14128 1.05011 7.14128 1.19936C7.14128 5.36499 0.290527 8.16017 0.290527 13.348C0.290527 15.6004 1.79015 16.9302 3.38757 18.2463C6.41941 20.3585 7.02485 21.4757 7.02485 22.1632C7.02485 22.62 6.8013 22.9321 6.8013 23.1718C7.41139 22.4165 7.61165 21.729 7.61631 21.0732C7.61631 19.7344 6.6057 18.5267 5.55783 17.1608C4.81267 16.1522 4.03958 15.234 4.03958 14.0174ZM13.6008 12.2534C13.0373 9.23211 9.9682 6.62689 9.19045 6.3329L9.37673 6.65855C9.48851 6.88922 9.53508 7.15155 9.53508 7.43198C9.53508 9.45373 7.01087 12.4615 6.8991 12.7102C6.79664 12.9409 6.75007 13.1852 6.75007 13.4249C6.75007 14.334 7.45797 15.329 7.58371 15.329C7.69548 15.329 10.2197 12.8233 10.2895 11.3624C10.5876 11.8916 10.7134 12.3846 10.7134 12.8731C10.7134 14.7365 8.76664 17.2558 8.76664 17.2558C8.76664 17.7805 10.2523 19.662 10.4199 19.662C10.4665 19.662 10.5224 19.5987 10.569 19.5535C12.3341 17.7759 13.7033 15.709 13.7033 13.3661C13.7033 13.0042 13.6707 12.6334 13.6008 12.2534Z"
                                       fill="white"/>
                             </svg>
                             <span class="filter-name">Popular filters</span>
-                            <span class="fa-stack"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
+                            <span class="fa-stack">
+                                <svg class="sidebar-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
 <path d="M5.36703 7.72701L0.265434 2.46079C-0.087176 2.09681 -0.087176 1.50823 0.265434 1.14811L1.1132 0.272991C1.46581 -0.0909971 2.03599 -0.0909971 2.38485 0.272991L6.00098 4.00581L9.61711 0.272991C9.96972 -0.0909971 10.5399 -0.0909971 10.8888 0.272991L11.7365 1.14811C12.0891 1.5121 12.0891 2.10068 11.7365 2.46079L6.63493 7.72701C6.28982 8.091 5.71964 8.091 5.36703 7.72701Z"
       fill="white"/>
 </svg>
+         <svg class="filter-arrow" width="12" height="9" viewBox="0 0 12 9" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+<path d="M5.36703 8.47506L0.265434 3.20884C-0.087176 2.84485 -0.087176 2.25627 0.265434 1.89616L1.1132 1.02104C1.46581 0.65705 2.03599 0.65705 2.38485 1.02104L6.00098 4.75386L9.61711 1.02104C9.96972 0.65705 10.5399 0.65705 10.8888 1.02104L11.7365 1.89616C12.0891 2.26015 12.0891 2.84872 11.7365 3.20884L6.63493 8.47506C6.28982 8.83904 5.71964 8.83904 5.36703 8.47506Z"
+      fill="#6667AB"/>
+<path d="M5.36703 8.47506L0.265434 3.20884C-0.087176 2.84485 -0.087176 2.25627 0.265434 1.89616L1.1132 1.02104C1.46581 0.65705 2.03599 0.65705 2.38485 1.02104L6.00098 4.75386L9.61711 1.02104C9.96972 0.65705 10.5399 0.65705 10.8888 1.02104L11.7365 1.89616C12.0891 2.26015 12.0891 2.84872 11.7365 3.20884L6.63493 8.47506C6.28982 8.83904 5.71964 8.83904 5.36703 8.47506Z"
+      fill="url(#paint0_linear_3_2989)" fill-opacity="0.2"/>
+<defs>
+<linearGradient id="paint0_linear_3_2989" x1="6.00098" y1="1.96659" x2="6.00098" y2="7.95334"
+                gradientUnits="userSpaceOnUse">
+<stop offset="0.421875" stop-color="#A119E0"/>
+<stop offset="0.869792" stop-color="#A119E0" stop-opacity="0.92"/>
+</linearGradient>
+</defs>
+</svg>
+
 </span>
                         </button>
-                    </h2>
-                    <h5>Slots, Roulette, Blackjack,Betting Vid...</h5>
+                    </div>
+                    <span>Slots, Roulette, Blackjack,Betting Vid...</span>
                 </div>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
                         <ul>
                             <li><input type="checkbox">Computer Science</li>
-                            <li>Economics</li>
-                            <li>Sociology</li>
-                            <li>Nursing</li>
-                            <li>English</li>
+                            <li><input type="checkbox">Economics</li>
+                            <li><input type="checkbox">Sociology</li>
+                            <li><input type="checkbox">Nursing</li>
+                            <li><input type="checkbox">English</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="d-flex align-items-center btn btn-link collapsed"
+                    <div class="mb-0">
+                        <button class="d-flex align-items-center btn collapsed"
                                 data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                                 aria-controls="collapseTwo">
-                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                            <svg class="left-ico" width="22" height="18" viewBox="0 0 22 18" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.351 6.75H16.2693C16.7055 7.79027 16.514 9.04219 15.6849 9.89016L11.001 14.6805V16.3125C11.001 17.2445 11.7397 18 12.651 18H20.351C21.2623 18 22.001 17.2445 22.001 16.3125V8.4375C22.001 7.50551 21.2623 6.75 20.351 6.75ZM16.501 13.2187C16.0455 13.2187 15.676 12.8408 15.676 12.375C15.676 11.9088 16.0455 11.5312 16.501 11.5312C16.9564 11.5312 17.326 11.9088 17.326 12.375C17.326 12.8408 16.9564 13.2187 16.501 13.2187ZM14.907 6.65508L8.89379 0.505195C8.23516 -0.168398 7.16713 -0.168398 6.50851 0.505195L0.494945 6.65508C-0.16368 7.32867 -0.16368 8.42098 0.494945 9.09457L6.50816 15.2448C7.16679 15.9184 8.23482 15.9184 8.89344 15.2448L14.907 9.09492C15.5656 8.42098 15.5656 7.32867 14.907 6.65508ZM3.30098 8.71875C2.84551 8.71875 2.47598 8.34082 2.47598 7.875C2.47598 7.40883 2.84551 7.03125 3.30098 7.03125C3.75645 7.03125 4.12598 7.40883 4.12598 7.875C4.12598 8.34082 3.75645 8.71875 3.30098 8.71875ZM7.70098 13.2187C7.24551 13.2187 6.87598 12.8408 6.87598 12.375C6.87598 11.9088 7.24551 11.5312 7.70098 11.5312C8.15645 11.5312 8.52598 11.9088 8.52598 12.375C8.52598 12.8408 8.15645 13.2187 7.70098 13.2187ZM7.70098 8.71875C7.24551 8.71875 6.87598 8.34082 6.87598 7.875C6.87598 7.40883 7.24551 7.03125 7.70098 7.03125C8.15645 7.03125 8.52598 7.40883 8.52598 7.875C8.52598 8.34082 8.15645 8.71875 7.70098 8.71875ZM7.70098 4.21875C7.24551 4.21875 6.87598 3.84082 6.87598 3.375C6.87598 2.90883 7.24551 2.53125 7.70098 2.53125C8.15645 2.53125 8.52598 2.90883 8.52598 3.375C8.52598 3.84082 8.15645 4.21875 7.70098 4.21875ZM12.101 8.71875C11.6455 8.71875 11.276 8.34082 11.276 7.875C11.276 7.40883 11.6455 7.03125 12.101 7.03125C12.5564 7.03125 12.926 7.40883 12.926 7.875C12.926 8.34082 12.5564 8.71875 12.101 8.71875Z"
                                       fill="white"/>
                             </svg>
 
                             <span class="filter-name">Casino Games</span>
-                            <span class="fa-stack"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
+                            <span class="fa-stack">                      <svg class="sidebar-arrow" width="12"
+                                                                              height="8" viewBox="0 0 12 8" fill="none"
+                                                                              xmlns="http://www.w3.org/2000/svg">
 <path d="M5.36703 7.72701L0.265434 2.46079C-0.087176 2.09681 -0.087176 1.50823 0.265434 1.14811L1.1132 0.272991C1.46581 -0.0909971 2.03599 -0.0909971 2.38485 0.272991L6.00098 4.00581L9.61711 0.272991C9.96972 -0.0909971 10.5399 -0.0909971 10.8888 0.272991L11.7365 1.14811C12.0891 1.5121 12.0891 2.10068 11.7365 2.46079L6.63493 7.72701C6.28982 8.091 5.71964 8.091 5.36703 7.72701Z"
       fill="white"/>
+</svg>
+          <svg class="filter-arrow" width="12" height="9" viewBox="0 0 12 9" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+<path d="M5.36703 8.47506L0.265434 3.20884C-0.087176 2.84485 -0.087176 2.25627 0.265434 1.89616L1.1132 1.02104C1.46581 0.65705 2.03599 0.65705 2.38485 1.02104L6.00098 4.75386L9.61711 1.02104C9.96972 0.65705 10.5399 0.65705 10.8888 1.02104L11.7365 1.89616C12.0891 2.26015 12.0891 2.84872 11.7365 3.20884L6.63493 8.47506C6.28982 8.83904 5.71964 8.83904 5.36703 8.47506Z"
+      fill="#6667AB"/>
+<path d="M5.36703 8.47506L0.265434 3.20884C-0.087176 2.84485 -0.087176 2.25627 0.265434 1.89616L1.1132 1.02104C1.46581 0.65705 2.03599 0.65705 2.38485 1.02104L6.00098 4.75386L9.61711 1.02104C9.96972 0.65705 10.5399 0.65705 10.8888 1.02104L11.7365 1.89616C12.0891 2.26015 12.0891 2.84872 11.7365 3.20884L6.63493 8.47506C6.28982 8.83904 5.71964 8.83904 5.36703 8.47506Z"
+      fill="url(#paint0_linear_3_2989)" fill-opacity="0.2"/>
+<defs>
+<linearGradient id="paint0_linear_3_2989" x1="6.00098" y1="1.96659" x2="6.00098" y2="7.95334"
+                gradientUnits="userSpaceOnUse">
+<stop offset="0.421875" stop-color="#A119E0"/>
+<stop offset="0.869792" stop-color="#A119E0" stop-opacity="0.92"/>
+</linearGradient>
+</defs>
 </svg>
 
 </span>
                         </button>
-                    </h2>
-                    <h5>Slots, Roulette, Blackjack,Betting Vid...</h5>
+                    </div>
+                    <span>Slots, Roulette, Blackjack,Betting Vid...</span>
 
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
                         <ul>
-                            <li>Informatics</li>
-                            <li>Mathematics</li>
-                            <li>Greek</li>
-                            <li>Biostatistics</li>
-                            <li>English</li>
-                        <li>Nursing</li>
+                            <li><input type="checkbox">Informatics</li>
+                            <li><input type="checkbox">Mathematics</li>
+                            <li><input type="checkbox">Greek</li>
+                            <li><input type="checkbox">Biostatistics</li>
+                            <li><input type="checkbox">English</li>
+                            <li><input type="checkbox">Nursing</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed"
+                    <div class="mb-0">
+                        <button class="d-flex align-items-center justify-content-between btn collapsed"
                                 data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                                 aria-controls="collapseThree">
-                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                            <svg class="left-ico" width="22" height="18" viewBox="0 0 22 18" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.351 6.75H16.2693C16.7055 7.79027 16.514 9.04219 15.6849 9.89016L11.001 14.6805V16.3125C11.001 17.2445 11.7397 18 12.651 18H20.351C21.2623 18 22.001 17.2445 22.001 16.3125V8.4375C22.001 7.50551 21.2623 6.75 20.351 6.75ZM16.501 13.2187C16.0455 13.2187 15.676 12.8408 15.676 12.375C15.676 11.9088 16.0455 11.5312 16.501 11.5312C16.9564 11.5312 17.326 11.9088 17.326 12.375C17.326 12.8408 16.9564 13.2187 16.501 13.2187ZM14.907 6.65508L8.89379 0.505195C8.23516 -0.168398 7.16713 -0.168398 6.50851 0.505195L0.494945 6.65508C-0.16368 7.32867 -0.16368 8.42098 0.494945 9.09457L6.50816 15.2448C7.16679 15.9184 8.23482 15.9184 8.89344 15.2448L14.907 9.09492C15.5656 8.42098 15.5656 7.32867 14.907 6.65508ZM3.30098 8.71875C2.84551 8.71875 2.47598 8.34082 2.47598 7.875C2.47598 7.40883 2.84551 7.03125 3.30098 7.03125C3.75645 7.03125 4.12598 7.40883 4.12598 7.875C4.12598 8.34082 3.75645 8.71875 3.30098 8.71875ZM7.70098 13.2187C7.24551 13.2187 6.87598 12.8408 6.87598 12.375C6.87598 11.9088 7.24551 11.5312 7.70098 11.5312C8.15645 11.5312 8.52598 11.9088 8.52598 12.375C8.52598 12.8408 8.15645 13.2187 7.70098 13.2187ZM7.70098 8.71875C7.24551 8.71875 6.87598 8.34082 6.87598 7.875C6.87598 7.40883 7.24551 7.03125 7.70098 7.03125C8.15645 7.03125 8.52598 7.40883 8.52598 7.875C8.52598 8.34082 8.15645 8.71875 7.70098 8.71875ZM7.70098 4.21875C7.24551 4.21875 6.87598 3.84082 6.87598 3.375C6.87598 2.90883 7.24551 2.53125 7.70098 2.53125C8.15645 2.53125 8.52598 2.90883 8.52598 3.375C8.52598 3.84082 8.15645 4.21875 7.70098 4.21875ZM12.101 8.71875C11.6455 8.71875 11.276 8.34082 11.276 7.875C11.276 7.40883 11.6455 7.03125 12.101 7.03125C12.5564 7.03125 12.926 7.40883 12.926 7.875C12.926 8.34082 12.5564 8.71875 12.101 8.71875Z"
                                       fill="white"/>
                             </svg>
                             <span class="filter-name">Casino games</span>
-                            <span class="fa-stack"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
+                            <span class="fa-stack">                      <svg class="sidebar-arrow" width="12"
+                                                                              height="8" viewBox="0 0 12 8" fill="none"
+                                                                              xmlns="http://www.w3.org/2000/svg">
 <path d="M5.36703 7.72701L0.265434 2.46079C-0.087176 2.09681 -0.087176 1.50823 0.265434 1.14811L1.1132 0.272991C1.46581 -0.0909971 2.03599 -0.0909971 2.38485 0.272991L6.00098 4.00581L9.61711 0.272991C9.96972 -0.0909971 10.5399 -0.0909971 10.8888 0.272991L11.7365 1.14811C12.0891 1.5121 12.0891 2.10068 11.7365 2.46079L6.63493 7.72701C6.28982 8.091 5.71964 8.091 5.36703 7.72701Z"
       fill="white"/>
 </svg>
+           <svg class="filter-arrow" width="12" height="9" viewBox="0 0 12 9" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+<path d="M5.36703 8.47506L0.265434 3.20884C-0.087176 2.84485 -0.087176 2.25627 0.265434 1.89616L1.1132 1.02104C1.46581 0.65705 2.03599 0.65705 2.38485 1.02104L6.00098 4.75386L9.61711 1.02104C9.96972 0.65705 10.5399 0.65705 10.8888 1.02104L11.7365 1.89616C12.0891 2.26015 12.0891 2.84872 11.7365 3.20884L6.63493 8.47506C6.28982 8.83904 5.71964 8.83904 5.36703 8.47506Z"
+      fill="#6667AB"/>
+<path d="M5.36703 8.47506L0.265434 3.20884C-0.087176 2.84485 -0.087176 2.25627 0.265434 1.89616L1.1132 1.02104C1.46581 0.65705 2.03599 0.65705 2.38485 1.02104L6.00098 4.75386L9.61711 1.02104C9.96972 0.65705 10.5399 0.65705 10.8888 1.02104L11.7365 1.89616C12.0891 2.26015 12.0891 2.84872 11.7365 3.20884L6.63493 8.47506C6.28982 8.83904 5.71964 8.83904 5.36703 8.47506Z"
+      fill="url(#paint0_linear_3_2989)" fill-opacity="0.2"/>
+<defs>
+<linearGradient id="paint0_linear_3_2989" x1="6.00098" y1="1.96659" x2="6.00098" y2="7.95334"
+                gradientUnits="userSpaceOnUse">
+<stop offset="0.421875" stop-color="#A119E0"/>
+<stop offset="0.869792" stop-color="#A119E0" stop-opacity="0.92"/>
+</linearGradient>
+</defs>
+</svg>
+
 
 </span>
                         </button>
-                    </h2>
-                    <h5>Slots, Roulette, Blackjack,Betting Vid...</h5>
+                    </div>
+                    <span>Slots, Roulette, Blackjack,Betting Vid...</span>
 
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
                         <ul>
-                            <li>Astrophysics</li>
-                            <li>Informatics</li>
-                            <li>Criminology</li>
-                            <li>Economics</li>
+                            <li><input type="checkbox">Astrophysics</li>
+                            <li><input type="checkbox">Informatics</li>
+                            <li><input type="checkbox">Criminology</li>
+                            <li><input type="checkbox">Economics</li>
                         </ul>
                     </div>
                 </div>
@@ -536,3 +632,372 @@ function sidebar_filter_shortcode() {
 
 	return $myvariable;
 }
+
+//add_action( 'add_attachment', 'pami_set_image_meta_upon_upload' );
+//
+//# Helper function
+//if ( ! function_exists( 'pami_image_meta_first' ) ) {
+//
+//	function pami_image_meta_first( $my_image_title, $encoding = 'UTF-8' ) {
+//
+//		$my_image_title = mb_ereg_replace( '^[\ ]+', '', $my_image_title );
+//		$my_image_title = mb_strtoupper( mb_substr( $my_image_title, 0, 1, $encoding ), $encoding ) . mb_substr( $my_image_title, 1, mb_strlen( $my_image_title ), $encoding );
+//
+//		return $my_image_title;
+//
+//	}
+//
+//}
+//
+//# Main function
+//function pami_set_image_meta_upon_upload( $post_ID ) {
+//
+//	if ( ! wp_attachment_is_image( $post_ID ) ) {
+//		return;
+//	}
+//
+//	$my_image_title = get_post( $post_ID )->post_title;
+//
+//	// Sanitize the title: remove hyphens, underscores & extra spaces:
+//	$my_image_title = preg_replace( '%\s*[-_\s]+\s*%', ' ', $my_image_title );
+//
+//	// Sanitize the title: capitalize first letter of every word (other letters lower case):
+//	$my_image_title = str_replace( '"', '', $my_image_title );
+//	$my_image_title = str_replace( '«', '', $my_image_title );
+//	$my_image_title = str_replace( '»', '', $my_image_title );
+//	$my_image_title = str_replace( '—', '', $my_image_title );
+//	$my_image_title = str_replace( ':', '', $my_image_title );
+//	$my_image_title = str_replace( '  ', ' ', $my_image_title );
+//	$my_image_title = str_replace( '   ', ' ', $my_image_title );
+//
+//	$my_image_title = pami_image_meta_first( mb_strtolower( $my_image_title ) );
+//
+//	// Set the image Alt-Text
+//	update_post_meta( $post_ID, '_wp_attachment_image_alt', $my_image_title );
+//
+//	$my_image_title = mb_strtolower( $my_image_title );
+//
+//	$my_image_meta = [
+//		'ID'         => $post_ID,
+//		'post_title' => 'Image — ' . $my_image_title, // Set image Title to sanitized title
+//	];
+//
+//	// Set the image meta (e.g. Title, Excerpt, Content)
+//	wp_update_post( $my_image_meta );
+//
+//}
+//function misha_my_load_more_scripts() {
+//
+//	global $wp_query;
+//
+//	// In most cases it is already included on the page and this line can be removed
+//	wp_enqueue_script('jquery');
+//
+//	// register our main script but do not enqueue it yet
+//	wp_register_script( 'my_loadmore', get_stylesheet_directory_uri() . '/js/myloadmore.js', array('jquery') );
+//
+//	// now the most interesting part
+//	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
+//	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
+//	wp_localize_script( 'my_loadmore', 'misha_loadmore_params', array(
+//		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+//		'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
+//		'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 5,
+//		'max_page' => $wp_query->max_num_pages
+//	) );
+//
+//	wp_enqueue_script( 'my_loadmore' );
+//}
+//
+////add_action( 'wp_enqueue_scripts', 'misha_my_load_more_scripts' );
+//function misha_loadmore_ajax_handler(){
+//	$perfect_casinos_list = get_sub_field( 'perfect_casinos_list' );
+//	// prepare our arguments for the query
+//	$args = json_decode( stripslashes( $_POST['query'] ), true );
+//	$args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
+//	$args['post_status'] = 'publish';
+//
+//	// it is always better to use WP_Query but not here
+//	query_posts( $args );
+//	$args     = array(
+//		'post_type'      => 'reviews',
+//		'order'          => 'DESC',
+//		'order_by'       => 'date',
+//		'posts_per_page' => 5,
+//		'post__not_in'   => $perfect_casinos_list
+//	);
+//	$myposts2 = get_posts( $args );
+//	if( have_posts() ) :
+//
+//		// run the loop
+//		 foreach ( $myposts2 as $all_post ) :
+//
+//			// look into your theme code how the posts are inserted, but you can use your own HTML of course
+//			// do you remember? - my example is adapted for Twenty Seventeen theme
+//			get_template_part( 'template-parts/content', 'reviews' );
+//			// for the test purposes comment the line above and uncomment the below one
+//			// the_title();
+//
+//
+//		 endforeach;
+//
+//	endif;
+//	die; // here we exit the script and even no wp_reset_query() required!
+//}
+//
+//
+//
+//add_action('wp_ajax_loadmore', 'misha_loadmore_ajax_handler'); // wp_ajax_{action}
+//add_action('wp_ajax_nopriv_loadmore', 'misha_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
+function assets() {
+
+	wp_enqueue_script( 'tuts/js', get_template_directory_uri() . '/js/tuts.js', [ 'jquery' ], null, true );
+
+	wp_localize_script( 'tuts/js', 'bobz', array(
+		'nonce'    => wp_create_nonce( 'bobz' ),
+		'ajax_url' => admin_url( 'admin-ajax.php' )
+	) );
+}
+
+add_action( 'wp_enqueue_scripts', 'assets', 100 );
+add_action( 'wp_ajax_nopriv_codyshop_ajax_search', 'codyshop_ajax_search' );
+add_action( 'wp_ajax_codyshop_ajax_search', 'codyshop_ajax_search' );
+function codyshop_ajax_search() {
+	$args  = array(
+		'post_type'      => 'reviews',
+		'post_status'    => 'publish',
+		'order'          => 'DESC',
+		'orderby'        => 'date',
+		's'              => $_POST['term'],
+		'posts_per_page' => 5
+	);
+	$query = new WP_Query( $args );
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post(); ?>
+            <li class="review-post">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </li>
+		<?php }
+	} else { ?>
+        <li><a href="#">Ничего не найдено, попробуйте другой запрос</a></li>
+	<?php }
+	exit;
+}
+
+function vb_filter_posts_sc( $atts ) {
+
+	$a = shortcode_atts( array(
+		'post_type' => 'games',
+		'tax'       => 'games_categories', // Taxonomy
+		'terms'     => false, // Get specific taxonomy terms only
+		'active'    => false, // Set active term by ID
+		'per_page'  => 4, // How many posts per page,
+		'pager'     => 'pager' // 'pager' to use numbered pagination || 'infscr' to use infinite scroll
+	), $atts );
+
+	$result = null;
+	$terms  = get_terms( $a['tax'] );
+	global $post;
+	if ( ! $post ) {
+		$post = get_the_ID();
+	}
+	if ( count( $terms ) ) :
+		ob_start(); ?>
+        <div id="container-async" data-paged="<?php echo $a['per_page']; ?>" class="sc-ajax-filter">
+            <ul class="nav-filter row flex-wrap">
+                <li class="col-4 active">
+                    <a href="#" data-filter="<?= $terms[0]->taxonomy; ?>" data-term="all-terms" data-page="1">
+                        Play all free games
+                        <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.74365 9.02384L3.10303 15.2886C2.64404 15.7216 1.90186 15.7216 1.44775 15.2886L0.344238 14.2475C-0.114746 13.8145 -0.114746 13.1143 0.344238 12.686L5.05127 8.24536L0.344238 3.80476C-0.114746 3.37176 -0.114746 2.67158 0.344238 2.24318L1.44287 1.19292C1.90186 0.759913 2.64404 0.759913 3.09814 1.19292L9.73877 7.45766C10.2026 7.89066 10.2026 8.59084 9.74365 9.02384Z"
+                                  fill="white"/>
+                        </svg>
+
+                    </a>
+                </li>
+				<?php foreach ( $terms as $term ) : ?>
+                    <li<?php if ( $term->term_id == $a['active'] ) : ?> class="col-4"<?php endif; ?>>
+                        <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>"
+                           data-filter="<?php echo $term->taxonomy; ?>" data-term="<?php echo $term->slug; ?>"
+                           data-page="1">
+							<?php echo $term->name; ?>
+                        </a>
+                    </li>
+				<?php endforeach; ?>
+            </ul>
+
+            <div class="status"></div>
+            <div class="content all-games-grid"></div>
+
+			<?php if ( $a['pager'] == 'infscr' ) : ?>
+                <nav class="pagination infscr-pager">
+                    <a href="#page-2" class="btn btn-primary">Load More</a>
+                </nav>
+			<?php endif; ?>
+        </div>
+
+		<?php $result = ob_get_clean();
+	endif;
+
+	return $result;
+}
+
+add_shortcode( 'ajax_filter_posts', 'vb_filter_posts_sc' );
+function vb_ajax_pager( $query = null, $paged = 4 ) {
+
+	if ( ! $query ) {
+		return;
+	}
+
+	$paginate = paginate_links( [
+		'base'      => '%_%',
+		'type'      => 'array',
+		'total'     => $query->max_num_pages,
+		'format'    => '#page=%#%',
+		'current'   => max( 1, $paged ),
+		'prev_text' => 'Prev',
+		'next_text' => 'Next'
+	] );
+
+	if ( $query->max_num_pages > 1 ) : ?>
+        <ul class="pagination">
+			<?php foreach ( $paginate as $page ) : ?>
+                <li><?php echo $page; ?></li>
+			<?php endforeach; ?>
+        </ul>
+	<?php endif;
+}
+
+function vb_filter_posts() {
+
+	if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'bobz' ) ) {
+		die( 'Permission denied' );
+	}
+
+	/**
+	 * Default response
+	 */
+	$response = [
+		'status'  => 500,
+		'message' => 'Something is wrong, please try again later ...',
+		'content' => false,
+		'found'   => 0
+	];
+
+	$tax  = sanitize_text_field( $_POST['params']['tax'] );
+	$term = sanitize_text_field( $_POST['params']['term'] );
+	$page = intval( $_POST['params']['page'] );
+	$qty  = intval( $_POST['params']['qty'] );
+
+	/**
+	 * Check if term exists
+	 */
+	if ( ! term_exists( $term, $tax ) && $term != 'all-terms' ) :
+		$response = [
+			'status'  => 501,
+			'message' => 'Term doesn\'t exist',
+			'content' => 0
+		];
+
+		die( json_encode( $response ) );
+	endif;
+
+	/**
+	 * Tax query
+	 */
+	if ( $term == 'all-terms' ) :
+
+		$tax_qry[] = [
+			'taxonomy' => $tax,
+			'field'    => 'slug',
+			'terms'    => $term,
+			'operator' => 'NOT IN'
+		];
+	else :
+
+		$tax_qry[] = [
+			'taxonomy' => $tax,
+			'field'    => 'slug',
+			'terms'    => $term,
+		];
+	endif;
+
+	/**
+	 * Setup query
+	 */
+	$args = [
+		'paged'          => $page,
+		'post_type'      => 'games',
+		'post_status'    => 'publish',
+		'posts_per_page' => $qty,
+		'tax_query'      => $tax_qry
+	];
+
+	$qry = new WP_Query( $args );
+
+	ob_start();
+	if ( $qry->have_posts() ) :
+		while ( $qry->have_posts() ) : $qry->the_post(); ?>
+			<?php $post_id = get_the_ID(); ?>
+            <article class="loop-item play-free-grid-item">
+                <div class="game-thumb-block">
+					<?php reviewcasino_post_thumbnail(); ?>
+                    <div class="hide-modal-group">
+						<?php $free_link = get_sub_field( 'free_link', $post_id ); ?>
+						<?php if ( $free_link ) : ?>
+                            <a class="free-game-link" href="<?php echo esc_url( $free_link['url'] ); ?>"
+                               target="_blank">
+                                    <span>
+                                        <?php echo esc_html( $free_link['title'] ); ?>
+                                    </span>
+                            </a>
+						<?php endif; ?>
+						<?php $game_link = get_sub_field( 'game_link', $post_id ); ?>
+						<?php if ( $game_link ) : ?>
+                            <a class="site-game-link" href="<?php echo esc_url( $game_link['url'] ); ?>"
+                               target="_blank"><?php echo esc_html( $game_link['title'] ); ?></a>
+						<?php endif; ?>
+                    </div>
+                </div>
+                <footer>
+                    <a href="<?php the_permalink(); ?>">
+						<?php $game_logo = get_field( 'game_logo', $post_id ); ?>
+						<?php if ( $game_logo ) : ?>
+                            <img src="<?php echo esc_url( $game_logo['url'] ); ?>"
+                                 alt="<?php echo esc_attr( $game_logo['alt'] ); ?>"/>
+						<?php endif; ?>
+                    </a>
+                </footer>
+            </article>
+
+		<?php endwhile;
+
+		/**
+		 * Pagination
+		 */
+		vb_ajax_pager( $qry, $page );
+
+		$response = [
+			'status' => 200,
+			'found'  => $qry->found_posts
+		];
+
+
+	else :
+
+		$response = [
+			'status'  => 201,
+			'message' => 'No posts found'
+		];
+
+	endif;
+
+	$response['content'] = ob_get_clean();
+
+	die( json_encode( $response ) );
+
+}
+
+add_action( 'wp_ajax_do_filter_posts', 'vb_filter_posts' );
+add_action( 'wp_ajax_nopriv_do_filter_posts', 'vb_filter_posts' );

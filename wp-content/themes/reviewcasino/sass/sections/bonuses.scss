@@ -1,5 +1,5 @@
 h3 {
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -34,3 +34,22 @@ h3 {
 @import "bonuses/want-to-play";
 /*Most popular*/
 @import "bonuses/most-popular";
+
+/*Noe Deposit Page*/
+@import "bonuses/latest-bonuses";
+/*Choose Bonus*/
+@import "bonuses/choose-bonus";
+/*Different types*/
+@import "bonuses/different-types";
+/*Find Bonus Code*/
+@import "bonuses/find-deposit";
+/*Discover More*/
+@import "bonuses/discover-more";
+/*No Deposit Bonuses tables*/
+@import "bonuses/deposit-tables";
+/*Games No Deposit*/
+@import "bonuses/games-deposit";
+/*No Deposit Mobile*/
+@import "bonuses/no-deposit-mobile";
+/*Rate Banking Methods*/
+@import "bonuses/rate-banking-methods";

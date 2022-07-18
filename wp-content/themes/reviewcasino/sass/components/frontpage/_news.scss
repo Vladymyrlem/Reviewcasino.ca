@@ -9,20 +9,32 @@
     background: transparent;
   }
 
-  .container {
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
+  .mycontainer {
+
+    @include for-desktop-up {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
   }
 
   .news-title {
-    @include big-title;
+    @include bonus-title;
     margin-bottom: 25px;
+    width: 100%;
+    max-width: 100%;
+    @include for-big-phone {
+      text-align: center;
+    }
   }
 
   .news-descr {
     @include light-text;
     margin-bottom: 49px;
+    @include for-big-phone {
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   .news-grid {
@@ -47,6 +59,7 @@
 
     }
     @include for-big-phone {
+      grid-template-columns: repeat(1, 1fr);
       grid-template-rows: auto;
       gap: 20px 10px;
     }
@@ -56,6 +69,8 @@
       flex-flow: column;
       background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+
       border-radius: 10px;
       padding: 14px 14px 36px 14px;
       width: 100%;
@@ -76,10 +91,14 @@
         height: 100%;
         max-height: 208px;
         margin-bottom: 26px;
+        @include for-big-phone {
+          width: auto;
+          max-width: 100%;
+        }
       }
 
       .news-date {
-        @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+        @include text-style('Roboto', normal, 500, 18px, 21px);
         color: #FFFFFF;
         margin-bottom: 6px;
         width: 100%;
@@ -87,34 +106,35 @@
         text-align: left;
         @include for-big-phone {
           text-align: center;
-          @include text-style('Roboto Medium', normal, 500, 16px, 18px);
+          @include text-style('Roboto', normal, 500, 16px, 18px);
         }
       }
 
       .news-link {
-        @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+        @include text-style('Roboto', normal, 500, 18px, 21px);
         color: #ffffff;
         text-decoration: none;
         width: 100%;
         max-width: 249px;
         margin-bottom: 10px;
         @include for-big-phone {
-          @include text-style('Roboto Medium', normal, 500, 16px, 18px);
+          @include text-style('Roboto', normal, 500, 16px, 18px);
         }
         @include for-phone {
           max-height: 100%;
-          @include text-style('Roboto Medium', normal, 500, 13px, 16px);
+          @include text-style('Roboto', normal, 500, 13px, 16px);
           margin-bottom: 0;
         }
       }
 
       .news-excerpt {
         p {
-          @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+          @include text-style('Roboto', normal, 500, 16px, 19px);
           margin: 0 0;
           color: #ffffff;
           @include for-big-phone {
-            @include text-style('Roboto Medium', normal, 500, 14px, 16px);
+            @include text-style('Roboto', normal, 500, 14px, 16px);
+            text-align: center;
           }
 
           &:last-child {
@@ -126,7 +146,7 @@
   }
 
   a {
-    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+    @include text-style('Roboto', normal, 500, 24px, 28px);
     color: #ffffff;
     text-decoration: none;
     margin-left: auto;

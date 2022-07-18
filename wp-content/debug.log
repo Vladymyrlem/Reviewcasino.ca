@@ -1,0 +1,24 @@
+[29-Jun-2022 18:54:12 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'yvmxefkf_wp384'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[29-Jun-2022 19:04:42 UTC] PHP Parse error:  Unclosed '{' on line 20 in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\https-migration.php on line 37
+[29-Jun-2022 19:05:57 UTC] PHP Fatal error:  Uncaught Error: Class "Requests_Hooks" not found in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\class-wp-http-requests-hooks.php:17
+Stack trace:
+#0 C:\OpenServer\domains\Reviewcasino.ca\wp-settings.php(243): require()
+#1 C:\OpenServer\domains\Reviewcasino.ca\wp-config.php(97): require_once('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\Reviewcasino.ca\wp-load.php(50): require_once('C:\\OpenServer\\d...')
+#3 C:\OpenServer\domains\Reviewcasino.ca\wp-blog-header.php(13): require_once('C:\\OpenServer\\d...')
+#4 C:\OpenServer\domains\Reviewcasino.ca\index.php(17): require('C:\\OpenServer\\d...')
+#5 {main}
+  thrown in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\class-wp-http-requests-hooks.php on line 17
+[29-Jun-2022 19:05:57 UTC] PHP Notice:  Function is_embed was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\functions.php on line 5831
+[29-Jun-2022 19:05:57 UTC] PHP Notice:  Function is_search was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\functions.php on line 5831
+[03-Jul-2022 11:31:41 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[04-Jul-2022 15:20:52 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[04-Jul-2022 15:20:53 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[04-Jul-2022 15:21:18 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[04-Jul-2022 15:21:18 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[04-Jul-2022 15:21:55 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[04-Jul-2022 15:21:55 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[08-Jul-2022 10:47:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[08-Jul-2022 10:47:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[08-Jul-2022 10:47:29 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753
+[08-Jul-2022 10:47:29 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\OpenServer\domains\Reviewcasino.ca\wp-includes\wp-db.php on line 1753

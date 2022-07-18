@@ -1,8 +1,8 @@
 <section class="top-block left-content">
     <div class="mycontainer ">
-        <h2 class="middle-title">
+        <h1 class="main-title">
 			<?php the_sub_field( 'main_title' ); ?>
-        </h2>
+        </h1>
         <div class="top-content dark-decor-block">
 			<?php the_sub_field( 'top_description' ); ?>
         </div>

@@ -3,12 +3,12 @@
 .bonus-decor-list {
   margin-left: 0;
   padding-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   position: relative;
   list-style-type: none;
 
   > li {
-    @include text-style('Roboto Medium', normal, 500, 20px, 24px);
+    @include text-style('Roboto', normal, 500, 20px, 24px);
     color: #ffffff;
     margin-bottom: 20px;
     position: relative;
@@ -34,22 +34,34 @@
 .bonuses-promotions {
   display: flex;
   flex-flow: column;
-  padding: 30px 0 40px 0;
+  padding: 30px 0 0 0;
 
   .top-promotions-block {
     padding: 0 30px 20px 30px;
 
     h2 {
-      @include text-style('Roboto Medium', normal, 500, 40px, 47px);
+      @include middle-title;
       color: #ffffff;
+
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-phone {
+      }
     }
 
     .promotions-descr {
       p {
-        @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+        @include text-style('Roboto', normal, 500, 18px, 21px);
         color: #ffffff;
         margin-top: 0;
         margin-bottom: 20px;
+        @include for-big-phone {
+          text-align: center;
+        }
+        @include for-middle-phone {
+          @include text-style('Roboto', normal, 500, 16px, 21px);
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -74,12 +86,23 @@
       justify-content: space-between;
       position: relative;
       z-index: 10;
+
+      ul.bonus-decor-list {
+        @include text-style('Roboto', normal, 500, 20px, 23px);
+        margin-bottom: 0;
+
+        > li {
+          @include for-tablet {
+            @include text-style('Roboto', normal, 500, 18px, 21px);
+          }
+        }
+      }
     }
   }
 
   .promotion-item {
     position: relative;
-    padding: 20px 40px 30px 30px;
+    padding: 20px 40px 20px 30px;
     border-style: solid;
     border-color: white;
     border-width: 3px 0 0 0;
@@ -91,6 +114,9 @@
     height: 100%;
     max-height: 100%;
     flex: 0 0 100%;
+    @include for-tablet-landscape-up {
+      flex-wrap: wrap;
+    }
 
     .games-type-list {
       flex: 0 0 auto;
@@ -100,6 +126,17 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       gap: 30px 20px;
+      @include for-tablet-landscape-up {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 20px;
+        width: 100%;
+        max-width: max-content;
+      }
+      @include for-big-phone {
+        grid-template-columns: 119px 119px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       .game-item {
         background: #FFFFFF;
@@ -131,7 +168,7 @@
         }
 
         .term-name {
-          @include text-style('Roboto Medium', normal, 500, 10px, 12px);
+          @include text-style('Roboto', normal, 500, 10px, 12px);
           color: #000000;
           text-align: center;
           text-decoration: none;
@@ -140,7 +177,7 @@
     }
 
     .promotions-title {
-      @include text-style('Roboto Medium', normal, 500, 28px, 33px);
+      @include small-title;
       color: #ffffff;
       margin-top: 0;
       margin-bottom: 20px;
@@ -148,17 +185,23 @@
 
     .promotions-subtitle {
       p {
-        @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+        @include text-style('Roboto', normal, 500, 18px, 21px);
         color: #ffffff;
         margin-top: 0;
         margin-bottom: 20px;
+        @include for-big-phone {
+          text-align: center;
+        }
+        @include for-middle-phone {
+          @include text-style('Roboto', normal, 500, 16px, 21px);
+        }
       }
     }
 
     .promotion-link {
-      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      @include text-style('Roboto', normal, 500, 18px, 21px);
       color: #ffffff;
-      margin-bottom: 0;
+      margin-top: 20px;
     }
 
     .right-promotions-image {
@@ -171,6 +214,9 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 0;
+      @include for-tablet {
+        opacity: .5;
+      }
     }
 
     .devices-list {
@@ -181,6 +227,7 @@
       margin-left: 0;
       padding-left: 0;
       margin-top: 20px;
+      margin-bottom: 20px;
 
       > li {
         flex: 0 0 auto;
@@ -207,7 +254,7 @@
         }
 
         span {
-          @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+          @include text-style('Roboto', normal, 500, 20px, 23px);
           background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -217,5 +264,10 @@
       }
     }
 
+    &.game-bonuses, &.device-bonuses {
+      .bonus-decor-list {
+        margin-bottom: 20px;
+      }
+    }
   }
 }

@@ -15,13 +15,18 @@ h6 {
   @include middle-title;
   color: #ffffff;
   margin-bottom: 50px;
+  @include for-big-phone {
+    margin-bottom: 20px;
+  }
 }
 
-h2.large-title {
+h1.large-title, h1.main-title {
   @include big-title;
+  @include for-big-phone {
+    text-align: center;
+  }
 }
 
 h2.middle-title {
   @include middle-title;
-
 }

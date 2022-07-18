@@ -1,4 +1,13 @@
+@import "sass/abstracts/mixins/mixins";
+
 .review-criteria {
+  h2.middle-title {
+    @include middle-title;
+    @include for-big-phone {
+      text-align: center;
+    }
+
+  }
 
   .description {
     width: 100%;
@@ -8,6 +17,12 @@
       @include light-text();
       margin-top: 0;
       margin-bottom: 25px;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 20px);
+      }
     }
   }
 
@@ -22,35 +37,76 @@
       display: flex;
       margin-bottom: 25px;
       padding: 27px 46px 45px 28px;
+      @include for-tablet {
+        padding-bottom: 27px;
+      }
+      @include for-big-phone {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
 
       .left-criteria {
         float: left;
         width: 100%;
-        max-width: 698px;
+        max-width: 100%;
+        display: grid;
+        column-gap: 30px;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto;
+        grid-template-areas: "A C"
+                     "B C";
+        @include for-tablet {
+          grid-template-columns: 1fr;
+          grid-template-areas: "A"
+        "C"
+        "B";
+        }
 
         .criteria-title {
-          @include text-style('Roboto Medium', normal, 500, 27px, 32px);
+          grid-area: A;
+          @include small-title;
           color: #ffffff;
           width: 100%;
           max-width: 100%;
           margin-top: 0;
           margin-bottom: 15px;
+          @include for-tablet {
+            text-align: center;
+          }
+          @include for-big-phone {
+            text-align: center;
+          }
         }
 
         .criteria-content {
+          grid-area: B;
           width: 100%;
           max-width: 100%;
 
           p {
-            @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+            @include text-style('Roboto', normal, 500, 18px, 21px);
             color: #ffffff;
+            @include for-big-phone {
+              text-align: center;
+            }
+            @include for-middle-phone {
+              @include text-style('Roboto', normal, 500, 16px, 21px);
+            }
           }
         }
-      }
 
-      img {
-        float: right;
-        margin-left: auto;
+        img {
+          grid-area: C;
+          float: right;
+          margin-left: auto;
+          @include for-tablet {
+            margin-right: auto;
+            margin-bottom: 20px;
+          }
+          @include for-big-phone {
+            max-width: 40%;
+          }
+        }
       }
     }
   }

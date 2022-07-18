@@ -10,9 +10,9 @@
 			<?php while ( have_rows( 'promotions_grid' ) ) : the_row(); ?>
                 <div class="promotion-item">
                     <div class="left-promotions-part">
-                        <h5 class="promotions-title">
+                        <h3 class="promotions-title">
 							<?php the_sub_field( 'promotion_title' ); ?>
-                        </h5>
+                        </h3>
                         <div class="promotions-subtitle">
 							<?php the_sub_field( 'promotion_subtitle' ); ?>
                         </div>
@@ -48,9 +48,9 @@
 			<?php while ( have_rows( 'game_specific_bonuses' ) ) : the_row(); ?>
                 <div class="left-promotions-part">
 
-                    <h5 class="promotions-title">
+                    <h3 class="promotions-title">
 						<?php the_sub_field( 'specific_title' ); ?>
-                    </h5>
+                    </h3>
                     <div class="promotions-subtitle">
 
 						<?php the_sub_field( 'specific_subtitle' ); ?>
@@ -95,9 +95,9 @@
         <div class="promotion-item device-bonuses specific-bonuses">
 			<?php while ( have_rows( 'devices_specific_bonuses' ) ) : the_row(); ?>
                 <div class="left-promotions-part">
-                    <h5 class="promotions-title">
+                    <h3 class="promotions-title">
 						<?php the_sub_field( 'specific_title' ); ?>
-                    </h5>
+                    </h3>
                     <div class="promotions-subtitle">
 						<?php the_sub_field( 'specific_subtitle' ); ?>
                     </div>

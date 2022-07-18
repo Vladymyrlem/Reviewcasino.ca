@@ -30,8 +30,8 @@
 
                                 </div>
                                 <div class="top-game-block">
-                                    <h5 class="game-title top-game-title">Game</h5>
-									<?php $games = get_sub_field( 'games', $top_post ); ?>
+                                    <h4 class="game-title top-game-title">Game</h4>
+		                            <?php $games = get_sub_field( 'games', $top_post ); ?>
 									<?php if ( $games ) : ?>
 										<?php foreach ( $games as $post ) : ?>
 											<?php setup_postdata( $post ); ?>
@@ -44,7 +44,7 @@
                                         </span>
                                 </div>
                                 <div class="top-bonuses-block">
-                                    <h5 class="top-bonuses-title">Bonus</h5>
+                                    <h4 class="top-bonuses-title">Bonus</h4>
 		                            <?php if ( have_rows( 'head_review_content', $top_post->ID ) ) : ?>
 			                            <?php while ( have_rows( 'head_review_content', $top_post->ID ) ) : the_row(); ?>
 				                            <?php if ( have_rows( 'bonuses', $top_post->ID ) ) : ?>
@@ -225,7 +225,7 @@
                                                                 <a href="<?php echo $permalink; ?>" class="red-btn">Play
                                                                     Now</a>
 
-                                                                <a href="<?php echo $permalink ?>">Read
+                                                                <a class="read-review" href="<?php echo $permalink ?>">Read
 																	<?php echo $top_post->post_title; ?> Review
                                                                 </a>
 															<?php endwhile; ?>

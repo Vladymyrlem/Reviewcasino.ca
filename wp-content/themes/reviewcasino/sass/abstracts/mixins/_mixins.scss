@@ -24,7 +24,7 @@
 }
 
 @mixin for-big-phone {
-  @media (max-width: 560px) {
+  @media screen and (max-width: 560px) {
     @content;
   }
 }
@@ -42,7 +42,13 @@
 }
 
 @mixin for-tablet {
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-mdl {
+  @media (max-width: 700px) {
     @content;
   }
 }
@@ -71,10 +77,30 @@
   }
 }
 
+@mixin for-desktop-middle {
+  @media (max-width: 1330px) {
+    @content;
+  }
+}
+
 @mixin for-middle-desktop-up {
   @media (max-width: 1440px) {
     @content;
   }
+}
+
+@mixin absolute-image($top,$right,$bottom,$left,$trans_y ) {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  position: absolute;
+  display: block;
+  top: $right;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  transform: translateY($trans_y);
 }
 
 @mixin for-big-desktop-up {
@@ -127,20 +153,20 @@ $font-weight: 400, $font-style: normal,$font-display: swap, $support-required: '
 }
 
 @mixin violet-text {
-  @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+  @include text-style('Roboto', normal, 500, 20px, 23px);
   background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
   @include for-tablet {
-    @include text-style('Roboto Medium', normal, 500, 18px, 20px);
+    @include text-style('Roboto', normal, 500, 18px, 20px);
   }
   @include for-big-phone {
-    @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+    @include text-style('Roboto', normal, 500, 16px, 20px);
   }
   @include for-phone {
-    @include text-style('Roboto Medium', normal, 500, 14px, 20px);
+    @include text-style('Roboto', normal, 500, 14px, 20px);
   }
 }
 
@@ -152,79 +178,94 @@ $font-weight: 400, $font-style: normal,$font-display: swap, $support-required: '
 }
 
 @mixin light-text {
-  @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+  @include text-style('Roboto', normal, 500, 18px, 21px);
   color: #ffffff;
-  @include for-big-phone {
-    @include text-style('Roboto Medium', normal, 500, 18px, 24px);
-  }
+
 }
 
+/*heading h1*/
 @mixin big-title {
-  @include text-style('Roboto Medium', normal, 500, 48px, 56px);
+  @include text-style('Roboto', normal, 500, 40px, 56px);
   color: #FFFFFF;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @include for-tablet {
-    @include text-style('Roboto Medium', normal, 500, 40px, 50px);
+    @include text-style('Roboto', normal, 500, 35px, 50px);
 
   }
   @include for-big-phone {
-    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+    @include text-style('Roboto', normal, 500, 26px, 28px);
 
   }
   @include for-phone {
-    @include text-style('Roboto Medium', normal, 500, 22px, 24px);
+    @include text-style('Roboto', normal, 500, 22px, 24px);
   }
 }
 
+/*Heading h2*/
 @mixin bonus-title {
-  @include text-style('Roboto Medium', normal, 500, 38px, 45px);
+  @include text-style('Roboto', normal, 500, 36px, 42px);
   color: #FFFFFF;
   @include for-tablet {
-    @include text-style('Roboto Medium', normal, 500, 35px, 43px);
+    @include text-style('Roboto', normal, 500, 30px, 43px);
 
   }
   @include for-big-phone {
-    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+    @include text-style('Roboto', normal, 500, 24px, 28px);
 
   }
   @include for-phone {
-    @include text-style('Roboto Medium', normal, 500, 20px, 26px);
+    @include text-style('Roboto', normal, 500, 20px, 26px);
   }
 }
 
+/*Heading h2*/
 @mixin middle-title {
-  @include text-style('Roboto Medium', normal, 500, 40px, 47px);
+  @include text-style('Roboto', normal, 500, 36px, 44px);
   color: #FFFFFF;
   @include for-tablet {
-    @include text-style('Roboto Medium', normal, 500, 35px, 43px);
-
+    @include text-style('Roboto', normal, 500, 30px, 43px);
+    width: 100%;
+    text-align: center;
   }
   @include for-big-phone {
-    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+    @include text-style('Roboto', normal, 500, 24px, 28px);
 
   }
   @include for-phone {
-    @include text-style('Roboto Medium', normal, 500, 20px, 26px);
+    @include text-style('Roboto', normal, 500, 20px, 26px);
   }
 }
 
+/*Heading h3*/
 @mixin small-title {
-  @include text-style('Roboto Medium', normal, 500, 27px, 32px);
+  @include text-style('Roboto', normal, 500, 22px, 32px);
   color: #FFFFFF;
+  @include for-tablet {
+    @include text-style('Roboto', normal, 500, 20px, 43px);
+    width: 100%;
+    text-align: center;
+  }
+  @include for-big-phone {
+    @include text-style('Roboto', normal, 500, 18px, 21px);
+
+  }
+  @include for-phone {
+    @include text-style('Roboto', normal, 500, 16px, 26px);
+  }
 }
 
 @mixin description {
-  @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+  @include text-style('Roboto', normal, 500, 18px, 21px);
   color: #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @include for-tablet {
-    @include text-style('Roboto Medium', normal, 500, 20px, 25px);
+    @include text-style('Roboto', normal, 500, 18px, 21px);
   }
   @include for-big-phone {
-    @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+    @include text-style('Roboto', normal, 500, 18px, 20px);
   }
   @include for-phone {
-    @include text-style('Roboto Medium', normal, 500, 14px, 20px);
+    @include text-style('Roboto', normal, 500, 14px, 20px);
   }
 }

@@ -1,5 +1,5 @@
 <section class="best-casino-section">
-    <div class="mycontainer p-0">
+    <div class="mycontainer">
         <div class="bonuses-list accordion-grid">
             <h2 class="middle-title">
 				<?php the_sub_field( 'mian_title' ); ?>

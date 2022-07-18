@@ -12,22 +12,31 @@
     padding: 20px 0;
   }
 
-  .container {
+  .mycontainer {
     justify-content: space-between;
+
+    @include for-desktop-up {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
   }
 
+
   .middle-title {
-    @include middle-title();
+    @include bonus-title();
     margin-top: 0;
     margin-bottom: 25px;
   }
 
   .info-descr {
-    @include description();
+    @include text-style('Roboto', normal, 500, 18px, 21px);
+    color: #ffffff;
     margin-top: 0;
     margin-bottom: 30px;
     @include for-big-phone {
-      @include text-style('Roboto Medium', normal, 500, 14px, 16px);
+      @include text-style('Roboto', normal, 500, 14px, 16px);
+      max-width: 100%;
+      text-align: center;
     }
   }
 
@@ -37,6 +46,10 @@
     max-width: 620px;
     height: 100%;
     max-height: 100%;
+    @include for-desktop-up {
+      flex: 0 0 49%;
+      max-width: 100%;
+    }
     @include for-desktop-mdl {
       max-width: 100%;
       flex: 0 0 100%;
@@ -103,7 +116,7 @@
         width: 100%;
         max-width: max-content;
         height: 100%;
-        max-height: 63px;
+        max-height: 70px;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -123,11 +136,21 @@
     display: flex;
     flex-flow: column;
     align-items: flex-start;
+    @include for-desktop-up {
+      flex: 0 0 49%;
+      max-width: 100%;
+    }
     @include for-desktop-mdl {
       max-width: 100%;
       flex: 0 0 100%;
     }
-
+    //.info-descr {
+    //  @include for-big-phone {
+    //    @include text-style('Roboto', normal, 500, 14px, 16px);
+    //    max-width: 50%;
+    //    text-align: center;
+    //  }
+    //}
     .play-casino-list {
       width: 100%;
       max-width: 594px;
@@ -136,6 +159,8 @@
       @include for-desktop-mdl {
         max-width: 100%;
       }
+      position: relative;
+      z-index: 10;
     }
 
     .middle-title {
@@ -196,6 +221,11 @@
       }
 
       .play-casino-descr {
+        @include for-big-phone {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+
         p {
           @include violet-text;
           background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
@@ -204,6 +234,11 @@
           background-clip: text;
           text-fill-color: transparent;
           margin-top: 0;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
 
         margin: 0;
@@ -212,7 +247,7 @@
 
     a {
       @include light-text;
-      padding: 20px 30px;
+      padding: 25px 30px;
       display: flex;
       flex-flow: row;
       justify-content: center;
@@ -222,6 +257,8 @@
       max-width: 100%;
       margin-top: 20px;
       text-decoration: none;
+      height: 100%;
+      max-height: 70px;
       @include for-tablet {
         margin-top: 0;
       }
@@ -242,11 +279,20 @@
       opacity: .7;
     }
     @include for-big-phone {
-      right: 33px;
-      top: auto;
-      bottom: 25%;
-      max-width: 93px;
+      right: 15px;
+      top: 71%;
+      bottom: auto;
+      max-width: 58px;
       opacity: 1;
+    }
+    @include for-middle-phone {
+      top: 67%;
+      right: 15px;
+      max-width: 60px;
+    }
+    @include for-phone {
+      top: 69%;
+      max-width: 45px;
     }
   }
 }

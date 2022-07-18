@@ -9,6 +9,9 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: 50px;
+@include for-tablet-portrait-up {
+  justify-content: center;
+}
 
   h2 {
     width: 100%;
@@ -21,6 +24,12 @@
     flex: 0 0 auto;
     width: 100%;
     max-width: 280px;
+    @include for-tablet {
+      margin-bottom: 20px;
+    }
+    @include for-tablet-portrait-up {
+      flex: 0 0 100%;
+    }
 
     img {
       width: 100%;

@@ -5,6 +5,9 @@
     padding: 34px 19px 25px 29px;
     display: flex;
     flex-flow: column;
+@include for-tablet-landscape-up {
+  margin-bottom: 30px;
+}
 
     .middle-title {
       @include middle-title();
@@ -13,21 +16,39 @@
     }
 
     .rating-descr {
-      @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+      @include text-style('Roboto', normal, 500, 18px, 21px);
       color: #ffffff;
       margin-bottom: 19px;
+      @include for-tablet-landscape-up {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 21px);
+      }
     }
 
     .bottom-rating-block {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include for-tablet-landscape-up {
+        flex-flow: column;
+        align-items: center;
+      }
 
       .right-decor-image {
         float: left;
         width: auto;
         max-width: 100%;
         height: auto;
+        @include for-desktop-mdl {
+          max-width: 30%;
+        }
+        @include for-tablet-landscape-up {
+          max-width: 65%;
+          margin-right: auto;
+          margin-left: auto;
+        }
       }
 
       .right-part {
@@ -47,6 +68,20 @@
           max-width: 100%;
           justify-items: center;
           align-items: center;
+          @include for-tablet-landscape-up {
+            display: block;
+            grid-template-rows: auto;
+            grid-template-columns: auto;
+            column-count: 2;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+          }
+          @include for-middle-phone {
+            column-count: auto;
+            max-width: max-content;
+            padding-left: 0;
+          }
 
           .expert-rating-item {
             @include text-style('Robto Medium', normal, 500, 24px, 29px);
@@ -54,6 +89,12 @@
             margin-bottom: 17px;
             width: auto;
             max-width: 100%;
+            @include for-tablet-landscape-up {
+              @include text-style('Robto Medium', normal, 500, 19px, 20px);
+            }
+            @include for-tablet {
+              @include text-style('Robto Medium', normal, 500, 14px, 16px);
+            }
           }
         }
       }
@@ -68,13 +109,36 @@
       max-width: 100%;
       margin-bottom: 40px;
       margin-top: 0;
+      @include for-tablet-landscape-up {
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      @include for-tablet {
+        align-items: center;
+        justify-content: center;
+      }
+      @include for-middle-phone {
+        flex-flow: column;
+      }
 
       .rating-title {
+        @include small-title;
         margin: 0;
+        @include for-tablet-landscape-up {
+          margin-bottom: 0;
+        }
+        @include for-middle-phone {
+          max-width: max-content;
+          margin-bottom: 20px;
+        }
       }
 
       .rating-group {
         margin-left: 20px;
+        @include for-middle-phone {
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
   }
@@ -89,6 +153,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
+    @include for-tablet-landscape-up {
+      margin-bottom: 20px;
+    }
   }
 }
 

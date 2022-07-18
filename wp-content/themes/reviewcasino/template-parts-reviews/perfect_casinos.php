@@ -177,5 +177,8 @@
     </div>
 	<?php wp_reset_postdata(); ?>
 	<?php //endif; ?>
-    <a href="#" class="red-btn more-reviews">See over 50 Casino Reviews</a>
+	<?php //if (  $myposts2->max_num_pages > 1 )
+	echo '<div class="misha_loadmore red-btn more-reviews">See over 50 Casino Reviews</div>'; // you can use <a> as well
+	?>
+    <!--    <a href="#" class="red-btn more-reviews">See over 50 Casino Reviews</a>-->
 </section>

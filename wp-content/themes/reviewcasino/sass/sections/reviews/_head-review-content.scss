@@ -12,7 +12,7 @@
   }
 
   a.ShowMore {
-    @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+    @include text-style('Roboto', normal, 500, 18px, 21px);
     display: block;
     font-size: 12px !important;
     font-weight: 700 !important;
@@ -35,10 +35,22 @@
     border-radius: 10px;
     padding-right: 20px;
     @include for-desktop-mdl {
-      grid-template-columns: 160px 20% 20% 20%;
+      grid-template-columns: 160px auto 25% 25%;
       grid-template-rows: auto;
       grid-template-areas: "A B C D"
                        "A E F G";
+    }
+    @include for-desktop {
+      grid-template-columns: 160px 40% 40%;
+      grid-template-rows: auto;
+      grid-template-areas: "A B C"
+                       "A D E"
+                       "A F G";
+    }
+    @include for-tablet-mdl {
+      display: flex;
+      flex-flow: column;
+      padding-right: 0;
     }
 
     .deposit-method-list.part-items {
@@ -61,7 +73,7 @@
     }
 
     .top-info-name {
-      @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+      @include text-style('Roboto', normal, 500, 20px, 23px);
       color: #ffffff;
     }
 
@@ -78,6 +90,9 @@
       align-items: center;
       @include for-desktop-mdl {
         justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        order: 1;
       }
     }
 
@@ -91,9 +106,15 @@
       max-width: 190px;
       padding-top: 30px;
       padding-bottom: 16px;
+      @include for-desktop {
+        max-width: 100%;
+      }
+      @include for-tablet-mdl {
+        order: 2;
+      }
 
       #bonus-value {
-        @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+        @include text-style('Roboto', normal, 500, 20px, 23px);
         color: #FFF615;
         margin-bottom: 10px;
         margin-top: 10px;
@@ -102,7 +123,7 @@
       #bonus-share {
         display: flex;
         flex-flow: row;
-        @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+        @include text-style('Roboto', normal, 500, 20px, 23px);
         color: #ffffff;
         margin-bottom: 5px;
 
@@ -112,11 +133,15 @@
       }
 
       #bonus-subtitle {
-        @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+        @include text-style('Roboto', normal, 500, 16px, 19px);
         color: #ffffff;
         width: 100%;
         max-width: 181px;
         text-align: center;
+        @include for-tablet-mdl {
+          width: 100%;
+          max-width: 100%;
+        }
       }
     }
 
@@ -124,9 +149,19 @@
       display: flex;
       flex-flow: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       position: relative;
       grid-area: C;
+      padding-top: 50px;
+      @include for-tablet-mdl {
+        width: 100%;
+        max-width: 100%;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        order: 4;
+      }
 
       .deposits-method-grid {
         display: flex;
@@ -159,7 +194,7 @@
             }
 
             &.ShowMore {
-              margin: 0;
+              margin: 10px 0 0 0;
               text-align: center;
               height: 14px;
             }
@@ -172,8 +207,20 @@
       display: flex;
       flex-flow: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 50px;
       grid-area: D;
+      @include for-tablet {
+        padding-top: 20px;
+      }
+      @include for-tablet-mdl {
+        width: 100%;
+        max-width: 100%;
+        border-bottom: 3px solid white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        order: 5;
+      }
 
       .devices-list {
         display: flex;
@@ -190,6 +237,18 @@
           height: auto;
           max-height: 100%;
           margin-right: 10px;
+          @include for-big-phone {
+            margin-right: 30px;
+            width: 100%;
+            max-width: 100%;
+          }
+
+          svg {
+            @include for-big-phone {
+              width: 150%;
+              height: 46px;
+            }
+          }
 
           &:last-child {
             margin-right: 0;
@@ -203,8 +262,20 @@
       display: flex;
       flex-flow: column;
       align-items: center;
-      align-self: center;
+      align-self: flex-start;
       position: relative;
+      padding-top: 50px;
+      @include for-tablet {
+        padding-top: 20px;
+      }
+      @include for-tablet-mdl {
+        width: 100%;
+        max-width: 100%;
+        border-bottom: 3px solid white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        order: 6;
+      }
 
       span {
         margin-bottom: 10px;
@@ -235,6 +306,9 @@
           place-items: center;
           background: #ffffff;
           border-radius: 5px;
+          @include for-tablet {
+            grid-template-rows: 1fr;
+          }
 
           .thumbnail {
             width: 100%;
@@ -244,7 +318,7 @@
           }
 
           span {
-            @include text-style('Roboto Medium', normal, 500, 10px, 15px);
+            @include text-style('Roboto', normal, 500, 10px, 15px);
             color: #000000;
             text-align: center;
           }
@@ -264,8 +338,21 @@
       display: flex;
       flex-flow: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 50px;
       grid-area: F;
+      @include for-desktop {
+        margin-bottom: 20px;
+        padding-top: 20px;
+      }
+      @include for-tablet-mdl {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+        order: 7;
+      }
 
       span {
         margin-bottom: 20px;
@@ -282,7 +369,7 @@
       grid-area: G;
       padding: 13px 30px;
       text-align: center;
-      @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+      @include text-style('Roboto', normal, 500, 25px, 29px);
       color: #ffffff;
       width: 100%;
       max-width: 214px;
@@ -291,6 +378,14 @@
       margin-top: auto;
       margin-bottom: auto;
       margin-right: 25px;
+      @include for-desktop {
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @include for-tablet-mdl {
+        order: 3;
+        margin-bottom: 20px;
+      }
     }
   }
 }

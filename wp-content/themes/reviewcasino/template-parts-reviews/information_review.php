@@ -10,23 +10,220 @@
 						<?php the_sub_field( 'info_description' ); ?>
                     </div>
 					<?php if ( have_rows( 'info_table' ) ) : ?>
-                        <table class="info-table-list">
-                            <tbody>
+                        <!--                        <table class="info-table-list">-->
+                        <!--                            <tbody>-->
+                        <!--							--><?php //while ( have_rows( 'info_table' ) ) : the_row(); ?>
+                        <!---->
+                        <!--                                <tr>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--                                                    --><?php
+//                                                    $casino_name = get_field_object( 'field_62addd651a07f' );
+//                                                    echo $casino_name['label'];
+//                                                    ?>
+                        <!--                        </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                        --><?php //the_sub_field( 'casino_name' ); ?>
+                        <!--                    </span>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--  --><?php
+//  $owner = get_field_object( 'field_62addd9f1a080' );
+//  echo $owner['label'];
+//  ?><!--                                                </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                                                --><?php //the_sub_field( 'owner' ); ?>
+                        <!--                        </span>-->
+                        <!---->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                                            <span class="info-name">-->
+                        <!---->
+                        <!--  --><?php
+//  $year_established = get_field_object( 'field_62adddb31a081' );
+//  echo $year_established['label'];
+//  ?><!--                                                                              </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                                                    --><?php //the_sub_field( 'year_established' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!---->
+                        <!--  --><?php
+//  $number_of_games = get_field_object( 'field_62adddbc1a082' );
+//  echo $number_of_games['label'];
+//  ?><!--                                                          </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'number_of_games' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--  --><?php
+//  $games_offered = get_field_object( 'field_62adddc71a083' );
+//  echo $games_offered['label'];
+//  ?><!--                                                          </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'games_offered' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--  --><?php
+//  $software_used = get_field_object( 'field_62adddce1a084' );
+//  echo $software_used['label'];
+//  ?><!--                                                          </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'software_used' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--  --><?php
+//  $compatible_devices = get_field_object( 'field_62adddd81a085' );
+//  echo $compatible_devices['label'];
+//  ?><!--                                                          </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'compatible_devices' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--  --><?php
+//  $payout_percentage = get_field_object( 'field_62addddf1a086' );
+//  echo $payout_percentage['label'];
+//  ?><!--                                                          </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'payout_percentage' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--  --><?php
+//  $payout_days = get_field_object( 'field_62addde81a087' );
+//  echo $payout_days['label'];
+//  ?><!--                                                          </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'payout_days' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                                                <span class="info-name">-->
+                        <!--  --><?php
+//  $max_jackpot = get_field_object( 'field_62adddf11a088' );
+//  echo $max_jackpot['label'];
+//  ?><!--                                                                                  </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'max_jackpot' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                        <span class="info-name">-->
+                        <!--  --><?php
+//  $languages = get_field_object( 'field_62adddf81a089' );
+//  echo $languages['label'];
+//  ?><!--                                                          </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'languages' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                                                <span class="info-name">-->
+                        <!--  --><?php
+//  $customer_support = get_field_object( 'field_62adde001a08a' );
+//  echo $customer_support['label'];
+//  ?><!--                                                  </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'customer_support' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                                <tr>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                                                <span class="info-name">-->
+                        <!--  --><?php
+//  $banking_options = get_field_object( 'field_62adde071a08b' );
+//  echo $banking_options['label'];
+//  ?><!--                                                  </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'banking_options' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td class="info-table-item">-->
+                        <!--                                                <span class="info-name">-->
+                        <!--  --><?php
+//  $currencies_supported = get_field_object( 'field_62adde0f1a08c' );
+//  echo $currencies_supported['label'];
+//  ?><!--                                                  </span>-->
+                        <!--                                        <span class="info-value">-->
+                        <!--                            					--><?php //the_sub_field( 'currencies_supported' ); ?>
+                        <!--                        </span>-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--								--><?php //$value_1 = get_sub_field( 'casino_name' ); ?>
+                        <!--								--><?php //$value_2 = get_sub_field( 'owner' )['value']; ?>
+                        <!--								--><?php //$value_3 = get_sub_field( 'year_established' )['value']; ?>
+                        <!--								--><?php //$value_4 = get_sub_field( 'number_of_games' ); ?>
+                        <!--								--><?php //$value_5 = get_sub_field( 'games_offered' ); ?>
+                        <!--								--><?php //$value_6 = get_sub_field( 'software_used' ); ?>
+                        <!--								--><?php //$value_7 = get_sub_field( 'compatible_devices' ); ?>
+                        <!--								--><?php //$value_8 = get_sub_field( 'payout_percentage' ); ?>
+                        <!--								--><?php //$value_9 = get_sub_field( 'payout_days' ); ?>
+                        <!--								--><?php //$value_10 = get_sub_field( 'max_jackpot' ); ?>
+                        <!--								--><?php //$value_11 = get_sub_field( 'languages' ); ?>
+                        <!--								--><?php //$value_12 = get_sub_field( 'customer_support' ); ?>
+                        <!--								--><?php //$value_13 = get_sub_field( 'banking_options' ); ?>
+                        <!--								--><?php //$value_14 = get_sub_field( 'currencies_supported' ); ?>
+                        <!--								--><?php
+//								$all_values = array(
+//									1  => $value_1,
+//									2  => $value_2,
+//									3  => $value_3,
+//									4  => $value_4,
+//									5  => $value_5,
+//									6  => $value_6,
+//									7  => $value_7,
+//									8  => $value_8,
+//									9  => $value_9,
+//									10 => $value_10,
+//									11 => $value_11,
+//									12 => $value_12,
+//									13 => $value_13,
+//									14 => $value_14
+//								);
+//								print_r( $all_values );
+//								?>
+                        <!--								--><?php //$arr = array( "$value_1", "$value_2" );
+//								var_dump( $arr ); ?>
+                        <!--							--><?php //endwhile; ?>
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
+                        <ul class="info-table-list">
 							<?php while ( have_rows( 'info_table' ) ) : the_row(); ?>
-
-                                <tr>
-                                    <td class="info-table-item">
+                                <li class="info-table-item">
                         <span class="info-name">
                                                     <?php
                                                     $casino_name = get_field_object( 'field_62addd651a07f' );
                                                     echo $casino_name['label'];
                                                     ?>
                         </span>
-                                        <span class="info-value">
+                                    <span class="info-value">
                         <?php the_sub_field( 'casino_name' ); ?>
                     </span>
-                                    </td>
-                                    <td class="info-table-item">
+                                </li>
+                                <li class="info-table-item">
                         <span class="info-name">
   <?php
   $owner = get_field_object( 'field_62addd9f1a080' );
@@ -36,10 +233,9 @@
                                                 <?php the_sub_field( 'owner' ); ?>
                         </span>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="info-table-item">
+                                </li>
+
+                                <li class="info-table-item">
                                             <span class="info-name">
 
   <?php
@@ -49,8 +245,8 @@
                                         <span class="info-value">
                                                     <?php the_sub_field( 'year_established' ); ?>
                         </span>
-                                    </td>
-                                    <td class="info-table-item">
+                                </li>
+                                <li class="info-table-item">
                         <span class="info-name">
 
   <?php
@@ -60,10 +256,9 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'number_of_games' ); ?>
                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="info-table-item">
+                                </li>
+
+                                <li class="info-table-item">
                         <span class="info-name">
   <?php
   $games_offered = get_field_object( 'field_62adddc71a083' );
@@ -72,8 +267,8 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'games_offered' ); ?>
                         </span>
-                                    </td>
-                                    <td class="info-table-item">
+                                </li>
+                                <li class="info-table-item">
                         <span class="info-name">
   <?php
   $software_used = get_field_object( 'field_62adddce1a084' );
@@ -82,10 +277,9 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'software_used' ); ?>
                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="info-table-item">
+                                </li>
+
+                                <li class="info-table-item">
                         <span class="info-name">
   <?php
   $compatible_devices = get_field_object( 'field_62adddd81a085' );
@@ -94,8 +288,8 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'compatible_devices' ); ?>
                         </span>
-                                    </td>
-                                    <td class="info-table-item">
+                                </li>
+                                <li class="info-table-item">
                         <span class="info-name">
   <?php
   $payout_percentage = get_field_object( 'field_62addddf1a086' );
@@ -104,10 +298,9 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'payout_percentage' ); ?>
                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="info-table-item">
+                                </li>
+
+                                <li class="info-table-item">
                         <span class="info-name">
   <?php
   $payout_days = get_field_object( 'field_62addde81a087' );
@@ -116,8 +309,8 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'payout_days' ); ?>
                         </span>
-                                    </td>
-                                    <td class="info-table-item">
+                                </li>
+                                <li class="info-table-item">
                                                 <span class="info-name">
   <?php
   $max_jackpot = get_field_object( 'field_62adddf11a088' );
@@ -126,10 +319,9 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'max_jackpot' ); ?>
                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="info-table-item">
+                                </li>
+
+                                <li class="info-table-item">
                         <span class="info-name">
   <?php
   $languages = get_field_object( 'field_62adddf81a089' );
@@ -138,8 +330,8 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'languages' ); ?>
                         </span>
-                                    </td>
-                                    <td class="info-table-item">
+                                </li>
+                                <li class="info-table-item">
                                                 <span class="info-name">
   <?php
   $customer_support = get_field_object( 'field_62adde001a08a' );
@@ -148,10 +340,9 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'customer_support' ); ?>
                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="info-table-item">
+                                </li>
+
+                                <li class="info-table-item">
                                                 <span class="info-name">
   <?php
   $banking_options = get_field_object( 'field_62adde071a08b' );
@@ -160,8 +351,8 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'banking_options' ); ?>
                         </span>
-                                    </td>
-                                    <td class="info-table-item">
+                                </li>
+                                <li class="info-table-item">
                                                 <span class="info-name">
   <?php
   $currencies_supported = get_field_object( 'field_62adde0f1a08c' );
@@ -170,8 +361,8 @@
                                         <span class="info-value">
                             					<?php the_sub_field( 'currencies_supported' ); ?>
                         </span>
-                                    </td>
-                                </tr>
+                                </li>
+
 								<?php $value_1 = get_sub_field( 'casino_name' ); ?>
 								<?php $value_2 = get_sub_field( 'owner' )['value']; ?>
 								<?php $value_3 = get_sub_field( 'year_established' )['value']; ?>
@@ -208,8 +399,8 @@
 								<?php $arr = array( "$value_1", "$value_2" );
 								var_dump( $arr ); ?>
 							<?php endwhile; ?>
-                            </tbody>
-                        </table>
+                        </ul>
+
 					<?php endif; ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
@@ -224,7 +415,7 @@
             <div class="advantages-section">
                 <div class="advantages-block">
 					<?php if ( have_rows( 'advantages' ) ) : ?>
-                        <h5 class="advantages-title">Pros +</h5>
+                        <h3 class="advantages-title">Pros +</h3>
                         <ul class="advantages-list">
 							<?php while ( have_rows( 'advantages' ) ) : the_row(); ?>
                                 <li class="advantages-item">
@@ -239,7 +430,7 @@
 
                 <div class="disadvantages-block">
 					<?php if ( have_rows( 'disadvantages' ) ) : ?>
-                        <h5 class="disadvantages-title">Cons -</h5>
+                        <div class="disadvantages-title">Cons -</div>
                         <ul class="disadvantages-list">
 							<?php while ( have_rows( 'disadvantages' ) ) : the_row(); ?>
                                 <li class="disadvantages-item">
@@ -251,9 +442,10 @@
                         </ul>
 					<?php endif; ?>
                 </div>
+            </div>
+
 				<?php endwhile; ?>
 				<?php endif; ?>
-            </div>
         </div>
     </div>
     <div class="right-info info-review-block">
@@ -278,9 +470,9 @@
 											<?php array_push( $new_array, $rows ) ?>
                                             <div class="ranks-wrap" itemprop="reviewRating" itemscope=""
                                                  itemtype="https://schema.org/Game">
-                                                <h5 itemprop="name" class="rating-title">
+                                                <p itemprop="name" class="rating-title">
 													<?php the_sub_field( 'rating_title' ); ?>
-                                                </h5>
+                                                </p>
                                                 <div class="rating-group">
 													<?php
 													$rating = get_sub_field( 'rank_count' );

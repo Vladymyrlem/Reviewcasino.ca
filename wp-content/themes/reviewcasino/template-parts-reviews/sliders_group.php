@@ -18,10 +18,11 @@
 			<?php foreach ( $right_slider_images as $right_slider_image ): ?>
                 <div class="slide">
                     <a href="<?php echo esc_url( $right_slider_image['url'] ); ?>">
-                        <img class="img-slide" src="<?php echo esc_url( $right_slider_image['sizes']['thumbnail'] ); ?>"
+                        <img class="img-slide m-md-auto"
+                             src="<?php echo esc_url( $right_slider_image['sizes']['thumbnail'] ); ?>"
                              alt="<?php echo esc_attr( $right_slider_image['alt'] ); ?>"/>
                     </a>
-                    <p><?php echo esc_html( $right_slider_image['caption'] ); ?></p>
+                    <!--                    <p>--><?php //echo esc_html( $right_slider_image['caption'] ); ?><!--</p>-->
                 </div>
 			<?php endforeach; ?>
 		<?php endif; ?>

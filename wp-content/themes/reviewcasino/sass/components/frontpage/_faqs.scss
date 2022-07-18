@@ -1,19 +1,53 @@
 @import "../../abstracts/mixins/mixins";
 
 .questions-content {
+  position: relative;
+  @include for-big-phone {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .mycontainer {
+    padding: 0 !important;
+    //@include for-tablet{
+    //  padding-left: 20px !important;
+    //  padding-right: 20px !important;
+    //}
+  }
+
+  &.front-questions {
+    .mycontainer {
+      padding: 0 !important;
+      @include for-tablet {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+  }
+
+  @include for-desktop-up {
+    //padding-left: 20px !important;
+    //padding-right: 20px !important;
+  }
   @include for-tablet-landscape-up {
     padding-top: 30px;
 
     padding-bottom: 20px;
   }
-  @include for-tablet {
-    border-top: 3px solid #ffffff;
-    background: transparent !important;
-    margin-top: 20px;
+
+  &::before {
 
   }
-  @include for-big-phone {
 
+  @include for-tablet {
+    //border-top: 3px solid #ffffff;
+    background: transparent !important;
+    margin-top: 20px;
+    //margin-left: -20px;
+    //margin-right: -20px;
+    width: auto;
+    //max-width: calc(100% + 40px);
+    max-width: 100%;
   }
 
   &.front-questions {
@@ -24,8 +58,9 @@
   padding-top: 50px;
   padding-bottom: 58px;
   @include for-big-phone {
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 20px;
+    margin-top: 0;
   }
 
   .container {
@@ -35,17 +70,31 @@
   }
 
   #questions-title {
-    @include big-title;
-    margin-bottom: 30px;
+    @include bonus-title;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    @include for-big-phone {
+      text-align: center;
+    }
   }
 
   .faqs-descr {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 34px;
+    margin-bottom: 15px;
     @include light-text;
+    @include for-big-phone {
+      text-align: center;
+    }
+    @include for-middle-phone {
+      @include text-style('Roboto', normal, 500, 16px, 20px);
+    }
 
     p {
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 20px);
+      }
     }
   }
 
@@ -62,19 +111,27 @@
       align-items: flex-start;
       border-radius: 10px;
       overflow: hidden;
+      filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+
       @include for-tablet-landscape-up {
         margin-bottom: 20px;
+      }
+      @include for-middle-phone {
+        //padding-left: 20px;
       }
 
       .question-name {
         background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
         position: relative;
-        padding: 27px 34px 32px 44px;
+        padding: 23px 87px 23px 44px;
         margin: 0;
         width: 100%;
         max-width: 100%;
-        @include for-middle-phone {
+        @include for-big-phone {
           padding: 20px 34px 20px 20px;
+        }
+        @include for-middle-phone {
+          padding: 10px 34px 10px 20px;
         }
 
         .open-faq {
@@ -88,17 +145,29 @@
           border: 0;
           padding: 0;
           cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            @include for-big-phone {
+              width: 12px;
+            }
+          }
         }
 
         .question-name-value {
-          a {
-            @include light-text;
-            text-decoration: none;
-            @include for-middle-phone {
-              @include text-style('Roboto Medium', normal, 500, 16px, 20px);
-            }
+          @include small-title;
+          text-decoration: none;
+          @include for-middle-phone {
           }
-
+          @include for-big-phone {
+            @include text-style('Roboto', normal, 500, 18px, 21px);
+            text-align: center;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+          }
           margin: 0;
         }
       }
@@ -106,18 +175,27 @@
 
       .answer-block {
         background: rgba(108, 95, 176, 0.7);
-        padding: 10px 25px 15px 30px;
+        padding: 30px 25px 10px 44px;
         border-radius: 0 0 10px 10px;
         display: none;
+        @include for-big-phone {
+          padding: 20px 20px 10px 20px;
+        }
 
         .answer-text {
           p {
             font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 17px;
-            line-height: 20px;
+            font-size: 18px;
+            line-height: 21px;
             color: #FFFFFF;
+            @include for-big-phone {
+              text-align: center;
+            }
+            @include for-middle-phone {
+              @include text-style('Roboto', normal, 500, 16px, 20px);
+            }
           }
         }
       }
@@ -125,15 +203,15 @@
   }
 
   a {
-    @include text-style('Roboto Medium', normal, 500, 24px, 28px);
+    @include text-style('Roboto', normal, 500, 24px, 28px);
     color: #FFFFFF;
     width: 100%;
-    max-width: 255px;
+    max-width: 319px;
     height: 100%;
-    max-height: 77px;
+    max-height: 70px;
     margin-left: auto;
     margin-right: auto;
-    @include for-big-phone {
+    @include for-tablet {
       max-width: 100%;
     }
   }

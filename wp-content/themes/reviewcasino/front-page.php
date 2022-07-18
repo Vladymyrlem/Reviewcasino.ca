@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-    <main id="primary" class="site-main">
+    <main id="primary" class="site-main home-main">
 		<?php if ( have_rows( 'home_layout' ) ): ?>
 			<?php while ( have_rows( 'home_layout' ) ) : the_row(); ?>
 

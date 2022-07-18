@@ -4,8 +4,12 @@
   margin-bottom: 0;
 
   .middle-title {
+    @include middle-title;
     width: 100%;
     max-width: 100%;
+    @include for-big-phone {
+      text-align: center;
+    }
   }
 
   .right-descr {
@@ -16,6 +20,12 @@
       @include light-text();
       margin-top: 0;
       margin-bottom: 25px;
+      @include for-big-phone {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 20px);
+      }
     }
   }
 
@@ -26,51 +36,84 @@
     margin-bottom: 0;
 
     > li {
-      display: grid;
-      grid-template-columns: 900px auto;
-      grid-template-rows: auto;
       margin-bottom: 25px !important;
+
 
       &:last-child {
         margin-bottom: 0 !important;
       }
 
       .choose-right-title {
-        @include text-style('Roboto Medium', normal, 500, 30px, 35px);
+        @include small-title;
         color: #FFFFFF;
+        grid-area: A;
+        @include for-tablet {
+          text-align: center;
+        }
+        @include for-big-phone {
+          text-align: center;
+        }
       }
 
       .left-part {
         flex: 0 0 auto;
         width: 100%;
-        max-width: 900px;
+        max-width: 100%;
         padding: 25px 20px 29px 49px;
+        display: grid;
+        grid-template-columns: 900px auto;
+        grid-template-areas: "A C"
+    "B C";
+        grid-template-rows: auto;
+        @include for-tablet {
+          grid-template-columns: 1fr;
+          grid-template-areas: "A"
+        "C"
+        "B";
+          padding-left: 20px;
+        }
 
         .content-right {
+          width: 100%;
+          max-width: 900px;
+          grid-area: B;
+
           p {
-            @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+            @include text-style('Roboto', normal, 500, 18px, 21px);
             color: #ffffff;
             margin-top: 0;
             margin-bottom: 20px;
+            @include for-middle-phone {
+              @include text-style('Roboto', normal, 500, 16px, 20px);
+            }
+          }
+        }
+
+        .img-right {
+          justify-self: center;
+          align-self: center;
+          grid-area: C;
+          @include for-tablet {
+            margin-bottom: 20px;
+            text-align: center;
+          }
+
+          img {
+            //position: absolute;
+            //right: 20px;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+            //top: 50%;
+            //transform: translateY(-50%);
+            @include for-big-phone {
+              max-width: 40%;
+            }
           }
         }
       }
 
-      .img-right {
-        justify-self: center;
-        align-self: center;
-
-        img {
-          //position: absolute;
-          //right: 20px;
-          width: auto;
-          max-width: 100%;
-          height: auto;
-          max-height: 100%;
-          //top: 50%;
-          //transform: translateY(-50%);
-        }
-      }
     }
   }
 

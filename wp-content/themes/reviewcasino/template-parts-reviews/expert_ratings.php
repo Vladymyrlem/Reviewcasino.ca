@@ -14,11 +14,11 @@
 			<?php endif; ?>
             <div class="right-part">
                 <div class="ranks-wrap" itemprop="reviewRating" itemscope="" itemtype="https://schema.org/Game">
-                    <h5 itemprop="name" class="rating-title">
-						<?php the_sub_field( 'rating_title' ); ?>
-                    </h5>
+                    <h3 itemprop="name" class="rating-title">
+				        <?php the_sub_field( 'rating_title' ); ?>
+                    </h3>
                     <div class="rating-group">
-						<?php
+				        <?php
 						$rating = get_sub_field( 'rank_count' );
 						if ( $rating ) {
 							$average_stars = $rating * 20;

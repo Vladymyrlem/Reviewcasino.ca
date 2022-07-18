@@ -1,8 +1,8 @@
 <section class="choose-best left-content dark-decor-section">
     <div class="left-choose">
-        <h2 class="small-title">
+        <h3 class="small-title">
 			<?php the_sub_field( 'main_title' ); ?>
-        </h2>
+        </h3>
         <div class="choose-best-content">
 			<?php the_sub_field( 'content' ); ?>
         </div>

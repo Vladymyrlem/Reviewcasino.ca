@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9c016e52-23d4-4fe0-8ad3-99076d672afe" name="Hostpro" url="http://141.94.109.20">
+        <fileTransfer rootFolder="/domains/hudzhal.com.ua/public_html/reviewcasino.ca" host="141.94.109.20" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="b3b97cba-4c0d-47a6-8503-f1b911c80091" name="Reviewcasino" url="http://67.212.83.209">
+        <fileTransfer rootFolder="/www/reviewcasino.ca/wp-content/themes/reviewcasino" host="67.212.83.209" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

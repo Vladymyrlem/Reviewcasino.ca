@@ -5,9 +5,9 @@
     <div class="customer-support-content">
 		<?php the_sub_field( 'support_content' ); ?>
     </div>
-    <h2 class="support-title middle-title">
+    <h3 class="support-title small-title">
 		<?php the_sub_field( 'support_title' ); ?>
-    </h2>
+    </h3>
 
 	<?php
 	$support_list_checked_values = get_sub_field( 'support_list' );
@@ -79,8 +79,8 @@
 		?>
     </div>
 	<?php //endif; ?>
-    <h2 class="languages-title middle-title">            <?php the_sub_field( 'lang_title' ); ?>
-    </h2>
+    <h3 class="languages-title small-title">            <?php the_sub_field( 'lang_title' ); ?>
+    </h3>
     <div class="languages-list gallery">
 		<?php $languages_images_images = get_sub_field( 'languages_images' ); ?>
 		<?php if ( $languages_images_images ) : ?>

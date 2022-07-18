@@ -2,8 +2,7 @@
     <section class="top-casinos left-content">
         <div class="mycontainer">
             <h2 class="middle-title">
-                <h2 class="middle-title"><?php the_sub_field( 'main_title' ); ?></h2>
-            </h2>
+				<?php the_sub_field( 'main_title' ); ?></h2>
             <div class="top-casinos-grid">
 				<?php //global $post;
 				$i = 1;
@@ -31,8 +30,8 @@
 
                                     </div>
                                     <div class="top-game-block">
-                                        <h5 class="game-title top-game-title">Game</h5>
-										<?php $games = get_sub_field( 'games', $top_post ); ?>
+                                        <h4 class="game-title top-game-title">Game</h4>
+		                                <?php $games = get_sub_field( 'games', $top_post ); ?>
 										<?php if ( $games ) : ?>
 											<?php foreach ( $games as $post ) : ?>
 												<?php setup_postdata( $post ); ?>
@@ -45,8 +44,8 @@
                                         </span>
                                     </div>
                                     <div class="top-bonuses-block">
-                                        <h5 class="top-bonuses-title">Bonus</h5>
-										<?php if ( have_rows( 'head_review_content', $top_post->ID ) ) : ?>
+                                        <h4 class="top-bonuses-title">Bonus</h4>
+		                                <?php if ( have_rows( 'head_review_content', $top_post->ID ) ) : ?>
 											<?php while ( have_rows( 'head_review_content', $top_post->ID ) ) : the_row(); ?>
 												<?php if ( have_rows( 'bonuses', $top_post->ID ) ) : ?>
 													<?php while ( have_rows( 'bonuses', $top_post->ID ) ) : the_row(); ?>
@@ -239,12 +238,20 @@
 	                                        <?php else: ?>
                                                 <a class="red-btn" href="/" target="_blank">Play Now</a>
 	                                        <?php endif; ?>
-                                            <a href="<?php echo $permalink ?>">Read
+	                                        <?php $permalink = get_permalink( $top_post->ID ); ?>
+                                            <a class="read-review" href="<?php echo $permalink ?>">Read
 		                                        <?php echo $top_post->post_title; ?> Review
                                             </a>
                                         </div>
                                     </div>
-                                    <button class="open-details">More details</button>
+                                    <button class="open-details">More details
+                                        <svg width="7" height="5" viewBox="0 0 7 5" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M0.146447 0.646447C0.341709 0.451184 0.658291 0.451184 0.853553 0.646447L3.5 3.29289L6.14645 0.646447C6.34171 0.451184 6.65829 0.451184 6.85355 0.646447C7.04881 0.841709 7.04881 1.15829 6.85355 1.35355L3.85355 4.35355C3.65829 4.54882 3.34171 4.54882 3.14645 4.35355L0.146447 1.35355C-0.0488155 1.15829 -0.0488155 0.841709 0.146447 0.646447Z"
+                                                  fill="white"/>
+                                        </svg>
+                                    </button>
                                 </div>
 
 							<?php endforeach; ?>

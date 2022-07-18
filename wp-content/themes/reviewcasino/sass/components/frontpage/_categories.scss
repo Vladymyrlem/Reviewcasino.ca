@@ -4,6 +4,15 @@
 .all-categories {
   background: $color__violet_background;
   padding: 58px 20px 79px 20px;
+
+  .mycontainer {
+
+    @include for-desktop-up {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+
   @include for-tablet-landscape-up {
     padding: 20px 0;
   }
@@ -15,7 +24,7 @@
   }
 
   .middle-title {
-    @include big-title();
+    @include middle-title;
     margin-bottom: 52px;
     width: 100%;
     max-width: 100%;
@@ -71,14 +80,14 @@
         }
 
         .category-link {
-          @include text-style('Roboto Medium', normal, 500, 27px, 32px);
+          @include text-style('Roboto', normal, 500, 27px, 32px);
           background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-fill-color: transparent;
           @include for-tablet {
-            @include text-style('Roboto Medium', normal, 700, 22px, 25px);
+            @include text-style('Roboto', normal, 700, 22px, 25px);
           }
         }
       }
@@ -89,12 +98,12 @@
         align-items: flex-start;
 
         .subcategory-link {
-          @include text-style('Roboto Medium', normal, 700, 20px, 23px);
+          @include text-style('Roboto', normal, 700, 20px, 23px);
           color: #000000;
           margin-bottom: 32px;
           text-decoration: none;
           @include for-tablet {
-            @include text-style('Roboto Medium', normal, 700, 16px, 19px);
+            @include text-style('Roboto', normal, 700, 16px, 19px);
             margin-bottom: 16px;
           }
         }

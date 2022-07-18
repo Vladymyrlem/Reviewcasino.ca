@@ -1,3 +1,4 @@
+@import "../../abstracts/mixins/mixins";
 .sticky {
   display: block;
 }
@@ -31,24 +32,28 @@
   margin-bottom: 25px;
   width: 100%;
   max-width: 100%;
+  @include for-tablet-landscape-up {
+    display: none;
+  }
 }
 
 .breadcrumbs a {
 }
 
 .breadcrumbs span a {
-  @include text-style('Roboto Medium', normal, 500, 15px, 18px);
+  @include text-style('Roboto', normal, 500, 15px, 18px);
   text-decoration-line: underline;
   color: #FFFFFF;
 }
 
-.breadcrumbs span:last-child a {
-  background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  text-decoration: none;
+.breadcrumbs span:last-child span {
+  //background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+  //-webkit-background-clip: text;
+  //-webkit-text-fill-color: transparent;
+  //background-clip: text;
+  //text-fill-color: transparent;
+  //text-decoration: none;
+  color: #000000;
 }
 
 .breadcrumbs span.line {

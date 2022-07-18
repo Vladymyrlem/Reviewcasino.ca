@@ -9,10 +9,14 @@
     padding: 20px 0;
   }
 
-  .container {
+  .mycontainer {
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    @include for-desktop-up {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
     @include for-desktop-mdl {
       flex-wrap: wrap;
       justify-content: center;
@@ -32,10 +36,11 @@
       width: 100%;
       max-width: 100%;
     }
+    @include for-big-phone
   }
 
   a.red-btn {
-    padding: 12px 20px;
+    padding: 24px 20px;
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -96,16 +101,14 @@
           grid-template-columns: 33% 90px 124px auto;
         }
         @include for-tablet-portrait-up {
-          grid-template-columns: 128px 43px auto minmax(124px, auto);
+          grid-template-columns: 115px 43px auto minmax(124px, auto);
           gap: 10px;
         }
         @include for-middle-phone {
-          display: flex;
-          flex-flow: row;
-          flex-wrap: wrap;
-          align-items: center;
-          //place-items: center;
+          grid-template-columns: auto 43px auto;
+          grid-template-rows: auto;
           justify-content: space-between;
+          place-items: center;
         }
 
         &:last-child {
@@ -133,11 +136,11 @@
           @include for-middle-phone {
             @include text-style('Roboto', normal, 400, 19px, 20px);
             width: auto;
-            max-width: 94px;
+            max-width: 99px;
           }
           @include for-phone {
             flex: 0 0 49%;
-            @include text-style('Roboto', normal, 400, 14px, 12px);
+            @include text-style('Roboto', normal, 400, 14px, 20px);
             width: 100%;
             max-width: 100%;
           }
@@ -154,7 +157,7 @@
             flex: 0 0 40%;
             width: 100%;
             max-width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 0;
             text-align: center;
           }
         }
@@ -200,23 +203,23 @@
             }
 
             .editors-verdict .verdict-middle {
-              @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+              @include text-style('Roboto', normal, 500, 25px, 29px);
               color: #000000;
               @include for-big-phone {
-                @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+                @include text-style('Roboto', normal, 500, 16px, 19px);
               }
               @include for-middle-phone {
-                @include text-style('Roboto Medium', normal, 500, 14px, 16px);
+                @include text-style('Roboto', normal, 500, 14px, 16px);
               }
 
               span {
-                @include text-style('Roboto Medium', normal, 500, 25px, 29px);
+                @include text-style('Roboto', normal, 500, 25px, 29px);
                 color: #000000;
                 @include for-big-phone {
-                  @include text-style('Roboto Medium', normal, 500, 18px, 22px);
+                  @include text-style('Roboto', normal, 500, 16px, 19px);
                 }
                 @include for-middle-phone {
-                  @include text-style('Roboto Medium', normal, 500, 16px, 20px);
+                  @include text-style('Roboto', normal, 500, 14px, 16px);
                 }
               }
             }
@@ -231,12 +234,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
-            @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+            @include text-style('Roboto', normal, 500, 20px, 23px);
             @include for-big-phone {
-              @include text-style('Roboto Medium', normal, 500, 13px, 22px);
+              @include text-style('Roboto', normal, 500, 13px, 22px);
             }
             @include for-middle-phone {
-              @include text-style('Roboto Medium', normal, 500, 10px, 20px);
+              @include text-style('Roboto', normal, 500, 10px, 20px);
             }
           }
 
@@ -253,17 +256,18 @@
             width: auto;
             max-width: 134px;
           }
-          @include for-phone {
+          @include for-middle-phone {
             flex: 0 0 100%;
             width: 100%;
             max-width: 100%;
             flex-flow: column;
             align-items: center;
             justify-content: center;
+            grid-column: span 3;
           }
 
           a.play-btn {
-            @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+            @include text-style('Roboto', normal, 500, 16px, 19px);
             color: #ffffff;
             width: 100%;
             max-width: 149px;
@@ -283,7 +287,7 @@
           }
 
           a.title-link {
-            @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+            @include text-style('Roboto', normal, 500, 16px, 19px);
             background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -331,13 +335,14 @@
 
       .review-name {
         position: relative;
-        padding: 27px 34px 32px 44px;
+        padding: 27px 60px 32px 44px;
         margin: 0;
         width: 100%;
         max-width: 100%;
+        max-height: 100% !important;
+
         @include for-big-phone {
-          max-height: 100% !important;
-          padding: 20px 34px 20px 25px;
+          padding: 20px 60px 20px 25px;
         }
 
         span {
@@ -348,6 +353,11 @@
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-fill-color: transparent;
+
+          &.review-name-value {
+            //width: 100%;
+            //max-width: calc(100% - 40px);
+          }
         }
       }
 
@@ -360,11 +370,16 @@
           background-clip: text;
           text-fill-color: transparent;
           margin-top: 0;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
 
         @include for-big-phone {
           max-height: 100% !important;
-          padding: 0 20px 20px 20px;
+          padding: 0 30px 20px 30px;
         }
         margin: 0;
       }
@@ -405,13 +420,34 @@
       border-radius: 10px;
 
       .accord-title {
+        @include for-tablet {
+          padding: 25px 55px 25px 35px;
+        }
+        @include for-big-phone {
+          padding: 20px 50px 20px 30px;
+        }
+
         .accord-name {
-          @include text-style('Roboto Medium', normal, 500, 30px, 35px);
+          @include small-title;
           background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-fill-color: transparent;
+          margin-bottom: 0;
+          //@include for-tablet {
+          //  @include text-style('Roboto', normal, 500, 27px, 25px);
+          //}
+          //@include for-big-phone {
+          //  @include text-style('Roboto', normal, 500, 20px, 26px);
+          //
+          //}
+          //@include for-big-phone {
+          //  @include text-style('Roboto', normal, 500, 18px, 20px);
+          //}
+          //@include for-big-phone {
+          //  @include text-style('Roboto', normal, 500, 16px, 20px);
+          //}
         }
       }
     }
@@ -421,9 +457,17 @@
       border-radius: 10px;
 
       .accord-title {
+        @include for-tablet {
+          padding: 25px 35px 25px 35px;
+        }
+        @include for-big-phone {
+          padding: 20px 30px 20px 30px;
+        }
+
         .accord-name {
-          @include text-style('Roboto Medium', normal, 500, 30px, 35px);
+          @include small-title;
           color: #ffffff;
+          margin-bottom: 0;
         }
       }
     }
@@ -435,12 +479,13 @@
       max-height: 82px;
     }
 
-    .open-block {
+    &.dark-block .open-block {
       position: absolute;
       right: 34px;
       top: 50%;
       transform: translateY(-50%);
-      width: 12px;
+      width: auto;
+      max-width: 23px;
       height: 22px;
       background: transparent;
       border: 0;
@@ -452,9 +497,38 @@
       }
     }
 
+    &.light-block .open-block {
+      position: absolute;
+      right: 34px;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      width: auto;
+      max-width: 23px;
+      height: 22px;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      margin-top: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
     .hidden-block {
       display: none;
-      padding: 0 45px 45px 45px;
+      padding: 0 45px 32px 45px;
+      @include for-big-phone {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    &.open {
+      .open-block {
+        //transform: translateY(-50%) rotate(0);
+      }
     }
   }
 }

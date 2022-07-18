@@ -9,6 +9,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative !important;
+  @include for-desktop-middle {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
   @include for-desktop-up {
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -17,6 +21,10 @@
   @include for-phone-only {
     padding: 0 10px !important;
   }
+}
+
+section .mycontainer {
+  padding: 0 !important;
 }
 
 .dark-decor-block {
@@ -31,4 +39,7 @@
   border-radius: 10px;
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
   margin-bottom: 50px;
+  @include for-big-phone {
+    margin-bottom: 30px;
+  }
 }

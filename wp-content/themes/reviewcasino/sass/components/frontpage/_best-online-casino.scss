@@ -5,6 +5,15 @@
   padding-top: 58px;
   padding-bottom: 58px;
   position: relative;
+
+  .mycontainer {
+
+    @include for-desktop-up {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+
   @include for-tablet-landscape-up {
     padding: 20px 0;
   }
@@ -21,6 +30,12 @@
     display: flex;
     flex-flow: column;
     align-items: flex-start;
+    z-index: 10;
+
+    h2.middle-title {
+      @include bonus-title();
+    }
+
     @include for-tablet-landscape-up {
       max-width: 100%;
     }
@@ -47,7 +62,7 @@
       }
 
       @include for-tablet {
-        background: white;
+        background: white !important;
       }
 
       .best-bonus-name {
@@ -66,12 +81,15 @@
           @include light-text;
           color: #FFFFFF;
           @include for-tablet {
-            @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+            @include text-style('Roboto', normal, 500, 20px, 22px);
             background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
+          }
+          @include for-big-phone {
+            @include text-style('Roboto', normal, 500, 16px, 18px);
           }
         }
 
@@ -79,25 +97,33 @@
           @include for-tablet {
 
             svg path {
-              fill: rgba(163, 0, 255, 1);
+              fill: #6667AB;
             }
           }
         }
       }
 
       .bonus-descr {
+        @include text-style('Roboto', normal, 500, 18px, 21px);
+
         @include for-big-phone {
-          padding-left: 20px;
-          padding-right: 20px;
+          padding-left: 30px;
+          padding-right: 30px;
           padding-bottom: 20px;
         }
 
         p {
-          @include light-text;
+          @include text-style('Roboto', normal, 500, 18px, 21px);
           color: #FFFFFF;
           margin-top: 0;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
           @include for-tablet {
-            @include text-style('Roboto Medium', normal, 500, 16px, 19px);
+            @include text-style('Roboto', normal, 500, 16px, 19px);
             background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -112,11 +138,11 @@
     }
 
     .middle-title {
-      @include text-style('Roboto Medium', noraml, 500, 40px, 47px);
+      @include text-style('Roboto', noraml, 500, 40px, 47px);
       color: #ffffff;
       margin-bottom: 25px;
       @include for-big-phone {
-        @include text-style('Roboto Medium', noraml, 500, 24px, 28px);
+        @include text-style('Roboto', noraml, 500, 24px, 28px);
       }
     }
 
@@ -125,13 +151,14 @@
       max-width: 470px;
 
       margin-top: 0;
-      @include light-text;
+      @include text-style('Roboto', normal, 500, 18px, 21px);
+      color: #ffffff;
       margin-bottom: 30px;
       @include for-tablet-landscape-up {
         max-width: 100%;
       }
       @include for-big-phone {
-        @include text-style('Roboto Medium', noraml, 500, 14px, 16px);
+        @include text-style('Roboto', noraml, 500, 14px, 16px);
         max-width: calc(100% - 120px);
       }
 
@@ -139,7 +166,7 @@
 
     a {
       @include light-text;
-      padding: 20px 30px;
+      padding: 25px 30px;
       display: flex;
       flex-flow: row;
       justify-content: center;

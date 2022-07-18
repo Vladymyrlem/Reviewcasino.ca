@@ -14,23 +14,51 @@
     max-width: 100%;
 
     h2 {
-      @include text-style('Roboto Medium', normal, 500, 40px, 47px);
+      @include middle-title;
       color: #ffffff;
       margin-top: 0;
       margin-bottom: 20px;
       margin-right: 20px;
+      @include for-tablet {
+
+      }
+      @include for-big-phone {
+        margin-right: 0;
+      }
+      @include for-phone {
+      }
     }
 
+    .editors-verdict {
+      @include for-tablet {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .verdict-middle {
+
+        .editors-verdict-middle-group .verdict-middle-value {
+          background: linear-gradient(180deg, rgba(161, 25, 224, 0.2) 46.8%, rgba(161, 25, 224, 0.184) 80.32%), #6667AB;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
     .info-description {
       flex: 0 0 100%;
       width: 100%;
       max-width: 100%;
 
       p {
-        @include text-style('Roboto Medium', normal, 500, 18px, 22px);
+        @include text-style('Roboto', normal, 500, 18px, 22px);
         color: #fff;
         margin-top: 0;
         margin-bottom: 20px;
+        @include for-middle-phone {
+          @include text-style('Roboto', normal, 500, 16px, 20px);
+        }
 
         &:last-child {
           margin-bottom: 0;

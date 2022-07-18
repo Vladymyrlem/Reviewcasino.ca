@@ -4,10 +4,24 @@
   padding: 30px;
   margin-bottom: 50px;
   margin-top: 50px;
+  @include for-tablet {
+    margin-bottom: 20px;
+  }
 
   h2 {
     margin-top: 0;
     margin-bottom: 20px;
+    @include for-tablet {
+      @include text-style('Roboto', normal, 500, 35px, 43px);
+
+    }
+    @include for-big-phone {
+      @include text-style('Roboto', normal, 500, 24px, 28px);
+      text-align: center;
+    }
+    @include for-phone {
+      @include text-style('Roboto', normal, 500, 20px, 26px);
+    }
   }
 
   .vip-content {
@@ -16,6 +30,15 @@
       color: #ffffff;
       margin-top: 0;
       margin-bottom: 20px;
+      @include for-tablet {
+        text-align: center;
+      }
+      @include for-middle-phone {
+        @include text-style('Roboto', normal, 500, 16px, 20px);
+      }
+      @include for-phone {
+        @include text-style('Roboto', normal, 500, 14px, 20px);
+      }
 
       &:last-child {
         margin-bottom: 0;

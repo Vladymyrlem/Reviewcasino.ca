@@ -5,10 +5,21 @@
   margin-bottom: 50px;
 
   h2 {
-    @include text-style('Roboto Medium', normal, 500, 40px, 47px);
+    @include text-style('Roboto', normal, 500, 36px, 44px);
     color: #ffffff;
     margin-top: 0;
     margin-bottom: 0;
+    @include for-tablet {
+      @include text-style('Roboto', normal, 500, 35px, 43px);
+
+    }
+    @include for-big-phone {
+      @include text-style('Roboto', normal, 500, 24px, 28px);
+
+    }
+    @include for-phone {
+      @include text-style('Roboto', normal, 500, 20px, 26px);
+    }
   }
 
   .content {
@@ -18,7 +29,7 @@
     max-width: 690px;
 
     p {
-      @include text-style('Roboto Medium', normal, 500, 18px, 21px);
+      @include text-style('Roboto', normal, 500, 18px, 21px);
       color: #ffffff;
       margin-bottom: 20px;
 
@@ -38,7 +49,7 @@
       margin-bottom: 22px;
       margin-top: 20px;
       position: relative;
-      @include text-style('Roboto Medium', normal, 500, 20px, 23px);
+      @include text-style('Roboto', normal, 500, 20px, 23px);
       color: #ffffff;
 
       &::before {
@@ -67,5 +78,10 @@
     right: 23px;
     bottom: 0;
     z-index: -1;
+    @include for-big-phone {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

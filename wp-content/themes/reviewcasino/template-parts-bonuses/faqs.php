@@ -1,5 +1,5 @@
-<section class="text-content questions-content" itemscope="" itemtype="https://schema.org/FAQPage">
-    <div class="container">
+<section class="full-content questions-content" itemscope="" itemtype="https://schema.org/FAQPage">
+    <div class="mycontainer">
         <h2 class="questions-title" id="questions-title"
             itemprop="headline">            <?php the_sub_field( 'faq_title' ); ?>
         </h2>
@@ -14,9 +14,9 @@
 					<?php setup_postdata( $post ); ?>
                     <div class="question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                         <div class="question-name">
-                            <h4 class="question-name-value" itemprop="name">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h4>
+                            <h3 class="question-name-value" itemprop="name">
+								<?php the_title(); ?>
+                            </h3>
                             <span>
                             <button class="open-faq" type="button">
 <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@
                         <div class="answer-block" itemscope itemprop="acceptedAnswer"
                              itemtype="https://schema.org/Answer">
                             <div class="answer-text" itemprop="text">
-								<?php the_excerpt(); ?>
+								<?php the_content(); ?>
                             </div>
                         </div>
                     </div>
